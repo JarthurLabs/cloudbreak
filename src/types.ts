@@ -1,0 +1,11 @@
+export type RouteId = 'storefront' | 'accounts' | 'dispatch';
+export type ThreatType = 'bad-login' | 'swarm' | 'breach';
+export type Policy = { auth: boolean; rate: 0 | 1 | 3 | 6 | 12; isolated: boolean };
+export type ActiveThreat = { route: RouteId; threatType: ThreatType };
+export type IncomingRequest = { id: string; route: RouteId; role: 'legitimate' | 'hostile'; threatType: ThreatType | null; approachStartedAt: number; decisionAt: number };
+export type RequestRecord = { id: string; timestamp: string; elapsedMs: number; missionTime: number; route: RouteId; status: number; reason: string; role: 'legitimate' | 'hostile'; credential: 'valid' | 'invalid' | 'missing'; threatType: ThreatType | null; damage: number; approachStartedAt?: number; decisionAt?: number };
+export type RouteState = { id: RouteId; name: string; policy: Policy; served: number; rejected: number; hostileAdmitted: number };
+export type GameState = { game: 'cloudbreak'; sessionId: string; phase: 'ready' | 'running' | 'paused' | 'won' | 'lost'; elapsed: number; duration: number; integrity: number; service: number; credits: number; reserved: number; legitimateTotal: number; legitimateServed: number; hostileBlocked: number; hostileAdmitted: number; totalRequests: number; score: number; economyBonus: number; wave: { index: number; title: string; hint: string; threat: boolean; threatType: ThreatType | null; target: RouteId | null; threats: ActiveThreat[] }; routes: RouteState[]; incoming?: IncomingRequest[]; events: RequestRecord[]; logFile: string; pauseReason?: string; error?: string };
+export const ROUTES: RouteId[] = ['storefront', 'accounts', 'dispatch'];
+export const ROUTE_NAMES = { storefront: 'Storefront', accounts: 'Accounts', dispatch: 'Dispatch' };
+export const defaultPolicy = (): Policy => ({ auth: false, rate: 0, isolated: false });

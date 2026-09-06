@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cloudbreak — illustrated release cards</title>
+<style>html,body{margin:0;background:#08121b;width:100%;height:100%;overflow:hidden}canvas{display:block;width:100vw;height:auto;max-height:100vh;object-fit:contain}</style></head><body>
+<canvas id="card" width="3840" height="2160" aria-label="Original illustrated briefing for Cloudbreak. These motion graphics are separate from actual gameplay."></canvas>
+<script>
+const canvas=document.getElementById('card'),ctx=canvas.getContext('2d');
+const C={bg:'#08121b',panel:'#102432',ink:'#eaf4f1',muted:'#a0b8c0',faint:'#466773',cyan:'#76e9ef',coral:'#ff7f9b',amber:'#f6c979',violet:'#c49afc'};
+const type='"Helvetica Neue",Arial,sans-serif',mono='"SFMono-Regular",Consolas,monospace';
+const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+const ease=v=>{v=clamp(v);return v*v*(3-2*v)};
+function text(value,x,y,size=16,color=C.ink,weight=400){ctx.font=`${weight} ${size}px ${type}`;ctx.fillStyle=color;ctx.fillText(value,x,y)}
+function label(value,x,y,color=C.muted,size=10){ctx.font=`${size}px ${mono}`;ctx.fillStyle=color;let p=x;for(const ch of value){ctx.fillText(ch,p,y);p+=ctx.measureText(ch).width+1.5}}
+function line(x1,y1,x2,y2,color,width=1){ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.strokeStyle=color;ctx.lineWidth=width;ctx.stroke()}
+function path(points,color,width=1){ctx.beginPath();points.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));ctx.strokeStyle=color;ctx.lineWidth=width;ctx.stroke()}
+function round(x,y,w,h,r,fill,stroke){ctx.beginPath();ctx.roundRect(x,y,w,h,r);if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=1;ctx.stroke()}}
+function circle(x,y,r,color,width=1){ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.strokeStyle=color;ctx.lineWidth=width;ctx.stroke()}
+function logo(x,y,size=22){path([[x,y-size*.44],[x+size*.4,y-size*.18],[x+size*.32,y+size*.29],[x,y+size*.5],[x-size*.32,y+size*.29],[x-size*.4,y-size*.18],[x,y-size*.44]],C.cyan,1.9);path([[x-4,y],[x-1,y+4],[x+6,y-5]],C.cyan,1.6)}
+function backdrop(t){ctx.fillStyle=C.bg;ctx.fillRect(0,0,1280,720);const g=ctx.createRadialGradient(1010,350,30,960,365,610);g.addColorStop(0,'#173342');g.addColorStop(.68,'#0e202c');g.addColorStop(1,C.bg);ctx.fillStyle=g;ctx.fillRect(0,0,1280,720);
+ ctx.save();ctx.globalAlpha=.12;for(let x=664;x<1280;x+=42)line(x,110,x,608,C.faint,.55);for(let y=144;y<620;y+=42)line(664,y,1240,y,C.faint,.55);ctx.restore();
+ // Static industrial silhouettes give depth without borrowing gameplay art.
+ ctx.save();ctx.globalAlpha=.25;for(let i=0;i<21;i++){const w=12+(i*13)%24,h=65+(i*41)%110,x=660+i*29,y=608-h;ctx.fillStyle=i%2?'#061019':'#102635';ctx.fillRect(x,y,w,h);for(let k=0;k<h/18;k++){ctx.fillStyle='#456974';ctx.fillRect(x+4,y+9+k*18,2,2)}}ctx.restore();
+ logo(78,66,25);label('CLOUDBREAK',103,62,C.ink,13);label('FIRST LIGHT',103,80,C.muted,8);label('A PLAYABLE CLOUD SECURITY LAB',928,70,C.muted,8);
+ line(66,107,1214,107,'#29434f',.65);line(66,669,1214,669,'#29434f',.65);
+ ctx.fillStyle=C.cyan;ctx.beginPath();ctx.arc(69,635,2.2,0,Math.PI*2);ctx.fill();text('Created by Nicholas with Codex',81,639,12,C.muted);
+}
+function globe(x,y,t){circle(x,y,34,'#719ca7',1);ctx.save();ctx.translate(x,y);ctx.strokeStyle=C.cyan;ctx.lineWidth=1;ctx.beginPath();ctx.ellipse(0,0,15,32,0,0,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.ellipse(0,0,32,12,0,0,Math.PI*2);ctx.stroke();line(-32,0,32,0,C.cyan,.7);line(0,-32,0,32,C.cyan,.7);ctx.restore();circle(x,y,43,'#2d4f5d',.8);const a=t*.42;ctx.fillStyle=C.cyan;ctx.beginPath();ctx.arc(x+43*Math.cos(a),y+43*Math.sin(a),2.2,0,Math.PI*2);ctx.fill();label('INTERNET',x-33,y+65,C.muted,9)}
+function service(x,y,index,color,active,t){const top=y-33;ctx.save();ctx.translate(x,y);ctx.shadowColor=color;ctx.shadowBlur=active?13:0;
+ if(index===0){path([[-27,28],[-27,-20],[0,-35],[28,-20],[28,28],[-27,28]],'#6c8b98',1);path([[-27,-20],[0,-7],[28,-20]],'#6c8b98',1);line(0,-7,0,28,'#6c8b98');ctx.fillStyle='#172e3d';ctx.fillRect(-22,-16,17,38);ctx.fillRect(5,-16,17,38)}
+ else if(index===1){ctx.fillStyle='#173140';ctx.fillRect(-29,-34,19,63);ctx.fillRect(10,-34,19,63);ctx.strokeStyle='#6c8b98';ctx.strokeRect(-29,-34,19,63);ctx.strokeRect(10,-34,19,63);line(-10,-22,10,-22,color,2);line(-10,9,10,9,color,2)}
+ else{path([[-28,29],[-16,-28],[12,-28],[29,29],[-28,29]],'#6c8b98',1);ctx.fillStyle='#16303e';ctx.fillRect(-15,-21,28,44);circle(24,-19,14,'#6c8b98',1);line(14,-9,6,15,'#6c8b98',1)}
+ ctx.shadowBlur=0;for(let k=0;k<3;k++)line(-17,2+k*7,17,2+k*7,active?color:'#5c808c',1.3);ctx.restore();
+ label(['STOREFRONT','ACCOUNTS','DISPATCH'][index],x-42,y+55,C.muted,8);
+}
+function marker(x,y,kind,color,alpha=1){ctx.save();ctx.globalAlpha=alpha;ctx.translate(x,y);ctx.fillStyle=color;ctx.shadowColor=color;ctx.shadowBlur=9;if(kind==='customer'){ctx.beginPath();ctx.roundRect(-7,-2.5,14,5,2.5);ctx.fill()}
+ else if(kind==='coral'){ctx.beginPath();ctx.moveTo(0,-5);ctx.lineTo(6,0);ctx.lineTo(0,5);ctx.lineTo(-5,0);ctx.closePath();ctx.fill()}
+ else if(kind==='amber'){for(let j=0;j<3;j++){const a=j*Math.PI*2/3;ctx.beginPath();ctx.arc(Math.cos(a)*4,Math.sin(a)*4,2.7,0,Math.PI*2);ctx.fill()}}
+ else {ctx.strokeStyle=color;ctx.lineWidth=2;ctx.beginPath();for(let i=0;i<6;i++){const a=i*Math.PI/3;const X=Math.cos(a)*6,Y=Math.sin(a)*6;i?ctx.lineTo(X,Y):ctx.moveTo(X,Y)}ctx.closePath();ctx.stroke();}ctx.restore()}
+function along(points,p){const distances=points.slice(1).map((v,i)=>Math.hypot(v[0]-points[i][0],v[1]-points[i][1]));let left=p*distances.reduce((a,b)=>a+b,0);for(let i=0;i<distances.length;i++){if(left<=distances[i]){const a=left/distances[i];return[points[i][0]+(points[i+1][0]-points[i][0])*a,points[i][1]+(points[i+1][1]-points[i][1])*a]}left-=distances[i]}return points.at(-1)}
+function schematic(t,stage,outro=false){const colors=[C.coral,C.amber,C.violet],kinds=['coral','amber','violet'];const ys=[239,376,513],internetX=778,internetY=376;
+ // Different senders converge into the same Internet connection.
+ const ingress=[[[666,293],[710,293],[740,347]],[[666,376],[735,376]],[[666,459],[710,459],[740,406]]];
+ ingress.forEach((points,i)=>{path(points,'#30515f',1);for(let j=0;j<2;j++){const p=((t*.16+j*.46+i*.21)%1);const [x,y]=along(points,p);marker(x,y,j===0||outro?'customer':kinds[i],j===0||outro?C.cyan:colors[i],.8)}});
+ ys.forEach((y,i)=>{const route=[[823,376],[875,376],[904,y],[1120,y]];path(route,'#3c6070',1.3);
+  if(stage>=2||outro){ctx.save();ctx.globalAlpha=.62;path(route,C.cyan,.6);ctx.restore();}
+  const gateX=978;
+  if(stage>=2&&!outro){round(gateX-12,y-25,24,50,5,'#102c3a',colors[i]);line(gateX-5,y-16,gateX+5,y+16,colors[i],1.2);line(gateX+5,y-16,gateX-5,y+16,colors[i],1.2);text(['Check credentials','Limit volume','Isolate route'][i],918,y+83,16,colors[i],500)}
+  for(let j=0;j<5;j++){const hostile=j%2===1,p=(t*.117+j*.197+i*.087)%1;const[x,yPos]=along(route,p);let alpha=1;if(stage>=2&&!outro&&x>gateX){if(i===0&&hostile)alpha=0;if(i===1&&j>1)alpha=0;if(i===2)alpha=0}if(outro&&hostile)alpha=0;marker(x,yPos,hostile?kinds[i]:'customer',hostile?colors[i]:C.cyan,alpha)}
+  if(stage>=2&&!outro){const hit=1-((t*.585+i*.24)%1);ctx.save();ctx.globalAlpha=hit*.36;circle(gateX,y,10+(1-hit)*14,colors[i],.8);ctx.restore()}
+  service(1152,y,i,outro?C.cyan:colors[i],stage>=2,t);
+ });
+ globe(internetX,internetY,t);
+ if(stage<2&&!outro){marker(865,154,'customer',C.cyan);text('Customers',883,159,12,C.muted);marker(1001,154,'coral',C.coral);text('Attacks',1019,159,12,C.muted)}
+ if(outro){round(933,570,256,33,4,'#0b242e','#356774');text('PROTECTED. STILL CONNECTED.',949,591,10,C.cyan,600)}
+}
+function intro(t){const stage=Math.min(2,Math.floor(t/4)),local=t-stage*4;schematic(t,stage);
+ ctx.save();ctx.globalAlpha=ease(local/.45)*(local>3.67?1-ease((local-3.67)/.33):1);ctx.translate(0,10*(1-ease(local/.55)));
+ if(stage===0){label('FIRST LIGHT',67,223,C.cyan,11);text('CLOUDBREAK',63,316,65,C.ink,700);text('A cloud security game.',67,363,27,C.cyan,400);text('Three services. Three minutes.',68,430,19,C.muted);text('One city to keep online.',68,460,19,C.muted)}
+ if(stage===1){label('THE SECURITY CONNECTION',67,219,C.amber,10);text('Good traffic. Attacks.',63,301,48,C.ink,650);text('Same connection.',63,360,53,C.cyan,650);text('Customers and threats arrive',67,421,21,C.muted);text('through the same Internet uplinks.',67,451,21,C.muted)}
+ if(stage===2){label('THE PLAYER DECISION',67,219,C.amber,10);text('Block the threat.',63,301,52,C.ink,650);text('Keep customers',63,362,52,C.cyan,650);text('moving.',63,423,52,C.cyan,650);text('Match the control to the problem.',67,481,20,C.muted)}
+ ctx.restore();label('01 — ILLUSTRATED BRIEFING',1010,639,C.muted,7.6);line(66,669,66+1148*clamp(t/12),669,C.cyan,1.15);
+}
+function outro(t){schematic(t,2,true);ctx.save();ctx.globalAlpha=ease(t/.6);ctx.translate(0,8*(1-ease(t/.6)));label('YOUR NEXT THREE MINUTES',67,219,C.amber,10);text('Your turn.',63,301,63,C.ink,650);text('Keep the city',63,365,53,C.cyan,650);text('online.',63,426,53,C.cyan,650);text('Play in your browser',67,486,23,C.ink,450);text('Build story in the post',67,520,18,C.muted);ctx.restore();label('02 — YOUR TURN',1102,639,C.muted,7.6);line(66,669,66+1148*clamp(t/8),669,C.cyan,1.15)}
+window.renderCard=(kind,t)=>{ctx.setTransform(3,0,0,3,0,0);ctx.clearRect(0,0,1280,720);backdrop(t);kind==='outro'?outro(t):intro(t)};
+const query=new URLSearchParams(location.search),kind=query.get('kind')==='outro'?'outro':'intro';window.renderCard(kind,Number(query.get('t')||'1'));
+if(!query.has('render')){const started=performance.now();const tick=now=>{window.renderCard(kind,((now-started)/1000)%(kind==='outro'?8:12));requestAnimationFrame(tick)};requestAnimationFrame(tick)}
+</script></body></html>

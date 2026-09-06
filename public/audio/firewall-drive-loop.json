@@ -1,0 +1,20 @@
+{
+  "name": "Firewall Drive",
+  "bpm": 124,
+  "key": "D minor",
+  "beats": 64,
+  "bars": 16,
+  "sampleRate": 44100,
+  "channels": 2,
+  "frames": 1365677,
+  "seconds": 30.967732426303854,
+  "source": "Original Firewall Drive audition synthesis, same notes, instruments, seed and arrangement over a complete 16-bar phrase.",
+  "loop": "Natural releases and stereo echoes wrap into the start; circular high-pass filter history; no fade, silence or encoded padding.",
+  "loudnessLufs": -23.01,
+  "truePeakDbtp": -8.4,
+  "staticGainDb": 12.270000000000003,
+  "rawPeak": 0.09260531566533278,
+  "bytes": 5462786,
+  "sha256": "71c5a644124e6db590a8aba32be322253f3bd74e7368ad88153b72b4e71c35f5",
+  "notes": 594
+}

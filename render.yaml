@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: cloudbreak
+    runtime: node
+    plan: free
+    region: singapore
+    numInstances: 1
+    autoDeployTrigger: off
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm run start:cloud
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 24.19.0
