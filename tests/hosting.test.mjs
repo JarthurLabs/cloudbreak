@@ -12,6 +12,7 @@ const EMPTY = { auth: false, rate: 0, isolated: false };
 
 async function fixture(t, options = {}) {
   let now = 10_000;
+  await mkdir(resolve(ROOT, 'logs'), { recursive: true });
   const directory = await mkdtemp(resolve(ROOT, 'logs', 'hosting-test-'));
   const distDir = resolve(directory, 'dist');
   await mkdir(distDir);

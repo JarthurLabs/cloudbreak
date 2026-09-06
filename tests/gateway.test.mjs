@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { mkdtemp, readFile, rm } from 'node:fs/promises';
+import { mkdir, mkdtemp, readFile, rm } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { createCloudbreakServer } from '../server/app.mjs';
 
@@ -9,6 +9,7 @@ const EMPTY = { auth: false, rate: 0, isolated: false };
 
 async function fixture(t, options = {}) {
   let time = 10_000;
+  await mkdir(resolve(ROOT, 'logs'), { recursive: true });
   const logDir = await mkdtemp(resolve(ROOT, 'logs', 'test-'));
   const app = createCloudbreakServer({ port: 5318, autoTick: false, clock: () => time, logDir, ...options });
   await app.listen();

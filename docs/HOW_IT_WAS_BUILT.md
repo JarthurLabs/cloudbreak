@@ -8,7 +8,7 @@ I used Codex as my development partner. I set the direction, played the builds, 
 
 The early version had navy buildings, pale bridges, and soft white clouds. I liked the general design, but the little white customers looked like dice. They did not communicate Internet traffic. The buildings also needed to feel more futuristic.
 
-![The original Cloudbreak city and its cube-shaped customer traffic](../captures/01-first-light.png)
+![The original Cloudbreak city and its cube-shaped customer traffic](../captures/01-first-light.webp)
 
 *An actual early gameplay capture. The customer shapes, pale environment, and original control panel all changed after review.*
 
@@ -18,7 +18,7 @@ The new background worked for me. The three playable buildings still felt too or
 
 That led to the current three-building skyline, connected approaches, and foundations descending into the lower city. The distant city is a generated background image. The playable buildings, roads, gates, and traffic are interactive Three.js geometry. [The background prompt and provenance](../public/art/PROVENANCE.md) keep that distinction explicit.
 
-![The later industrial city with three distinct buildings and Internet uplinks](../captures/revision-8/03-three-fronts.png)
+![The later industrial city with three distinct buildings and Internet uplinks](../captures/revision-8/03-three-fronts.webp)
 
 *Actual revision-eight gameplay. Different threats are active in all three districts, and each defense is visible beneath its building.*
 
