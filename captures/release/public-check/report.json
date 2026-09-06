@@ -1,0 +1,221 @@
+{
+  "passed": true,
+  "url": "https://cloudbreak.onrender.com",
+  "checkedAt": "2026-09-06T13:46:57.088Z",
+  "health": {
+    "game": "cloudbreak",
+    "status": "ok",
+    "localOnly": false,
+    "frontend": "ready",
+    "maxSessions": 8
+  },
+  "completeRealTimePublicMission": true,
+  "missionClock": "Unmodified server clock; ordinary pointer controls and actual API responses.",
+  "ownerCookie": {
+    "name": "__Host-cloudbreak-owner",
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Strict"
+  },
+  "independentBrowserSessions": true,
+  "crossCookieReadRejected": true,
+  "assetHashesMatch": true,
+  "assetHashes": {
+    "art/industrial-dusk-city.png": "4ee468c47af22fca0277dc0e32f419fefd6a4ff21336e0a2db72c70ef7a5e648",
+    "audio/firewall-drive-loop.wav": "71c5a644124e6db590a8aba32be322253f3bd74e7368ad88153b72b4e71c35f5"
+  },
+  "final": {
+    "phase": "won",
+    "elapsed": 180,
+    "integrity": 79.1,
+    "service": 85.71428571428571,
+    "legitimateTotal": 1071,
+    "legitimateServed": 918,
+    "hostileBlocked": 768,
+    "hostileAdmitted": 125,
+    "totalRequests": 1964,
+    "score": 6060,
+    "economyBonus": 679
+  },
+  "actions": [
+    {
+      "elapsed": 17.247,
+      "route": "storefront",
+      "label": "Key check"
+    },
+    {
+      "elapsed": 31.164,
+      "route": "storefront",
+      "label": "Open"
+    },
+    {
+      "elapsed": 35.2,
+      "route": "accounts",
+      "label": "Slow flow"
+    },
+    {
+      "elapsed": 51.234,
+      "route": "accounts",
+      "label": "Open"
+    },
+    {
+      "elapsed": 55.181,
+      "route": "dispatch",
+      "label": "Close bridge"
+    },
+    {
+      "elapsed": 67.027,
+      "route": "dispatch",
+      "label": "Open"
+    },
+    {
+      "elapsed": 73.26,
+      "route": "accounts",
+      "label": "Key check"
+    },
+    {
+      "elapsed": 73.26,
+      "route": "dispatch",
+      "label": "Slow flow"
+    },
+    {
+      "elapsed": 93.196,
+      "route": "accounts",
+      "label": "Open"
+    },
+    {
+      "elapsed": 93.196,
+      "route": "dispatch",
+      "label": "Open"
+    },
+    {
+      "elapsed": 99.106,
+      "route": "storefront",
+      "label": "Close bridge"
+    },
+    {
+      "elapsed": 99.106,
+      "route": "dispatch",
+      "label": "Key check"
+    },
+    {
+      "elapsed": 117.198,
+      "route": "storefront",
+      "label": "Open"
+    },
+    {
+      "elapsed": 117.198,
+      "route": "dispatch",
+      "label": "Open"
+    },
+    {
+      "elapsed": 123.274,
+      "route": "storefront",
+      "label": "Slow flow"
+    },
+    {
+      "elapsed": 123.274,
+      "route": "accounts",
+      "label": "Close bridge"
+    },
+    {
+      "elapsed": 141.105,
+      "route": "storefront",
+      "label": "Open"
+    },
+    {
+      "elapsed": 141.105,
+      "route": "accounts",
+      "label": "Open"
+    },
+    {
+      "elapsed": 147.174,
+      "route": "storefront",
+      "label": "Close bridge"
+    },
+    {
+      "elapsed": 147.174,
+      "route": "accounts",
+      "label": "Slow flow"
+    },
+    {
+      "elapsed": 147.174,
+      "route": "dispatch",
+      "label": "Key check"
+    },
+    {
+      "elapsed": 172.254,
+      "route": "storefront",
+      "label": "Open"
+    },
+    {
+      "elapsed": 172.254,
+      "route": "accounts",
+      "label": "Open"
+    },
+    {
+      "elapsed": 172.254,
+      "route": "dispatch",
+      "label": "Open"
+    }
+  ],
+  "audio": {
+    "method": "Harness-only parallel MediaRecorder tap at native speaker output, after game master gain and limiter.",
+    "stage": "Ready briefing after Enter the city, before Begin First Light.",
+    "browserWavHashMatches": true,
+    "privateGameHooksAbsent": true,
+    "limitation": "Decoded output and mute measurements; not subjective listening approval.",
+    "playing": {
+      "mimeType": "audio/webm;codecs=opus",
+      "bytes": 49562,
+      "seconds": 3.06,
+      "startDelaySeconds": 0.0552000000178814,
+      "recordingWallSeconds": 3.002899999976158,
+      "channels": 2,
+      "sampleRate": 48000,
+      "rms": 0.011113057099569031,
+      "peak": 0.060750365257263184,
+      "clippedSamples": 0,
+      "file": "audio-playing.webm",
+      "sha256": "abd0db2b85307b65daccde2dcf907d7843532700ed82b457ebca6549304734eb"
+    },
+    "muted": {
+      "mimeType": "audio/webm;codecs=opus",
+      "bytes": 534,
+      "seconds": 1.02,
+      "startDelaySeconds": 0.056800000011920926,
+      "recordingWallSeconds": 1.0014000000059604,
+      "channels": 2,
+      "sampleRate": 48000,
+      "rms": 2.034405546861534e-34,
+      "peak": 2.0345869483764863e-34,
+      "clippedSamples": 0,
+      "file": "audio-muted.webm",
+      "sha256": "b626b206db3e03350d5fce9767f311debd7ed2ea8b7bd6637d49dbdc55f25aa8"
+    },
+    "resumed": {
+      "mimeType": "audio/webm;codecs=opus",
+      "bytes": 33140,
+      "seconds": 2.04,
+      "startDelaySeconds": 0.05859999999403954,
+      "recordingWallSeconds": 2.0025999999940396,
+      "channels": 2,
+      "sampleRate": 48000,
+      "rms": 0.011996792778824587,
+      "peak": 0.061390481889247894,
+      "clippedSamples": 0,
+      "file": "audio-resumed.webm",
+      "sha256": "2804d120dec5cd47d55fbd32863e8f170f9e903f485db68066fc5dbe86230c65"
+    },
+    "probe": {
+      "destinations": 1,
+      "kinds": [
+        "DynamicsCompressorNode"
+      ],
+      "errors": []
+    }
+  },
+  "errors": [],
+  "logCountsReconciled": true,
+  "privateIdentifiersOmitted": true
+}

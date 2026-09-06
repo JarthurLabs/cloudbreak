@@ -68,7 +68,19 @@ The checks cover invalid and missing credentials, a valid-key attacker passing a
 
 The historical revision-eight checkpoint passed 46 gameplay tests. A separate normal-time local mission finished with 82.9 integrity and 923 of 1,062 customers served, about 87 percent. Its 1,956 completed HTTP records reconciled with the counters and damage. That is a measured example, not a promise about every player's score or public hosting performance.
 
-That earlier browser run also checked that approaching requests kept their identities during defense changes and that damage moved only the struck building. Its recording averaged about 24 frames per second, with occasional capture gaps. The gameplay result and the recording quality are separate findings. Later release checks cover the selected music, public hosting, and new demonstration.
+That earlier browser run also checked that approaching requests kept their identities during defense changes and that damage moved only the struck building. Its recording averaged about 24 frames per second, with occasional capture gaps. The gameplay result and the recording quality are separate findings. The later release passed 53 automated tests and a clean GitHub build. Its native 4K demonstration uses another actual mission, which finished with 80.9 integrity and about 85.4 percent of customers served. [The release verification](../captures/release/VERIFICATION.md) separates those local findings from the public browser review.
+
+## Getting the release ready
+
+The first clean GitHub test run found an assumption hidden by local development: the hosting test expected a logs directory that already existed on the development machine. Codex changed the fixture to create its own directory before using it. The clean run then passed. That was a useful reminder that a reproducible test needs to set up its own starting conditions.
+
+The dependency review also found advisories affecting older development tools. Codex updated the pinned Vite and Playwright versions and checked the installation again. The updated dependency audit reported no known advisories at that check. That is a snapshot of the package audit, not proof that the application has no vulnerabilities.
+
+The video had a different publishing problem. The native 4K master was about 52.51 megabytes, but GitHub's inline attachment interface rejected files above ten megabytes. We kept the high-quality master as a release download and made a separate 9.01-megabyte compressed 4K copy for the README player. Both keep the same 87.5-second edit and 2,100 frames. The smaller copy is easier to open inline; the master preserves more scene detail.
+
+The recording itself needed review too. Taking large screenshots briefly held the captured image, so the final edit avoids those intervals instead of speeding up the game. A text-rendering issue suppressed two captions containing percentage signs. Literal text rendering fixed those lines, and the corrected export passed the full media checks again.
+
+[Film provenance and the finished 4K download](../captures/release/FILM.md) explain what is gameplay, what is editorial, and what the checks establish. The selected frames were reviewed for clarity, but that is different from a continuous human review or a measured public cold start.
 
 ## The connection to my work
 

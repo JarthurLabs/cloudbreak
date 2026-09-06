@@ -1,8 +1,18 @@
 # Cloudbreak public hosting
 
-Cloudbreak is prepared for one free Render Node web service in Singapore, matching Ghost Protocol's hosting direction. This document describes the checked local release configuration. A public Cloudbreak deployment and its actual URL still require release verification; this file does not claim that a service is already live.
+Cloudbreak is live at [cloudbreak.onrender.com](https://cloudbreak.onrender.com) on one free Render Node web service in Singapore, matching Ghost Protocol's hosting direction. The September 6, 2026 [public verification receipt](../captures/release/public-check/report.json) records the completed real 180-second mission, independent browser sessions, matching runtime assets, and measured audio output and mute controls. This is a checked release result, not a guarantee of uninterrupted free-tier availability.
 
-The service runs the existing 180-second First Light mission. Public hosting does not add campaign missions or authorize Phase 2.
+The service contains one authored 180-second First Light mission.
+
+## Public release result
+
+The release task confirmed [revision d1d1ef5](https://github.com/JarthurLabs/cloudbreak/commit/d1d1ef5d76ab377f720fd7ed3379a57cb0d65b15) in Render's deployment interface before the browser check. The game health response does not report a commit identifier. The public mission ran on the unmodified server clock with ordinary pointer controls and actual API responses. It won with 79.1 integrity and 918 of 1,071 customers served, or 85.7143 percent. Its 1,964 completed HTTP records reconciled with the counters: 768 hostile requests were rejected and 125 were admitted. Browser errors were empty.
+
+Separate browser contexts received independent owner cookies and sessions. Cross-cookie access to the other mission was rejected. The cookie flags were HttpOnly, Secure and SameSite Strict. The public city image and Firewall Drive file matched the approved local asset hashes.
+
+The audio check captured the browser's final speaker output after the game's master gain and limiter. It measured music before play, near-silent output while muted, and music again after unmuting, without clipping. No private game hooks were used. These are decoded signal measurements, not subjective listening approval. The report contains no owner values or private identifiers.
+
+A public cold start was **not measured**. This single completed run does not establish worldwide performance, prolonged uptime, or simultaneous-user capacity.
 
 ## Deployment configuration
 
@@ -36,9 +46,9 @@ Static serving is confined to real files inside `dist`, including symlink contai
 
 ## Free service limits
 
-The public URL can remain available between visits, but free hosting is not an always-running service. Render documents spin-down after fifteen minutes without incoming traffic and a wake-up of about one minute. Running missions and memory logs disappear when the process restarts, redeploys or sleeps. Its free instance allowance is 750 hours per workspace per month, shared with Ghost Protocol if both use the same workspace. Bandwidth and build usage also have limits; exhaustion can suspend services or builds when no payment method is present. No paid upgrade or payment method is required by this configuration. See [Render's free service limits](https://render.com/docs/free).
+The public URL can remain available between visits, but free hosting is not an always-running service. Render documents spin-down after fifteen minutes without incoming traffic and a wake-up of about one minute. Those are provider descriptions, not measured Cloudbreak timings. Running missions and memory logs disappear when the process restarts, redeploys or sleeps. Free-service, bandwidth and build allowances have limits and can be shared across a workspace. No paid upgrade or payment method is required by this configuration. See [Render's free service limits](https://render.com/docs/free).
 
-Before announcing the link, verify the deployed health response, built page, actual browser controls, two independent browser sessions, and recovery after restart or expiry. Observe a real cold start separately; local startup timings cannot establish public latency or cold-start behavior.
+The deployed health response, actual browser controls, full mission, independent sessions, asset hashes and music controls were checked as described above. Expired-session recovery was checked separately in local browser testing. A public restart-recovery or idle cold-start observation was not part of the completed public run.
 
 ## Local release checks
 

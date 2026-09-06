@@ -1,0 +1,35 @@
+I built a little cloud security game where blocking everything is a good way to lose.
+
+Meet Cloudbreak.
+
+Play Cloudbreak in your browser: https://cloudbreak.onrender.com/
+
+You have three minutes to protect a futuristic city from bad logins, request swarms, and heavier attacks with working keys. The buildings represent cloud services. The catch? Real customers need to get through too.
+
+Check credentials when the keys are wrong. Limit traffic when the requests come too quickly. Isolate a route when you need to stop every arrival, then reopen it when the danger clears.
+
+The city can survive an attack and still fail if too many customers are turned away.
+
+I built this with Codex. I directed the gameplay, visuals, onboarding, balance, and sound, while Codex handled implementation and testing.
+
+A lot of that work started with something feeling wrong during a playthrough. Customer traffic looked like dice. The tutorial took too many clicks. Gates felt slow. Turning on a defense appeared to reset the approaching enemies. And the first music options sounded far too relaxed for a city under attack.
+
+Apparently the security team needed a more urgent soundtrack.
+
+Those reviews became specific changes to the controls, request flow, damage feedback, and city design. I chose Firewall Drive for the music.
+
+The project connects with my experience in software-as-a-service implementation, documentation, onboarding, and troubleshooting. A setting can look right on its own and still interrupt the workflow it is supposed to support. I wanted that consequence to be part of the game.
+
+Underneath the city, synthetic requests go through a real HTTP gateway inside the game. The response codes drive the results. It is a teaching model, not a production cloud environment.
+
+The 4K video shows the decisions in action. The GitHub write-up covers how we built it, including the parts that needed another pass.
+
+See how I built it: https://github.com/JarthurLabs/cloudbreak
+
+It runs on free hosting, so the first visit may take a little time to wake up.
+
+When you're done, try Ghost Protocol, my maze game about copied credentials and knowing which access to revoke: https://ghost-protocol-b74p.onrender.com/
+
+Next up: a Diner Dash-inspired game about software-as-a-service implementation. Stay tuned.
+
+#CloudSecurity #Cybersecurity #BuildInPublic

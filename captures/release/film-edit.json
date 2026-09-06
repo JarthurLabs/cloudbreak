@@ -1,0 +1,268 @@
+{
+  "title": "Cloudbreak \u2014 4K game demonstration",
+  "width": 3840,
+  "height": 2160,
+  "fps": 24,
+  "seconds": 87.49999999999999,
+  "frames": 2100,
+  "bytes": 52508020,
+  "sha256": "f1a53fb5af5c222cf1d981468c9e3c64702c7a5a1f10c1a107bc5667d75523bd",
+  "codec": "H.264 High / AAC stereo",
+  "container": "MP4 with faststart",
+  "audio": {
+    "gameplay": "Original recorded post-master mix and enemy effects, retained at normal speed.",
+    "cards": "Selected original Firewall Drive loop, level matched to the captured soundtrack.",
+    "cardGainDb": -14.749999999999996,
+    "finalStaticGainDb": 17.97,
+    "targetIntegratedLufs": -20,
+    "shortEditorialAudioFades": true,
+    "narration": false
+  },
+  "source": {
+    "video": "captures/release/raw/Cloudbreak-Full-Flight-4k.mp4",
+    "videoSha256": "8b4db3119f8b7a33e470842dde37edaf72be9c1d01c128ae9aa17938ee4423d8",
+    "width": 3840,
+    "height": 2160,
+    "originalCadence": {
+      "requestedEveryNthFrame": 2,
+      "maximumStoredFps": 30,
+      "received": 5598,
+      "stored": 4001,
+      "averageFps": 20.059014618957466,
+      "maximumIntervalSeconds": 1.6521861553192139,
+      "medianIntervalSeconds": 0.035246849060058594,
+      "finalFrameHoldSeconds": 0.012321949005126953,
+      "cadenceDrops": 1596,
+      "queueDrops": 0,
+      "nonMonotonicDrops": 1,
+      "maxPendingWrites": 6,
+      "encodedBytes": 3439414756
+    },
+    "realWallClockMissionSeconds": 180.2,
+    "missionResult": {
+      "phase": "won",
+      "integrity": 80.9,
+      "service": 85.41666666666666,
+      "totalRequests": 1946,
+      "hostileBlocked": 762
+    },
+    "clockMapping": "Nearest observed stage epoch plus the mission-time difference, relative to the first source compositor frame.",
+    "uiAdjustment": "UI-only scale increase for legibility at native 4K. No game state, outcomes, audio events or visual traffic injected.",
+    "speed": 1,
+    "interpolation": false,
+    "cadenceConversion": "24 FPS presentation holds or drops original frames at their real timestamps. No motion interpolation or gameplay acceleration."
+  },
+  "edit": [
+    {
+      "id": "00-intro",
+      "type": "card",
+      "file": "intro-4k.mp4",
+      "start": 0,
+      "seconds": 12,
+      "frames": 288,
+      "filmStart": 0,
+      "filmEnd": 12,
+      "part": "captures/release/raw/film-parts/00-intro.mkv"
+    },
+    {
+      "id": "01-customers",
+      "type": "gameplay",
+      "missionStart": 2,
+      "missionEnd": 9,
+      "caption": "customers",
+      "start": 6.9144429721832275,
+      "seconds": 7,
+      "frames": 168,
+      "filmStart": 12,
+      "filmEnd": 19,
+      "part": "captures/release/raw/film-parts/01-customers.mkv",
+      "maximumSourceIntervalSeconds": 0.06893587112426758
+    },
+    {
+      "id": "02-authentication",
+      "type": "gameplay",
+      "missionStart": 14,
+      "missionEnd": 23,
+      "caption": "auth",
+      "start": 18.914642864227297,
+      "seconds": 9,
+      "frames": 216,
+      "filmStart": 19,
+      "filmEnd": 28,
+      "part": "captures/release/raw/film-parts/02-authentication.mkv",
+      "maximumSourceIntervalSeconds": 0.07123780250549316
+    },
+    {
+      "id": "03-rate-limit",
+      "type": "gameplay",
+      "missionStart": 32,
+      "missionEnd": 42,
+      "caption": "rate",
+      "start": 36.91444298934937,
+      "seconds": 10,
+      "frames": 240,
+      "filmStart": 28,
+      "filmEnd": 38,
+      "part": "captures/release/raw/film-parts/03-rate-limit.mkv",
+      "maximumSourceIntervalSeconds": 0.06808900833129883
+    },
+    {
+      "id": "04-isolation",
+      "type": "gameplay",
+      "missionStart": 52,
+      "missionEnd": 59,
+      "caption": "isolate",
+      "start": 56.91474313545227,
+      "seconds": 7,
+      "frames": 168,
+      "filmStart": 38,
+      "filmEnd": 45,
+      "part": "captures/release/raw/film-parts/04-isolation.mkv",
+      "maximumSourceIntervalSeconds": 0.07010602951049805
+    },
+    {
+      "id": "05-isolation-responses",
+      "type": "gameplay",
+      "missionStart": 60.5,
+      "missionEnd": 63.8,
+      "caption": "isolate",
+      "start": 65.41454297065735,
+      "seconds": 3.2916666666666665,
+      "frames": 79,
+      "filmStart": 45,
+      "filmEnd": 48.291666666666664,
+      "part": "captures/release/raw/film-parts/05-isolation-responses.mkv",
+      "maximumSourceIntervalSeconds": 0.06803202629089355
+    },
+    {
+      "id": "06-reopen",
+      "type": "gameplay",
+      "missionStart": 64,
+      "missionEnd": 68,
+      "caption": "reopen",
+      "start": 68.91474298477173,
+      "seconds": 4,
+      "frames": 96,
+      "filmStart": 48.291666666666664,
+      "filmEnd": 52.291666666666664,
+      "part": "captures/release/raw/film-parts/06-reopen.mkv",
+      "maximumSourceIntervalSeconds": 0.06861209869384766
+    },
+    {
+      "id": "07-customers-return",
+      "type": "gameplay",
+      "missionStart": 69.5,
+      "missionEnd": 73,
+      "caption": "reopen",
+      "start": 74.41444305419923,
+      "seconds": 3.5,
+      "frames": 84,
+      "filmStart": 52.291666666666664,
+      "filmEnd": 55.791666666666664,
+      "part": "captures/release/raw/film-parts/07-customers-return.mkv",
+      "maximumSourceIntervalSeconds": 0.06784915924072266
+    },
+    {
+      "id": "08-simultaneous-defense",
+      "type": "gameplay",
+      "missionStart": 144,
+      "missionEnd": 159,
+      "caption": "multi",
+      "start": 148.91524300003053,
+      "seconds": 15,
+      "frames": 360,
+      "filmStart": 55.791666666666664,
+      "filmEnd": 70.79166666666666,
+      "part": "captures/release/raw/film-parts/08-simultaneous-defense.mkv",
+      "maximumSourceIntervalSeconds": 0.07891988754272461
+    },
+    {
+      "id": "09-victory",
+      "type": "gameplay",
+      "start": 187.8,
+      "seconds": 4.5,
+      "caption": "victory",
+      "frames": 108,
+      "filmStart": 70.79166666666666,
+      "filmEnd": 75.29166666666666,
+      "part": "captures/release/raw/film-parts/09-victory.mkv",
+      "maximumSourceIntervalSeconds": 0.06890010833740234
+    },
+    {
+      "id": "10-evidence",
+      "type": "gameplay",
+      "start": 195.1,
+      "seconds": 4.208333333333333,
+      "caption": "evidence",
+      "frames": 101,
+      "filmStart": 75.29166666666666,
+      "filmEnd": 79.49999999999999,
+      "part": "captures/release/raw/film-parts/10-evidence.mkv",
+      "maximumSourceIntervalSeconds": 0.06979179382324219
+    },
+    {
+      "id": "11-outro",
+      "type": "card",
+      "file": "outro-4k.mp4",
+      "start": 0,
+      "seconds": 8,
+      "frames": 192,
+      "filmStart": 79.49999999999999,
+      "filmEnd": 87.49999999999999,
+      "part": "captures/release/raw/film-parts/11-outro.mkv"
+    }
+  ],
+  "captionText": {
+    "customers": {
+      "tag": "THE CHALLENGE",
+      "title": "Customers and attacks share the same connection.",
+      "detail": "Keep at least 75% of legitimate customer requests moving.",
+      "color": "79e5ed"
+    },
+    "auth": {
+      "tag": "01  AUTHENTICATION",
+      "title": "Bad credentials? Require a valid key.",
+      "detail": "Key check blocks probes. Anonymous customers can be refused too.",
+      "color": "ff819d"
+    },
+    "rate": {
+      "tag": "02  RATE LIMITING",
+      "title": "Too many requests? Slow the flow.",
+      "detail": "One request per second. Customers and attackers share that cap.",
+      "color": "ffd17c"
+    },
+    "isolate": {
+      "tag": "03  ISOLATION",
+      "title": "A dangerous request can have a valid key.",
+      "detail": "Close bridge stops all traffic on that route, including customers.",
+      "color": "c7a1f8"
+    },
+    "reopen": {
+      "tag": "RESTORE SERVICE",
+      "title": "When the threat clears, reopen the route.",
+      "detail": "Protecting a cloud environment also means keeping it available.",
+      "color": "79e5ed"
+    },
+    "multi": {
+      "tag": "MULTIPLE SERVICES",
+      "title": "Match each threat to the right control.",
+      "detail": "Defend several routes while legitimate work continues.",
+      "color": "79e5ed"
+    },
+    "victory": {
+      "tag": "THE RESULT",
+      "title": "85.4% of customers served. The city stays online.",
+      "detail": "This actual run preserved 80.9 integrity and blocked 762 threats.",
+      "color": "79e5ed"
+    },
+    "evidence": {
+      "tag": "LOOK UNDER THE HOOD",
+      "title": "Every decision leaves a real request record.",
+      "detail": "Real HTTP responses. Authored traffic. Fictional city damage.",
+      "color": "79e5ed"
+    }
+  },
+  "omissions": "Unselected mission intervals and screenshot-induced long compositor holds were omitted through visible editorial cuts. The film is an edited demonstration, not an uninterrupted mission recording.",
+  "review": "Master and compressed inline copy passed complete decode, duration and frame-count checks. Sampled-frame review and technical limitations are described in FILM.md and VERIFICATION.md.",
+  "publicProvenanceNote": "Raw source and intermediate-part paths identify local provenance only. Those files stay outside the public repository. Timing, captions and hashes are retained without personal absolute paths or session credentials."
+}
