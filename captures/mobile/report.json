@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:5310",
+  "checkedAt": "2026-09-07T02:58:43.786Z",
+  "method": "Isolated Chrome context; real touch input, unchanged server clock, actual HTTP responses.",
+  "physicalDeviceTested": false,
+  "reportKind": "Verified summary of the completed run",
+  "provenance": "Reconstructed only from the completed run result readback after an interrupted follow-up overwrote the detailed report. No values were inferred from the incomplete follow-up.",
+  "smallBriefings": [
+    {
+      "width": 320,
+      "height": 568,
+      "startVisibleWithinViewport": true,
+      "startTarget": {
+        "x": 35,
+        "y": 445.203125,
+        "width": 250,
+        "height": 48
+      }
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "startVisibleWithinViewport": true,
+      "startTarget": {
+        "x": 35,
+        "y": 493.59375,
+        "width": 305,
+        "height": 48
+      }
+    }
+  ],
+  "selectionDoesNotMutatePolicies": true,
+  "allFourModesAndCreditRefunds": true,
+  "pauseSettingsAndGuide": true,
+  "simultaneousDistrictAwareness": true,
+  "actualModeActions": 28,
+  "mission": {
+    "completed": true,
+    "wallSeconds": 180.155,
+    "phase": "won",
+    "elapsed": 180,
+    "integrity": 94,
+    "service": 85.26912181303116,
+    "totalRequests": 1948,
+    "legitimateServed": 903,
+    "legitimateTotal": 1059,
+    "hostileBlocked": 829,
+    "hostileAdmitted": 60,
+    "logCountsReconciled": true
+  },
+  "postFlight": {
+    "muteUnmute": true,
+    "actualRequestEvidence": true,
+    "flyAgainResetsMission": true,
+    "resultsPanelGeometryVerified": false
+  },
+  "errors": [],
+  "geometryWarnings": [],
+  "captureLimit": "The first completed-run results screenshot preceded the React results panel. The harness now explicitly waits for that panel; the public run will verify and capture final results. Later title/layout screenshots were refreshed during the interrupted follow-up. The completed-run evidence screenshot remains preserved.",
+  "passedConsole": "{\"passed\":true,\"responsiveLayouts\":8,\"actualModeActions\":28,\"completeRealMission\":true}",
+  "responsiveLayoutsChecked": 8
+}

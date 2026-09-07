@@ -30,7 +30,15 @@ function ThreatGlyph({kind}: {kind:'bad-login'|'swarm'|'breach'}) {
   </svg>;
 }
 function QuickGuide() {
-  return <div className="quick-guide">
+  return <><div className="mobile-guide">
+    <p>Your buildings are <b>cloud services.</b> Protect them for three minutes. Serve at least <b>75% of cyan customers.</b></p>
+    <div className="mobile-matchups">
+      <div><ThreatGlyph kind="bad-login"/><span>Bad keys</span><b>Key check</b></div>
+      <div><ThreatGlyph kind="swarm"/><span>Fast swarms</span><b>Slow flow</b></div>
+      <div><ThreatGlyph kind="breach"/><span>Heavy carriers</span><b>Close bridge</b></div>
+    </div>
+    <p><b>Tap a district, then its defense.</b> Closing blocks customers too. Reopen when clear.</p>
+  </div><div className="quick-guide desktop-guide">
     <p className="quick-objective">Your buildings are <b>cloud services.</b> Customers and attacks arrive through the same <b>Internet uplinks.</b> Keep the city online for <b>three minutes</b> and serve at least <b>75% of cyan customers.</b></p>
     <div className="threat-lessons">
       <div><ThreatGlyph kind="bad-login"/><div><strong>Coral probes <span>→ Key check</span></strong><p>Authentication refuses their bad login keys.</p></div></div>
@@ -38,7 +46,7 @@ function QuickGuide() {
       <div><ThreatGlyph kind="breach"/><div><strong>Violet carriers <span>→ Close bridge</span></strong><p>Their keys work. Isolation stops everyone, including customers.</p></div></div>
     </div>
     <p className="quick-rule"><b>Click the matching mode under each attacked district.</b> Attacks can overlap. Choose <b>Open</b> when its alert clears so customers can return. Cloud security means balancing protection with availability.</p>
-  </div>;
+  </div></>;
 }
 
 export default function App() {
@@ -196,6 +204,7 @@ export default function App() {
   const finished=state?.phase==='won'||state?.phase==='lost';
   const playing=screen==='playing';
   const signals=state?signalsForState(state):[];
+  const selectedSignal=signals.find(signal=>signal.route===selected);
   const activeSignals=signals.filter(signal=>signal.kind!=='calm');
   const singleSignal=activeSignals.length===1?activeSignals[0]:null;
   const alertKind=activeSignals.length>1?'multiple':singleSignal?.kind??'calm';
@@ -204,7 +213,7 @@ export default function App() {
   const showHelp=async()=>{if(state?.phase==='running'){const next=await act('/api/pause',{paused:true});if(!next)return;}setHelpOpen(true);};
   const toggleMute=()=>{unlockAudio();setMuted(v=>{audioMute(!v);return !v;});};
   const motion=(value:boolean)=>{setReduced(value);localStorage.setItem('cloudbreak.reducedMotion',String(value));};
-  return <main className={`app ${playing?'in-mission':'arrival'} flow-revision multi-revision ${reduced?'reduced-motion':''}`}>
+  return <main className={`app ${playing?'in-mission':'arrival'} ${screen==='briefing'?'briefing-screen':''} ${finished?'mission-finished':''} flow-revision multi-revision ${reduced?'reduced-motion':''}`}>
     <CityScene state={state} selected={selected} onSelect={id=>{setSelected(id);sound('click');}} reducedMotion={reduced} titleMode={!playing}/>
     <div className="sky-grain"/>
     <header className="topbar">
@@ -213,6 +222,7 @@ export default function App() {
         <div className={`vital ${state.integrity<35?'danger':''}`}><span><Icon name="shield" size={17}/>City integrity</span><strong>{Math.ceil(state.integrity)}<small>/ 100</small></strong><i style={{width:`${state.integrity}%`}}/></div>
         <div className={`vital ${state.service<75&&state.elapsed>20?'danger':''}`}><span><Icon name="flow" size={17}/>Customers served</span><strong>{Math.floor(state.service*10)/10}<small>% <em>target 75%</em></small></strong></div>
         <div className="budget"><span>DEFENSE CREDITS</span><strong>{state.credits}<small>/ 40 free</small></strong><div className="credit-dots">{Array.from({length:8},(_,i)=><i key={i} className={i<state.credits/5?'free':''}/>)}</div></div>
+        {!finished&&<div className="mobile-clock"><span>Time left</span><strong>{fmtTime(state.duration-state.elapsed)}</strong></div>}
       </div>}
       <nav className="utility"><button className="icon-button" onClick={toggleMute} aria-label={muted?'Unmute sound':'Mute sound'} title={muted?'Unmute sound':'Mute sound'}><Icon name={muted?'mute':'sound'}/></button>{playing&&!finished&&<button className="help-button" onClick={()=>void showHelp()}>How to play</button>}{playing&&!finished&&<button className="icon-button" onClick={togglePause} aria-label={state?.phase==='paused'?'Resume game':'Pause game'} title="Pause · Space"><Icon name={state?.phase==='paused'?'play':'pause'}/></button>}</nav>
     </header>
@@ -236,6 +246,14 @@ export default function App() {
       <div className="mission-clock"><span>SHIFT REMAINING</span><strong>{fmtTime(state.duration-state.elapsed)}</strong><div className="timeline">{Array.from({length:9},(_,i)=><i key={i} className={i<=Math.floor(state.elapsed/20)?'active':''}/>)}</div></div>
       <div className="traffic-key"><span><i className="customer-symbol"/>Customers</span><span><ThreatGlyph kind="bad-login"/>Key check</span><span><ThreatGlyph kind="swarm"/>Slow flow</span><span><ThreatGlyph kind="breach"/>Close bridge</span></div>
       <section className="direct-controls" aria-label="District defenses">
+        <nav className="district-tabs" aria-label="Choose a district">{state.routes.map(route=>{
+          const signal=signals.find(item=>item.route===route.id)!;
+          const mode=modeForPolicy(route.policy), ready=mode===signal.mode;
+          const label=DEFENSES.find(defense=>defense.id===signal.mode)!.label;
+          const action=ready?(signal.kind==='calm'?'Open':`${label} ✓`):signal.kind==='calm'?'Reopen':`Use ${label}`;
+          return <button key={route.id} className={`district-tab ${signal.kind} ${ready?'ready':'needs-defense'}`} aria-pressed={selected===route.id} aria-label={`Select ${ROUTE_NAMES[route.id]}: ${signal.name}, ${action}`} data-route={route.id} onClick={()=>{setSelected(route.id);sound('click');}}><strong><em>0{ROUTES.indexOf(route.id)+1}</em>{ROUTE_NAMES[route.id]}</strong><span>{signal.kind==='calm'?<Icon name="flow" size={16}/>:<ThreatGlyph kind={signal.kind}/>}<small>{action}</small></span></button>;
+        })}</nav>
+        <div className="mobile-dock-heading"><span>{selectedSignal?.kind&&selectedSignal.kind!=='calm'?<ThreatGlyph kind={selectedSignal.kind}/>:<Icon name="flow" size={17}/>} {selectedSignal?.name}</span><span><b>{state.credits}</b> credits free</span></div>
         <div className="direct-dock-heading"><span>CHOOSE A MODE UNDER ANY DISTRICT <small>Switching returns the old mode’s credits.</small></span><button onClick={()=>setInspect(value=>!value)} aria-label="Inspect request evidence"><Icon name="evidence" size={16}/>{state.totalRequests.toLocaleString()} requests measured</button></div>
         <div className="district-grid">{state.routes.map((route,index)=>{
           const activeMode=modeForPolicy(route.policy);

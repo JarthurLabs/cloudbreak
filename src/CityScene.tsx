@@ -1157,7 +1157,7 @@ export default function CityScene(props: Props) {
       if (!titleMode) target.addScaledVector(selectedCenter, .018);
       cameraTarget.lerp(target, reducedMotion ? 1 : 1 - Math.exp(-dt * 3));
       zoom = THREE.MathUtils.damp(zoom, desiredZoom, 7, dt);
-      const baseHeight = aspect < 1.3 ? 26 / Math.max(aspect, .7) : 23;
+      const baseHeight = aspect < 1.3 ? 26 / Math.max(aspect, .25) : 23;
       const arrival = reducedMotion ? 1 : Math.min(time / 1.6, 1);
       const arrivalEase = 1 - Math.pow(1 - arrival, 3);
       const viewHeight = baseHeight / zoom * (1.055 - arrivalEase * .055);
@@ -1268,7 +1268,7 @@ export default function CityScene(props: Props) {
     };
   }, []);
 
-  return <div ref={hostRef} className="city-scene" style={{ position: 'absolute', inset: 0, overflow: 'hidden', background: 'linear-gradient(180deg, #11293918 0%, #1226340a 48%, #09182055 100%), url(/art/industrial-dusk-city.png) center center / cover no-repeat, #253b48' }}>
+  return <div ref={hostRef} className="city-scene" style={{ background: 'linear-gradient(180deg, #11293918 0%, #1226340a 48%, #09182055 100%), url(/art/industrial-dusk-city.png) center center / cover no-repeat, #253b48' }}>
     <div aria-label="City districts" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
       {IDS.map((id, i) => <button key={id} ref={element => { labelRefs.current[i] = element; }} onClick={() => props.onSelect(id)} aria-pressed={props.selected === id} aria-label={`Select ${NAMES[i].toLowerCase()}`} tabIndex={props.titleMode ? -1 : 0} style={{ position: 'absolute', top: 0, left: 0, opacity: 0, border: props.selected === id ? '1px solid #51d9e9' : '1px solid #617079', borderRadius: 5, padding: '7px 10px', background: props.selected === id ? '#123441f5' : '#13232def', color: props.selected === id ? '#d9f8fa' : '#b8cdd4', fontFamily: 'inherit', fontSize: 10, letterSpacing: '1.25px', fontWeight: 750, whiteSpace: 'nowrap', boxShadow: '0 4px 16px #02090e66', cursor: 'pointer' }}><span style={{ color: props.selected === id ? '#61eaff' : '#7797a4', marginRight: 7, fontWeight: 500 }}>{String(i + 1).padStart(2, '0')}</span>{NAMES[i]}</button>)}
       {IDS.map((id, i) => <span key={`uplink-${id}`} ref={element => { uplinkRefs.current[i] = element; }} className="uplink-label" data-route={id} aria-label={`Internet uplink for ${NAMES[i].toLowerCase()}`} style={{ position: 'absolute', top: 0, left: 0, opacity: 0, pointerEvents: 'none' }}>INTERNET UPLINK</span>)}

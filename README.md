@@ -14,7 +14,7 @@ I'm Nicholas. I built this with Codex, directing the gameplay, visuals, onboardi
 
 **[Play Cloudbreak in your browser](https://cloudbreak.onrender.com/)**
 
-Open the playable link in a desktop browser; no GitHub account is needed. Read the quick briefing, then choose **Begin First Light**. Click a defense directly beneath any building. Keep city integrity above zero for three minutes and serve at least 75 percent of customers. Later attacks happen in several districts at once.
+Open the playable link on your phone or desktop; no GitHub account is needed. Read the quick briefing, then choose **Begin First Light**. On a phone, tap a district, then choose one of its four defenses. The other district alerts stay visible. On desktop, click a defense beneath any building. Keep city integrity above zero for three minutes and serve at least 75 percent of customers. Later attacks happen in several districts at once.
 
 Keyboard controls are optional: 1–3 select a district, A checks keys, R slows traffic, I closes the bridge, O opens it, and Space pauses. Pause also gives you music, volume, and reduced-motion settings.
 
@@ -45,6 +45,8 @@ The first city sat in soft white clouds, and its little customer objects looked 
 The gameplay needed the same kind of review. The tutorial made me click through too many steps. Alerts interrupted play. Gates felt slow, and activating one appeared to reset the enemies already approaching it. Reasonable runs also lost too much integrity.
 
 We changed those individually: a short briefing, direct controls, warnings that stay in the world, fast gates, continuous request identities, and more forgiving damage. Internet uplinks gave traffic a visible origin. Local building light and movement replaced the whole-screen damage shake.
+
+Playing on my phone exposed another problem: too many words and twelve defense buttons squeezed into the same screen. I asked for a simpler mobile experience. We kept all three districts visible, showed four controls for the selected district, shortened the briefing, and moved settings into Pause. Landscape phones use a side panel. [Mobile screenshots and checks](captures/mobile/README.md).
 
 Music took another round. The ambient options sounded too calm for a city under attack. I chose **Firewall Drive** for its stronger pulse and sense of urgency, with separate enemy effects kept in the mix.
 

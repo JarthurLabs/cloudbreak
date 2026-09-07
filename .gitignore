@@ -26,3 +26,7 @@ captures/neon-music-options/raw/
 captures/attack-music-options/raw/
 
 captures/release/raw/
+
+# Raw phone QA captures stay local; curated WebP exports and reports are tracked.
+captures/mobile/*.png
+captures/mobile/public/*.png

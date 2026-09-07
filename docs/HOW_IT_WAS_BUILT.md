@@ -82,6 +82,16 @@ The recording itself needed review too. Taking large screenshots briefly held th
 
 [Film provenance and the finished 4K download](../captures/release/FILM.md) explain what is gameplay, what is editorial, and what the checks establish. The selected frames were reviewed for clarity, but that is different from a continuous human review or a measured public cold start.
 
+## Making it work on a phone
+
+The desktop layout did not translate well to my phone. There were too many words and buttons competing with the city. I asked Codex to simplify the mobile experience while keeping the gameplay and visual direction we had already settled on.
+
+The first phone check made the problem concrete: all twelve defense controls were still on screen, the header pushed controls out of view, and decorative title text intercepted the start button. Shrinking the same dashboard was not enough.
+
+The revised phone layout keeps three district selectors visible and shows four large controls for the selected district. Other attacks stay visible without automatically moving my selection. A shorter briefing gets to the threat matches quickly. Pause holds the sound settings and optional guide, and a landscape phone moves the controls beside the city. The original gateway, waves, damage, credits, music, and victory rules remain unchanged.
+
+Review also caught two details beyond the main layout: attack announcements needed to remain available to screen readers, and the result screen needed a working mute button. Those were addressed in the mobile revision. [Actual phone-size screenshots and verification limits](../captures/mobile/README.md) distinguish browser emulation from physical-device testing.
+
 ## The connection to my work
 
 My experience with software-as-a-service implementation, documentation, onboarding, and troubleshooting gives me a practical way to approach this subject. I am used to thinking about what someone needs to do, where the workflow breaks, how to explain a change, and how to check that it helped.
