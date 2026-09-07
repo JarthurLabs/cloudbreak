@@ -30,3 +30,11 @@ captures/release/raw/
 # Raw phone QA captures stay local; curated WebP exports and reports are tracked.
 captures/mobile/*.png
 captures/mobile/public/*.png
+
+# Native phone arrival capture frames remain local.
+captures/mobile-arrivals/*.png
+captures/mobile-arrivals/*.ffconcat
+captures/mobile-arrivals/phone-frames/
+captures/mobile-arrivals/public/*.png
+captures/mobile-arrivals/public/*.ffconcat
+captures/mobile-arrivals/public/phone-frames/

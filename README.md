@@ -46,7 +46,7 @@ The gameplay needed the same kind of review. The tutorial made me click through 
 
 We changed those individually: a short briefing, direct controls, warnings that stay in the world, fast gates, continuous request identities, and more forgiving damage. Internet uplinks gave traffic a visible origin. Local building light and movement replaced the whole-screen damage shake.
 
-Playing on my phone exposed another problem: too many words and twelve defense buttons squeezed into the same screen. I asked for a simpler mobile experience. We kept all three districts visible, showed four controls for the selected district, shortened the briefing, and moved settings into Pause. Landscape phones use a side panel. [Mobile screenshots and checks](captures/mobile/README.md).
+Playing on my phone exposed another problem: too many words and twelve defense buttons squeezed into the same screen. I asked for a simpler mobile experience. We kept all three districts visible, showed four controls for the selected district, shortened the briefing, and moved settings into Pause. Landscape phones use a side panel. A second phone review caught number badges covering the buildings and middle-lane traffic appearing too close to its gate. We removed those floating badges and extended that approach off screen along the existing bridge. [Mobile screenshots and checks](captures/mobile/README.md) · [Clearer bridge arrivals](captures/mobile-arrivals/README.md).
 
 Music took another round. The ambient options sounded too calm for a city under attack. I chose **Firewall Drive** for its stronger pulse and sense of urgency, with separate enemy effects kept in the mix.
 

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
+import { feederApproach } from './traffic-path';
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import type { GameState, IncomingRequest, RequestRecord, RouteId, ThreatType } from './types';
 
@@ -56,7 +57,7 @@ type Route = {
   gate: GateMotion;
 };
 type PendingTraveler = { request: IncomingRequest; record: RequestRecord | null; source: 'incoming' | 'record-replay'; queuedAt: number };
-type Traveler = PendingTraveler & { object: THREE.Group; age: number; duration: number; reacted: boolean; phase: 'approach' | 'waiting' | 'accepted' | 'rejected' | 'arrival'; phaseAge: number; progress: number; visualApproachStartedAt: number; hasRendered: boolean };
+type Traveler = PendingTraveler & { object: THREE.Group; age: number; duration: number; reacted: boolean; phase: 'approach' | 'waiting' | 'accepted' | 'rejected' | 'arrival'; phaseAge: number; progress: number; visualApproachStartedAt: number; hasRendered: boolean; approachPath: THREE.CurvePath<THREE.Vector3> | null };
 type Particle = { position: THREE.Vector3; velocity: THREE.Vector3; age: number; life: number; color: THREE.Color };
 
 const IDS: RouteId[] = ['storefront', 'accounts', 'dispatch'];
@@ -774,7 +775,7 @@ export default function CityScene(props: Props) {
     let lastState: GameState | null = null, sessionId = '', lastPhase = '', spawnTimer = 0, celebration = 0;
     let missionTime = 0, observedMissionTime = 0, observedMissionAtMs = performance.now();
     const continuityCounts = { spawned: 0, joinedOutcomes: 0, completed: 0, cancelled: 0, discardedStale: 0, discardedCapacity: 0, sessionResets: 0, lateOmitted: 0 };
-    const recentBirths: { id: string; uuid: string; route: RouteId; role: IncomingRequest['role']; threatType: ThreatType | null; source: Traveler['source']; firstProgress: number; sourcePosition: number[]; firstPosition: number[]; rawCurveOrigin: number[]; visualBornAt: number; decisionAt: number }[] = [];
+    const recentBirths: { id: string; uuid: string; route: RouteId; role: IncomingRequest['role']; threatType: ThreatType | null; source: Traveler['source']; firstProgress: number; sourcePosition: number[]; firstPosition: number[]; rawCurveOrigin: number[]; screenPosition: number[]; visualBornAt: number; decisionAt: number }[] = [];
     const lateOmissions: { id: string; route: RouteId; reason: 'late-admission' | 'missed-approach'; missionTime: number; decisionAt: number; remaining: number }[] = [];
     const recentHits: { route: RouteId; recordId: string; actualStatus: number; damage: number; missionTime: number }[] = [];
     const omitLate = (request: { id: string; route: RouteId; decisionAt: number }, reason: 'late-admission' | 'missed-approach') => {
@@ -810,6 +811,7 @@ export default function CityScene(props: Props) {
       }
     };
 
+    const compactLayout = matchMedia('(max-width:850px), (max-width:1000px) and (max-height:600px)');
     let width = 1, height = 1, zoom = 1, desiredZoom = 1, time = 0, previousTime = performance.now(), raf = 0, disposed = false;
     const cameraTarget = new THREE.Vector3(-.5, .8, .3);
     const ambientCameraPosition = new THREE.Vector3();
@@ -861,6 +863,33 @@ export default function CityScene(props: Props) {
       const paused = state?.phase === 'paused';
       const simulationDt = paused ? 0 : dt;
       time += simulationDt;
+      const aspect = width / height;
+      const selectedCenter = districts[IDS.indexOf(selected)].center;
+      const target = new THREE.Vector3(titleMode && aspect > 1.25 ? -5.1 : -.25, titleMode ? -.35 : -.8, titleMode ? .05 : .1);
+      if (!titleMode) target.addScaledVector(selectedCenter, .018);
+      cameraTarget.lerp(target, reducedMotion ? 1 : 1 - Math.exp(-dt * 3));
+      zoom = THREE.MathUtils.damp(zoom, desiredZoom, 7, dt);
+      const baseHeight = aspect < 1.3 ? 26 / Math.max(aspect, .25) : 23;
+      const arrival = reducedMotion ? 1 : Math.min(time / 1.6, 1);
+      const arrivalEase = 1 - Math.pow(1 - arrival, 3);
+      const viewHeight = baseHeight / zoom * (1.055 - arrivalEase * .055);
+      camera.left = -viewHeight * aspect / 2;
+      camera.right = viewHeight * aspect / 2;
+      camera.top = viewHeight / 2;
+      camera.bottom = -viewHeight / 2;
+      const depthOffset = compactLayout.matches ? 40 : 0;
+      camera.far = 160 + depthOffset;
+      camera.updateProjectionMatrix();
+      const drift = reducedMotion ? 0 : Math.sin(time * .13) * .15;
+      ambientCameraPosition.copy(cameraTarget).add(new THREE.Vector3(16 + drift, 11.5 + (1 - arrivalEase) * 1.6, 24 - drift));
+      // Orthographic framing is unchanged; move the near clip behind the mobile feeder.
+      // Offset fog distances equally so the accepted city haze remains the same.
+      ambientCameraPosition.addScaledVector(ambientCameraPosition.clone().sub(cameraTarget).normalize(), depthOffset);
+      (scene.fog as THREE.Fog).near = 29 + depthOffset;
+      (scene.fog as THREE.Fog).far = 82 + depthOffset;
+      camera.position.copy(ambientCameraPosition);
+      camera.lookAt(cameraTarget);
+      camera.updateMatrixWorld(true);
       if (state && state !== lastState) {
         if (state.sessionId !== sessionId || (lastState !== null && (state.logFile !== lastState.logFile || state.elapsed < lastState.elapsed || state.totalRequests < lastState.totalRequests))) {
           travelers.splice(0).forEach(traveler => removeTraveler(traveler, 'session-reset'));
@@ -986,7 +1015,9 @@ export default function CityScene(props: Props) {
           object.visible = false;
           scene.add(object);
           const duration = request.role === 'hostile' && kind === 'breach' ? 3.25 : 2.1;
-          const traveler: Traveler = { ...entry, object, age: 0, duration: duration + (request.id.charCodeAt(request.id.length - 1) % 6) * .07, reacted: false, phase: 'approach', phaseAge: 0, progress: 0, visualApproachStartedAt: missionTime, hasRendered: false };
+          const approachPath = request.route === 'accounts' && compactLayout.matches
+            ? feederApproach(routes[1].curve, GATE_PROGRESS, camera, width, height) : null;
+          const traveler: Traveler = { ...entry, approachPath, object, age: 0, duration: duration + (request.id.charCodeAt(request.id.length - 1) % 6) * .07, reacted: false, phase: 'approach', phaseAge: 0, progress: 0, visualApproachStartedAt: missionTime, hasRendered: false };
           travelers.push(traveler);
           activeById.set(request.id, traveler);
           continuityCounts.spawned++;
@@ -1020,18 +1051,21 @@ export default function CityScene(props: Props) {
           } else if (traveler.phase === 'arrival' || traveler.phase === 'rejected') traveler.phaseAge += simulationDt;
         }
         traveler.object.visible = true;
-        traveler.object.position.copy(route.curve.getPoint(traveler.progress));
+        const onFeeder = traveler.approachPath && traveler.progress <= GATE_PROGRESS;
+        const visualPath = onFeeder ? traveler.approachPath! : route.curve;
+        const visualProgress = onFeeder ? traveler.progress / GATE_PROGRESS : traveler.progress;
+        traveler.object.position.copy(visualPath.getPoint(visualProgress));
         traveler.object.position.y += carrier ? .32 : .25;
-        const heading = route.curve.getTangent(traveler.progress);
+        const heading = visualPath.getTangent(visualProgress);
         traveler.object.rotation.y = Math.atan2(heading.x, heading.z);
         if (!reducedMotion && !firstAppearance) {
           traveler.object.position.y += Math.sin(traveler.age * (carrier ? 1.25 : 4)) * (carrier ? .013 : .022);
           if (traveler.request.role === 'hostile' && kind === 'swarm') traveler.object.rotation.y += traveler.age * 1.9;
         }
         if (firstAppearance) {
-          const rawCurveOrigin = route.curve.getPoint(0);
+          const rawCurveOrigin = (traveler.approachPath ?? route.curve).getPoint(0);
           const sourcePosition = rawCurveOrigin.clone().add(new THREE.Vector3(0, carrier ? .32 : .25, 0));
-          recentBirths.push({ id: traveler.request.id, uuid: traveler.object.uuid, route: traveler.request.route, role: traveler.request.role, threatType: traveler.request.threatType, source: traveler.source, firstProgress: traveler.progress, sourcePosition: sourcePosition.toArray(), firstPosition: traveler.object.position.toArray(), rawCurveOrigin: rawCurveOrigin.toArray(), visualBornAt: traveler.visualApproachStartedAt, decisionAt: traveler.request.decisionAt });
+          recentBirths.push({ id: traveler.request.id, uuid: traveler.object.uuid, route: traveler.request.route, role: traveler.request.role, threatType: traveler.request.threatType, source: traveler.source, firstProgress: traveler.progress, sourcePosition: sourcePosition.toArray(), firstPosition: traveler.object.position.toArray(), rawCurveOrigin: rawCurveOrigin.toArray(), screenPosition: traveler.object.position.clone().project(camera).toArray(), visualBornAt: traveler.visualApproachStartedAt, decisionAt: traveler.request.decisionAt });
           if (recentBirths.length > 64) recentBirths.shift();
           traveler.hasRendered = true;
         }
@@ -1151,25 +1185,6 @@ export default function CityScene(props: Props) {
       particleGeometry.attributes.color.needsUpdate = true;
       particleGeometry.setDrawRange(0, particles.length);
 
-      const aspect = width / height;
-      const selectedCenter = districts[IDS.indexOf(selected)].center;
-      const target = new THREE.Vector3(titleMode && aspect > 1.25 ? -5.1 : -.25, titleMode ? -.35 : -.8, titleMode ? .05 : .1);
-      if (!titleMode) target.addScaledVector(selectedCenter, .018);
-      cameraTarget.lerp(target, reducedMotion ? 1 : 1 - Math.exp(-dt * 3));
-      zoom = THREE.MathUtils.damp(zoom, desiredZoom, 7, dt);
-      const baseHeight = aspect < 1.3 ? 26 / Math.max(aspect, .25) : 23;
-      const arrival = reducedMotion ? 1 : Math.min(time / 1.6, 1);
-      const arrivalEase = 1 - Math.pow(1 - arrival, 3);
-      const viewHeight = baseHeight / zoom * (1.055 - arrivalEase * .055);
-      camera.left = -viewHeight * aspect / 2;
-      camera.right = viewHeight * aspect / 2;
-      camera.top = viewHeight / 2;
-      camera.bottom = -viewHeight / 2;
-      camera.updateProjectionMatrix();
-      const drift = reducedMotion ? 0 : Math.sin(time * .13) * .15;
-      ambientCameraPosition.copy(cameraTarget).add(new THREE.Vector3(16 + drift, 11.5 + (1 - arrivalEase) * 1.6, 24 - drift));
-      camera.position.copy(ambientCameraPosition);
-      camera.lookAt(cameraTarget);
       clouds.position.y = reducedMotion ? 0 : Math.sin(time * .22) * .055;
       renderer.render(scene, camera);
       // Read-only, per-render diagnostics let tests measure confirmed-state-to-visible latency.
@@ -1196,7 +1211,7 @@ export default function CityScene(props: Props) {
           id: traveler.request.id, uuid: traveler.object.uuid, route: traveler.request.route,
           role: traveler.request.role, threatType: traveler.request.threatType,
           source: traveler.source, phase: traveler.phase, progress: traveler.progress,
-          position: traveler.object.position.toArray(), measuredStatus: traveler.record?.status ?? null,
+          position: traveler.object.position.toArray(), screenPosition: traveler.object.position.clone().project(camera).toArray(), extendedApproach: !!traveler.approachPath, measuredStatus: traveler.record?.status ?? null,
           approachStartedAt: traveler.request.approachStartedAt, visualApproachStartedAt: traveler.visualApproachStartedAt, decisionAt: traveler.request.decisionAt,
         })),
         pending: pending.map(item => ({ id: item.request.id, route: item.request.route, queuedAt: item.queuedAt, decisionAt: item.request.decisionAt })),

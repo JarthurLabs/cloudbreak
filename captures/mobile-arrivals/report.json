@@ -1,0 +1,724 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:5310",
+  "checkedAt": "2026-09-07T06:42:00.986Z",
+  "method": "Actual local HTTP, ordinary touch controls, original wall clock; per-render diagnostics are observed only.",
+  "physicalDeviceTested": false,
+  "stages": [
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "worldBadges": [
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleModes": 4,
+      "districtSelectors": 3
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "worldBadges": [
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleModes": 4,
+      "districtSelectors": 3,
+      "rotation": {
+        "viewport": [
+          320,
+          568
+        ],
+        "actorsFrozen": 33,
+        "exactWorldPositionsPreserved": true
+      }
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "worldBadges": [
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleModes": 4,
+      "districtSelectors": 3,
+      "rotation": {
+        "viewport": [
+          430,
+          932
+        ],
+        "actorsFrozen": 35,
+        "exactWorldPositionsPreserved": true
+      }
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "worldBadges": [
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleModes": 4,
+      "districtSelectors": 3,
+      "rotation": {
+        "viewport": [
+          844,
+          390
+        ],
+        "actorsFrozen": 33,
+        "exactWorldPositionsPreserved": true
+      }
+    },
+    {
+      "viewport": [
+        932,
+        430
+      ],
+      "worldBadges": [
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleModes": 4,
+      "districtSelectors": 3,
+      "rotation": {
+        "viewport": [
+          932,
+          430
+        ],
+        "actorsFrozen": 21,
+        "exactWorldPositionsPreserved": true
+      }
+    },
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "worldBadges": [
+        {
+          "display": "block",
+          "rects": 1,
+          "width": 123.65625,
+          "height": 28
+        },
+        {
+          "display": "block",
+          "rects": 1,
+          "width": 109.5,
+          "height": 28
+        },
+        {
+          "display": "block",
+          "rects": 1,
+          "width": 102.265625,
+          "height": 28
+        }
+      ],
+      "visibleModes": 12,
+      "districtSelectors": 0
+    }
+  ],
+  "errors": [],
+  "geometryWarnings": [],
+  "screenshots": [
+    "phone-390x844-accounts.png",
+    "mobile-320x568.png",
+    "mobile-430x932.png",
+    "mobile-844x390.png",
+    "mobile-932x430.png",
+    "desktop-1280x900.png"
+  ],
+  "sourceHashes": {
+    "src/CityScene.tsx": "52d3ebbc57e3b4b13ef377f0ef3fa56d6d11fa8f38335a07f756909b6e307116",
+    "src/traffic-path.ts": "2f8a509e7d08aa7fbdab2221a41333b16147fad68bf6620e9fa4cde6a405b463",
+    "src/style.css": "c19b4f2922a4b4e8df8506fbd6a84b74c0a544136f0ce55ab59efdf9f5d2efac",
+    "server/app.mjs": "4c261136951dc49681f158882004f7dfee962ecd67921b4415dbce939753c546",
+    "server/gateway.mjs": "8af4348f19279f70ffcccc40bc8b8030bc07e9ba37bf1229ffaea553b25b95b4",
+    "server/waves.mjs": "90a78c144a27aabe7cca8729ce02e729a15cd032a09d34396b3d358881eba060"
+  },
+  "slowFlowContinuity": {
+    "actorsCompared": 6,
+    "sameRequestAndObjectIdentities": true,
+    "deadlinesUnchanged": true,
+    "forwardProgress": true
+  },
+  "arrivals": {
+    "sampledFrames": 4211,
+    "mobileAccountsBirths": 233,
+    "allBornOutsideXYInsideZ": true,
+    "allStartedAtZero": true,
+    "sameIdentitiesAndForwardProgress": true,
+    "realHTTPDeadlinesPreserved": true,
+    "originalRejectedGateProgress": 0.72,
+    "viewports": [
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "births": 163,
+        "entered": 161,
+        "sameActorsJoinedRealHTTP": 161,
+        "maximumFirstEntryDistancePixels": 4.671064689766214
+      },
+      {
+        "viewport": [
+          320,
+          568
+        ],
+        "births": 36,
+        "entered": 34,
+        "sameActorsJoinedRealHTTP": 34,
+        "maximumFirstEntryDistancePixels": 1.6837184701730123
+      },
+      {
+        "viewport": [
+          430,
+          932
+        ],
+        "births": 18,
+        "entered": 17,
+        "sameActorsJoinedRealHTTP": 17,
+        "maximumFirstEntryDistancePixels": 1.8500047760126774
+      },
+      {
+        "viewport": [
+          844,
+          390
+        ],
+        "births": 8,
+        "entered": 8,
+        "sameActorsJoinedRealHTTP": 8,
+        "maximumFirstEntryDistancePixels": 1.694007502977242
+      },
+      {
+        "viewport": [
+          932,
+          430
+        ],
+        "births": 8,
+        "entered": 8,
+        "sameActorsJoinedRealHTTP": 8,
+        "maximumFirstEntryDistancePixels": 0.3365834889335615
+      }
+    ],
+    "otherLaneBirths": 321,
+    "otherLaneOriginsUnchanged": true,
+    "desktopBirths": 33,
+    "desktopOriginalPaths": true
+  },
+  "examples": [
+    {
+      "actor": "240c2e514d2f",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769233,
+        -0.5162956694353823,
+        -0.5563046334020934
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9932021644938719,
+          -0.44166270292894794,
+          -0.5257047657210987
+        ],
+        "edgeDistancePixels": 1.3255779236949823,
+        "movementPixels": 2.3208668528050027,
+        "intervalMs": 16.100000001490116,
+        "progress": 0.08889806599509911
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264555555555555,
+        "phase": "accepted",
+        "decisionAt": 2.591044
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "054be41dada4",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769235,
+        -0.5069027852127662,
+        -0.556091653505024
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9959498841683784,
+          -0.43936068630490527,
+          -0.5262278912003666
+        ],
+        "edgeDistancePixels": 0.789772587166217,
+        "movementPixels": 2.2191137457213848,
+        "intervalMs": 17.399999998509884,
+        "progress": 0.08541554739030922
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264555555555555,
+        "phase": "accepted",
+        "decisionAt": 3.093417
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "e389f5a2ea3e",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.123076923076923,
+        -0.5046901498326476,
+        -0.5558562857008238
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9992577162567097,
+          -0.4398388290767582,
+          -0.5267792653503309
+        ],
+        "edgeDistancePixels": 0.14474532994161404,
+        "movementPixels": 2.258837511941047,
+        "intervalMs": 16.300000000745058,
+        "progress": 0.08309394957215457
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7265333333333334,
+        "phase": "accepted",
+        "decisionAt": 3.596143
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "7da6468930c9",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769222,
+        -0.5039525895815739,
+        -0.5556374647883445
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9962493770866708,
+          -0.43766127396942944,
+          -0.5258752951414833
+        ],
+        "edgeDistancePixels": 0.7313714680991884,
+        "movementPixels": 2.1902143321112,
+        "intervalMs": 16.5,
+        "progress": 0.08511897043568466
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264555555555553,
+        "phase": "accepted",
+        "decisionAt": 4.099272
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "ed65a57d4efa",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769244,
+        -0.503231308348549,
+        -0.5553448911376202
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9951567154934948,
+          -0.43655995048439383,
+          -0.5253690898064415
+        ],
+        "edgeDistancePixels": 0.944440478768509,
+        "movementPixels": 2.3743646731059598,
+        "intervalMs": 16,
+        "progress": 0.0858254114042621
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264166666666666,
+        "phase": "accepted",
+        "decisionAt": 4.502234
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "7ebd38ca338c",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769235,
+        -0.5027353348145829,
+        -0.5551249141918786
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.999278378712642,
+          -0.43824159260352696,
+          -0.526142412258647
+        ],
+        "edgeDistancePixels": 0.1407161510348054,
+        "movementPixels": 2.300619473876384,
+        "intervalMs": 16.699999999254942,
+        "progress": 0.08306430317640157
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264555555555556,
+        "phase": "accepted",
+        "decisionAt": 5.004352
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "d41d34ba7be6",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769257,
+        -0.5021183456283587,
+        -0.5548458419417467
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9956324831365443,
+          -0.43583828951943177,
+          -0.5250497328753099
+        ],
+        "edgeDistancePixels": 0.8516657883738638,
+        "movementPixels": 2.364850399263546,
+        "intervalMs": 17.199999999254942,
+        "progress": 0.0854959948536733
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264944444444443,
+        "phase": "accepted",
+        "decisionAt": 5.508264
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "bd8209708202",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.123076923076922,
+        -0.5016660444486963,
+        -0.5546402742852776
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.999702100170612,
+          -0.4375250657956147,
+          -0.5258223532657818
+        ],
+        "edgeDistancePixels": 0.05809046673065865,
+        "movementPixels": 2.2910839540400083,
+        "intervalMs": 16,
+        "progress": 0.08276797181229215
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264944444444443,
+        "phase": "accepted",
+        "decisionAt": 6.010077
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "4ec4f9da1784",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.123076923076924,
+        -0.5011003721881062,
+        -0.5543829450481899
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9959413930238309,
+          -0.43511203564233175,
+          -0.5247244095520854
+        ],
+        "edgeDistancePixels": 0.7914283603529765,
+        "movementPixels": 2.37166066111952,
+        "intervalMs": 16.699999999254942,
+        "progress": 0.08527454997008874
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264944444444443,
+        "phase": "accepted",
+        "decisionAt": 6.513079
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "25c98a39e9f5",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769229,
+        -0.5006888426577271,
+        -0.5541957135973955
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.990541571131874,
+          -0.4319405915274985,
+          -0.5233043876335237
+        ],
+        "edgeDistancePixels": 1.844393629284566,
+        "movementPixels": 2.2829207714100948,
+        "intervalMs": 16.600000001490116,
+        "progress": 0.08889382602416888
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264944444444443,
+        "phase": "accepted",
+        "decisionAt": 7.015435
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "68f5536796c0",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769226,
+        -0.5001803316137189,
+        -0.5539643770412962
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9961610266868137,
+          -0.43442959499731165,
+          -0.5244182368347581
+        ],
+        "edgeDistancePixels": 0.7485997960713242,
+        "movementPixels": 2.3637978149326595,
+        "intervalMs": 17.199999999254942,
+        "progress": 0.08510894696740211
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.726494444444444,
+        "phase": "accepted",
+        "decisionAt": 7.519213
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "5883915ac0cc",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769242,
+        -0.4998157274850794,
+        -0.5537985269081308
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9910320563479672,
+          -0.43144496811931593,
+          -0.5230832029487953
+        ],
+        "edgeDistancePixels": 1.748749012146395,
+        "movementPixels": 2.26036898376011,
+        "intervalMs": 16.5,
+        "progress": 0.08854384653580685
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264944444444447,
+        "phase": "accepted",
+        "decisionAt": 8.022094
+      },
+      "actualHttpStatus": 200
+    }
+  ],
+  "actualRequests": 577,
+  "missionSecondsObserved": 64.599,
+  "recording": {
+    "file": "accounts-arrivals-phone-silent.mp4",
+    "width": 390,
+    "height": 844,
+    "durationSeconds": 10.201925992965698,
+    "actualFrames": 296,
+    "averageFps": 29.014129312846823,
+    "maximumFrameIntervalSeconds": 0.05046987533569336,
+    "finalRealFrameHoldSeconds": 0.05259585380554199,
+    "audio": "Silent technical review clip; no audio recorded.",
+    "timing": "Original compositor timestamps, variable frame rate. No speed changes or interpolated gameplay. Final real image held only to recording stop.",
+    "fullDecodePassed": true,
+    "sha256": "fbb60c62ed223de54e6ebd5dabce554eccdf6e2e30016ff2f6f3ccc96c4c9577"
+  }
+}

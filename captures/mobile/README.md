@@ -4,6 +4,8 @@ Nicholas found the released desktop dashboard crowded on his phone and asked to 
 
 [Play Cloudbreak](https://cloudbreak.onrender.com/)
 
+The subsequent [bridge-arrival refinement](../mobile-arrivals/README.md) removes floating mobile number badges and brings middle-lane traffic in from off screen.
+
 ## Before and after
 
 These are actual browser screenshots at 390 by 844 CSS pixels, exported as WebP without changing their content. The before capture required starting in the desktop layout because decorative title text intercepted the phone's start button. It shows the original twelve-button dashboard after resizing back to phone dimensions. The after capture uses the redesigned touch interface during a real mission with simultaneous attacks.
