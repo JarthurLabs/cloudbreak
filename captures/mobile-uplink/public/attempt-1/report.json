@@ -1,0 +1,7051 @@
+{
+  "passed": false,
+  "url": "https://cloudbreak.onrender.com",
+  "checkedAt": "2026-09-07T07:23:01.731Z",
+  "checkUplink": true,
+  "method": "Actual HTTP, ordinary touch controls, original wall clock; per-render diagnostics are observed only.",
+  "physicalDeviceTested": false,
+  "stages": [
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "worldBadges": [
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleModes": 4,
+      "districtSelectors": 3,
+      "uplinks": [
+        {
+          "route": "storefront",
+          "position": [
+            -10,
+            0.26,
+            7.5
+          ],
+          "screenPosition": [
+            -0.9302365980179351,
+            0.03172874726189893,
+            -0.3003195380338415
+          ],
+          "labelPosition": [
+            -9.371087914363923,
+            2.41,
+            8.109729110786814
+          ],
+          "originalJunction": [
+            -10,
+            0.26,
+            7.5
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 68,
+            "width": 390,
+            "height": 546
+          },
+          "labelRect": {
+            "x": 8.4921875,
+            "y": 298.10467529296875,
+            "width": 79.015625,
+            "height": 18.390625
+          }
+        },
+        {
+          "route": "accounts",
+          "position": [
+            2.469003472766984,
+            0.26,
+            25.637766398432277
+          ],
+          "screenPosition": [
+            -0.9076923076923084,
+            -0.41805691484623,
+            -0.5045970753209152
+          ],
+          "labelPosition": [
+            3.325512647294128,
+            2.41,
+            25.821320297739348
+          ],
+          "originalJunction": [
+            0.6,
+            0.26,
+            9.35
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 68,
+            "width": 390,
+            "height": 546
+          },
+          "labelRect": {
+            "x": 8.4921875,
+            "y": 419.60467529296875,
+            "width": 79.015625,
+            "height": 18.390625
+          },
+          "edgeDistancePixels": 17.999999999999872,
+          "upstreamWorldDistance": 16.394648768153424
+        },
+        {
+          "route": "dispatch",
+          "position": [
+            13.2,
+            2.4,
+            -0.5
+          ],
+          "screenPosition": [
+            0.8890752433438841,
+            0.013021377911920711,
+            -0.36617353691969257
+          ],
+          "labelPosition": [
+            12.83137057060293,
+            4.55,
+            -1.2946145882013438
+          ],
+          "originalJunction": [
+            13.2,
+            2.4,
+            -0.5
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 68,
+            "width": 390,
+            "height": 546
+          },
+          "labelRect": {
+            "x": 302.4921875,
+            "y": 293.60467529296875,
+            "width": 79.015625,
+            "height": 18.390625
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "geometryWarnings": [],
+  "screenshots": [
+    "failure.png"
+  ],
+  "sourceHashes": {
+    "src/CityScene.tsx": "084fdfeeee4bc308a1cae49260802f5443547c9c779022dcfe770c4a40fa2231",
+    "src/traffic-path.ts": "0622b912410249b59b3e56ef7dfd055cfa94667cff0139064284d48dbe5a128c",
+    "src/style.css": "c19b4f2922a4b4e8df8506fbd6a84b74c0a544136f0ce55ab59efdf9f5d2efac",
+    "server/app.mjs": "4c261136951dc49681f158882004f7dfee962ecd67921b4415dbce939753c546",
+    "server/gateway.mjs": "8af4348f19279f70ffcccc40bc8b8030bc07e9ba37bf1229ffaea553b25b95b4",
+    "server/waves.mjs": "90a78c144a27aabe7cca8729ce02e729a15cd032a09d34396b3d358881eba060"
+  },
+  "failure": "AssertionError [ERR_ASSERTION]: Mode changes must preserve forward progress.\n    at file:///Users/stealth/Documents/ChatGPT/Security%20game%20lab/cloudbreak/scripts/check-mobile-arrivals.mjs:209:259",
+  "partialAudit": {
+    "sampledFrames": 2037,
+    "births": [
+      {
+        "actor": "05809b16b35b",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.924291135850779,
+          0.03654181879515873,
+          -0.30009210392842744
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555553,
+          "phase": "accepted",
+          "decisionAt": 2.341054
+        }
+      },
+      {
+        "actor": "cfda534853cc",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769235,
+          -0.5171246063217559,
+          -0.5562909632172737
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9946365745648866,
+            -0.442775482151929,
+            -0.526034959920885
+          ],
+          "edgeDistancePixels": 1.0458679598471066,
+          "movementPixels": 2.2979146232856564,
+          "intervalMs": 16.699999999254942,
+          "progress": 0.08803708987460265
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 2.541014
+        }
+      },
+      {
+        "actor": "68c64582efb5",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9332028453836385,
+          0.04853845314567831,
+          -0.3018184616257117
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444443,
+          "phase": "accepted",
+          "decisionAt": 2.741772
+        }
+      },
+      {
+        "actor": "a7d817ff123e",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076924,
+          -0.5065552087159597,
+          -0.5560682855658896
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9917674471242913,
+            -0.43705317193980664,
+            -0.5252264404093339
+          ],
+          "edgeDistancePixels": 1.6053478107631918,
+          "movementPixels": 2.275678422131116,
+          "intervalMs": 16.699999999254942,
+          "progress": 0.08816659566386224
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7265333333333334,
+          "phase": "accepted",
+          "decisionAt": 3.042028
+        }
+      },
+      {
+        "actor": "3968ee72922c",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8916657089617783,
+          0.03235501742915223,
+          -0.3679655522518477
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7265333333333334,
+          "phase": "accepted",
+          "decisionAt": 3.042028
+        }
+      },
+      {
+        "actor": "a784f7e9450b",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.933908266502522,
+          0.05050657104262286,
+          -0.3019990142964274
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7265333333333334,
+          "phase": "accepted",
+          "decisionAt": 3.042028
+        }
+      },
+      {
+        "actor": "3c59a019ea12",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339361516058116,
+          0.05089580162897326,
+          -0.3020175928579216
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 3.342211
+        }
+      },
+      {
+        "actor": "fcb9f684b3fb",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769229,
+          -0.5047696453157032,
+          -0.5558711375385053
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9924088605704693,
+            -0.4363034885141147,
+            -0.5251834647901398
+          ],
+          "edgeDistancePixels": 1.480272188758489,
+          "movementPixels": 2.2581426539516594,
+          "intervalMs": 16.699999999254942,
+          "progress": 0.08769371906156968
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444443,
+          "phase": "accepted",
+          "decisionAt": 3.542306
+        }
+      },
+      {
+        "actor": "32f7157640db",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339895289714095,
+          0.05149226283584782,
+          -0.3020272755328913
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444443,
+          "phase": "accepted",
+          "decisionAt": 3.743357
+        }
+      },
+      {
+        "actor": "481fd4c1321f",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769235,
+          -0.5037927933082545,
+          -0.5555768953085524
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9969384437840111,
+            -0.43794862161791553,
+            -0.5259878783627866
+          ],
+          "edgeDistancePixels": 0.5970034621178383,
+          "movementPixels": 2.3586662426545875,
+          "intervalMs": 15.899999998509884,
+          "progress": 0.08463799926041522
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 4.044278
+        }
+      },
+      {
+        "actor": "a73565cb00d5",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8910868662270706,
+          0.03325260499303636,
+          -0.3682079082737636
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 4.044278
+        }
+      },
+      {
+        "actor": "bb82c79470f4",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340164049142521,
+          0.051682133867664126,
+          -0.3020127581354518
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 4.044278
+        }
+      },
+      {
+        "actor": "eb491b2faba3",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340220192909406,
+          0.051713899756372604,
+          -0.30200831197843814
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555553,
+          "phase": "accepted",
+          "decisionAt": 4.34594
+        }
+      },
+      {
+        "actor": "d9d63ae223ef",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769213,
+          -0.5032313888554106,
+          -0.5553447325736326
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9909089093774343,
+            -0.4343200235722472,
+            -0.5243712428757001
+          ],
+          "edgeDistancePixels": 1.7727626714003204,
+          "movementPixels": 2.2689845806960363,
+          "intervalMs": 15.800000000745058,
+          "progress": 0.08868437565362881
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 4.546276
+        }
+      },
+      {
+        "actor": "15575ae3fc70",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340463296661967,
+          0.051834634534713236,
+          -0.30198592835087146
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444443,
+          "phase": "accepted",
+          "decisionAt": 4.746334
+        }
+      },
+      {
+        "actor": "46d692fa325f",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769222,
+          -0.5026609573520829,
+          -0.5550914069526943
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9820201836307451,
+            -0.4292779869115629,
+            -0.5220763525933859
+          ],
+          "edgeDistancePixels": 3.5060641920047138,
+          "movementPixels": 4.655705095984844,
+          "intervalMs": 15.5,
+          "progress": 0.09462384508329849
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 5.049878
+        }
+      },
+      {
+        "actor": "12c2a1a45ea6",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8906409831178655,
+          0.03308120107053655,
+          -0.3683434346475186
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 5.049878
+        }
+      },
+      {
+        "actor": "744485910b2e",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340649932231354,
+          0.05191855757910183,
+          -0.3019669724359071
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 5.049878
+        }
+      },
+      {
+        "actor": "07d84603581a",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340697279475753,
+          0.05193941011172647,
+          -0.30196205233187956
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 5.348901
+        }
+      },
+      {
+        "actor": "ceab5392a324",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769237,
+          -0.5021182550957165,
+          -0.5548457908949327
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9897318810074799,
+            -0.43275733554546675,
+            -0.5236685502529874
+          ],
+          "edgeDistancePixels": 2.002283203541422,
+          "movementPixels": 2.6272701230535676,
+          "intervalMs": 15.800000000745058,
+          "progress": 0.08945978232084756
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 5.549401
+        }
+      },
+      {
+        "actor": "a73fb88e5930",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340927508502324,
+          0.052040022219461045,
+          -0.30193778699704676
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726494444444444,
+          "phase": "accepted",
+          "decisionAt": 5.749935
+        }
+      },
+      {
+        "actor": "4e37c0df5c34",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769242,
+          -0.5016148299285107,
+          -0.5546169793685807
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9923963125478746,
+            -0.4336852843592965,
+            -0.5240949664042591
+          ],
+          "edgeDistancePixels": 1.4827190531644456,
+          "movementPixels": 2.2400829760817524,
+          "intervalMs": 17.300000000745058,
+          "progress": 0.08767023765160499
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 6.053998
+        }
+      },
+      {
+        "actor": "c681c81515e3",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8902090738432377,
+          0.03287249734423031,
+          -0.36847186006682964
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 6.053998
+        }
+      },
+      {
+        "actor": "6f581f5dac1a",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341096578171705,
+          0.052113811137214514,
+          -0.30191973281422113
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 6.053998
+        }
+      },
+      {
+        "actor": "96d94a61c83c",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341153816812093,
+          0.052138842921862626,
+          -0.301913587033935
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726494444444444,
+          "phase": "accepted",
+          "decisionAt": 6.352925
+        }
+      },
+      {
+        "actor": "e6dd12a879d2",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769235,
+          -0.5010840670010087,
+          -0.5543755262599692
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9969186665507556,
+            -0.4355969649429495,
+            -0.5249457823396183
+          ],
+          "edgeDistancePixels": 0.6008600226026656,
+          "movementPixels": 3.009695054826355,
+          "intervalMs": 15.800000000745058,
+          "progress": 0.08462054430534564
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 6.552903
+        }
+      },
+      {
+        "actor": "72cf85d4a30f",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341354772130877,
+          0.0522270208454518,
+          -0.3018918901957153
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 6.752985
+        }
+      },
+      {
+        "actor": "6295229d9601",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769246,
+          -0.5006117500721983,
+          -0.5541606401092931
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9994940376810542,
+            -0.43650219425608955,
+            -0.5253614813898289
+          ],
+          "edgeDistancePixels": 0.09866265219443893,
+          "movementPixels": 2.2931917062496945,
+          "intervalMs": 15.699999999254942,
+          "progress": 0.08288880424197838
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 7.055329
+        }
+      },
+      {
+        "actor": "fcb501d68ebc",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8897928875969177,
+          0.032669273137273774,
+          -0.36859508944833574
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 7.055329
+        }
+      },
+      {
+        "actor": "e6d40dd1d341",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341519123718223,
+          0.05229952465406631,
+          -0.30187401199352004
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 7.055329
+        }
+      },
+      {
+        "actor": "053bc6ddbfa8",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341557314434566,
+          0.0523164254020135,
+          -0.30186984061757705
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264166666666666,
+          "phase": "accepted",
+          "decisionAt": 7.357914
+        }
+      },
+      {
+        "actor": "c5e439bca1eb",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769218,
+          -0.5001657947761396,
+          -0.5539577642185827
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.992288204126752,
+            -0.43238390312217573,
+            -0.5235095541115161
+          ],
+          "edgeDistancePixels": 1.503800195283359,
+          "movementPixels": 2.2755762308614855,
+          "intervalMs": 17,
+          "progress": 0.08771305216611122
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 7.557691
+        }
+      },
+      {
+        "actor": "9f26c4a4bffb",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341734824196849,
+          0.05239524863229689,
+          -0.30185036779996544
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 7.7583
+        }
+      },
+      {
+        "actor": "0883f1569bec",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076924,
+          -0.499748063887526,
+          -0.5537677501613785
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9961779577407164,
+            -0.43400877552824996,
+            -0.5242534092748476
+          ],
+          "edgeDistancePixels": 0.7452982405603059,
+          "movementPixels": 2.27674234018225,
+          "intervalMs": 16.199999999254942,
+          "progress": 0.08509937871379289
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 8.058351
+        }
+      },
+      {
+        "actor": "5c298fdecdef",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.889433879077461,
+          0.03249415739024824,
+          -0.368701085105379
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 8.058351
+        }
+      },
+      {
+        "actor": "a9b7979f7aa3",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341883591954208,
+          0.0524616556325216,
+          -0.3018339401915633
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 8.058351
+        }
+      },
+      {
+        "actor": "ae2dc36c9052",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341905641407731,
+          0.05247152533960722,
+          -0.30183149694868505
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 8.356654
+        }
+      },
+      {
+        "actor": "f71266ce1088",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076924,
+          -0.4993849489885341,
+          -0.5536025979402347
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9929550302263426,
+            -0.43205802195736537,
+            -0.5233655173050136
+          ],
+          "edgeDistancePixels": 1.3737691058631984,
+          "movementPixels": 2.2392896816500056,
+          "intervalMs": 17,
+          "progress": 0.08724391102416887
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.726494444444444,
+          "phase": "accepted",
+          "decisionAt": 8.558186
+        }
+      },
+      {
+        "actor": "67d8098a7884",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342062904753884,
+          0.052542125508624644,
+          -0.30181400717151297
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 8.759325
+        }
+      },
+      {
+        "actor": "49ac830d62ff",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076923,
+          -0.4990034467260883,
+          -0.5534291016945947
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.997750799238613,
+            -0.43423221982558724,
+            -0.5243346539740188
+          ],
+          "edgeDistancePixels": 0.43859414847046807,
+          "movementPixels": 2.8486700435318153,
+          "intervalMs": 16.199999999254942,
+          "progress": 0.08401045378949838
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 9.06005
+        }
+      },
+      {
+        "actor": "28eb65552d53",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8891242625991267,
+          0.03234335661766668,
+          -0.36879227749636867
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 9.06005
+        }
+      },
+      {
+        "actor": "4e59ce4c24bb",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342187912114107,
+          0.052598505939326405,
+          -0.3018000240551719
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 9.06005
+        }
+      },
+      {
+        "actor": "966a7d3c6036",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342206176112988,
+          0.052606762850964536,
+          -0.3017979750379408
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 9.35966
+        }
+      },
+      {
+        "actor": "6d944ee0e1f9",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769224,
+          -0.4986899013929834,
+          -0.5532865248845382
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9838740829897082,
+            -0.42685401017645896,
+            -0.5209955028027118
+          ],
+          "edgeDistancePixels": 3.1445538170068925,
+          "movementPixels": 4.21785053983879,
+          "intervalMs": 15.900000002235174,
+          "progress": 0.09329202346929714
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 9.55999
+        }
+      },
+      {
+        "actor": "33a715430db2",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342335057618674,
+          0.05266517133674959,
+          -0.3017834718364496
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 9.759839
+        }
+      },
+      {
+        "actor": "2cbd3b25ce03",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076923,
+          -0.4983990216398242,
+          -0.5531542664415459
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9918934987824972,
+            -0.43069019884256377,
+            -0.5227470621820238
+          ],
+          "edgeDistancePixels": 1.5807677374130424,
+          "movementPixels": 2.0793769438190113,
+          "intervalMs": 16,
+          "progress": 0.08791181030753319
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 10.060086
+        }
+      },
+      {
+        "actor": "3631f6f30992",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8888731634298483,
+          0.032221211579335655,
+          -0.3688660852902931
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 10.060086
+        }
+      },
+      {
+        "actor": "284f64db2e2e",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342431180961789,
+          0.05270889820679388,
+          -0.30177260422478225
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 10.060086
+        }
+      },
+      {
+        "actor": "6df757ffdfc9",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.934244914705648,
+          0.052717086738467464,
+          -0.3017705681499794
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 10.360684
+        }
+      },
+      {
+        "actor": "2a70dd618ed5",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769237,
+          -0.4981433553181272,
+          -0.5530380283397075
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9903415740919032,
+            -0.42969094493571913,
+            -0.5222927294290702
+          ],
+          "edgeDistancePixels": 1.883393052078885,
+          "movementPixels": 3.5353642665887164,
+          "intervalMs": 16.100000001490116,
+          "progress": 0.08893493844288809
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7265333333333337,
+          "phase": "accepted",
+          "decisionAt": 10.560706
+        }
+      },
+      {
+        "actor": "78d5b1148612",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342548121253252,
+          0.052762286096934397,
+          -0.301759323977135
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 10.760472
+        }
+      },
+      {
+        "actor": "de4a6b0caed2",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769218,
+          -0.4979106133498314,
+          -0.5529322203421725
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9936477773364351,
+            -0.43123306720724147,
+            -0.522972876632833
+          ],
+          "edgeDistancePixels": 1.238683419395164,
+          "movementPixels": 2.29047318825837,
+          "intervalMs": 17,
+          "progress": 0.08669975858304882
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 11.061635
+        }
+      },
+      {
+        "actor": "1a883ec0b2d9",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8886710082727295,
+          0.03212297544081972,
+          -0.36892540964012266
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 11.061635
+        }
+      },
+      {
+        "actor": "bdeb1e1f39a2",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342621452971253,
+          0.05279587308761712,
+          -0.30175096270495005
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 11.061635
+        }
+      },
+      {
+        "actor": "6ac64a3fc92e",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342634227936139,
+          0.05280173279007219,
+          -0.3017495034541682
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 11.362151
+        }
+      },
+      {
+        "actor": "755ec4630182",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769237,
+          -0.4977361747981274,
+          -0.5528529227002579
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9920558736433167,
+            -0.4302339587888018,
+            -0.5225426705808837
+          ],
+          "edgeDistancePixels": 1.5491046395532415,
+          "movementPixels": 2.255163998167624,
+          "intervalMs": 16.899999998509884,
+          "progress": 0.08775501934271109
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7265333333333337,
+          "phase": "accepted",
+          "decisionAt": 11.563199
+        }
+      },
+      {
+        "actor": "ff6c582a3912",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342699668139453,
+          0.05283178945942795,
+          -0.3017420159935331
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 11.764055
+        }
+      },
+      {
+        "actor": "5effd93e79e9",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769255,
+          -0.4975970960534539,
+          -0.5527897021081565
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9920936296688252,
+            -0.4301456534326079,
+            -0.5225031364900212
+          ],
+          "edgeDistancePixels": 1.5417422145790871,
+          "movementPixels": 2.2377454558402694,
+          "intervalMs": 15.800000000745058,
+          "progress": 0.08771345351097144
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 12.069054
+        }
+      },
+      {
+        "actor": "fd5756146a3b",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8885424583168315,
+          0.03206055389884503,
+          -0.36896308897643804
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 12.069054
+        }
+      },
+      {
+        "actor": "cd6afa370d5d",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342742667448941,
+          0.05285157574560153,
+          -0.30173708480924977
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 12.069054
+        }
+      },
+      {
+        "actor": "a908dc08e032",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342753286614427,
+          0.05285646669357562,
+          -0.3017358656073771
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 12.366944
+        }
+      },
+      {
+        "actor": "ec4f5f61c328",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769222,
+          -0.4974938738996151,
+          -0.5527427824046114
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9932589740079903,
+            -0.4306615020670102,
+            -0.5227389265789655
+          ],
+          "edgeDistancePixels": 1.3145000684418822,
+          "movementPixels": 2.230926012518639,
+          "intervalMs": 16.5,
+          "progress": 0.08691692659230754
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 12.566604
+        }
+      },
+      {
+        "actor": "3cadb7b0240f",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342791658727815,
+          0.05287415492932027,
+          -0.3017314554451225
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 12.666847
+        }
+      },
+      {
+        "actor": "ff38c1dfae20",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769206,
+          -0.49742366229210233,
+          -0.5527108684810755
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.992860569559881,
+            -0.4304138963004036,
+            -0.5226263103529898
+          ],
+          "edgeDistancePixels": 1.3921889358232047,
+          "movementPixels": 2.2240312813187884,
+          "intervalMs": 16.899999998509884,
+          "progress": 0.0871653966203015
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 13.068095
+        }
+      },
+      {
+        "actor": "a70972b2c50c",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8884733839676054,
+          0.03202702757982497,
+          -0.3689833210026696
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 13.068095
+        }
+      },
+      {
+        "actor": "e7169754f6c6",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.934280547098873,
+          0.052880527637910534,
+          -0.3017298662131429
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 13.068095
+        }
+      },
+      {
+        "actor": "5312a39f0097",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.934280899012827,
+          0.05288215178600496,
+          -0.3017294611527055
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555556,
+          "phase": "accepted",
+          "decisionAt": 13.367413
+        }
+      },
+      {
+        "actor": "9ee97602ac9d",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769213,
+          -0.49739574253825347,
+          -0.5526981780430484
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9928283557054612,
+            -0.43038850152473473,
+            -0.5226147905545686
+          ],
+          "edgeDistancePixels": 1.3984706374350582,
+          "movementPixels": 2.237734769587095,
+          "intervalMs": 16.300000000745058,
+          "progress": 0.08716973906058065
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 13.567999
+        }
+      },
+      {
+        "actor": "ee6f1c1daa31",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342811826332822,
+          0.052883460890540086,
+          -0.3017291346551869
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555564,
+          "phase": "accepted",
+          "decisionAt": 13.667485
+        }
+      },
+      {
+        "actor": "c354ea453514",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769224,
+          -0.49740444478158147,
+          -0.5527021334850888
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9936886638855561,
+            -0.43084817808525516,
+            -0.5228244199339467
+          ],
+          "edgeDistancePixels": 1.2307105423165603,
+          "movementPixels": 2.2218517366787585,
+          "intervalMs": 17.200000002980232,
+          "progress": 0.0865765806145496
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 14.069033
+        }
+      },
+      {
+        "actor": "0000eaacfb0c",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.888469516116035,
+          0.03202515056601848,
+          -0.3689844536075978
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 14.069033
+        }
+      },
+      {
+        "actor": "9c7dbbc08b02",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342805063119606,
+          0.052880339411516555,
+          -0.3017299131558041
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 14.069033
+        }
+      },
+      {
+        "actor": "fe92e7742166",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.934279891402892,
+          0.05287750200557565,
+          -0.30173062077065893
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 14.368624
+        }
+      },
+      {
+        "actor": "766e33872fac",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769235,
+          -0.49745649884911464,
+          -0.5527257938994916
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9925364825864044,
+            -0.43032648633771375,
+            -0.5225860539326064
+          ],
+          "edgeDistancePixels": 1.4553858956511485,
+          "movementPixels": 2.2414098468667656,
+          "intervalMs": 16,
+          "progress": 0.08732842008769827
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555564,
+          "phase": "accepted",
+          "decisionAt": 14.569322
+        }
+      },
+      {
+        "actor": "0c6720dfe184",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342770988362898,
+          0.05286462369189068,
+          -0.30173383201688864
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 14.670349
+        }
+      },
+      {
+        "actor": "c340959a2ee6",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769229,
+          -0.49754197790054466,
+          -0.5527646479355276
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9937561484796325,
+            -0.4310368407456238,
+            -0.5229092726354612
+          ],
+          "edgeDistancePixels": 1.2175510464716721,
+          "movementPixels": 2.2213910045093876,
+          "intervalMs": 16.800000000745058,
+          "progress": 0.08649461391114498
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 15.07204
+        }
+      },
+      {
+        "actor": "df11f5a996b8",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8885322453683911,
+          0.03205559622638872,
+          -0.3689660810044255
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 15.07204
+        }
+      },
+      {
+        "actor": "033a978c3ce2",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342739823874788,
+          0.05285026636254479,
+          -0.3017374111905522
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 15.07204
+        }
+      },
+      {
+        "actor": "8feb86f98172",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.934272811848449,
+          0.05284487771821901,
+          -0.3017387543022042
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 15.370915
+        }
+      },
+      {
+        "actor": "556ab9c9fe9b",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769237,
+          -0.4976683605609257,
+          -0.5528220962708432
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9934972801588435,
+            -0.43103308923290684,
+            -0.5229065511446267
+          ],
+          "edgeDistancePixels": 1.2680303690255113,
+          "movementPixels": 2.2133978774546352,
+          "intervalMs": 16.899999998509884,
+          "progress": 0.08664984285736405
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 15.57073
+        }
+      },
+      {
+        "actor": "afd3ef4c7dbf",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342663599642149,
+          0.05281521488798792,
+          -0.30174614540626454
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 15.671087
+        }
+      },
+      {
+        "actor": "25c43ecc3783",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342586875872251,
+          0.05278002583506766,
+          -0.30175490840540853
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 16.171292
+        }
+      },
+      {
+        "actor": "feaa46320fe5",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342575464254071,
+          0.052774799795227,
+          -0.30175620935672887
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 16.370797
+        }
+      },
+      {
+        "actor": "d20534abd5c4",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076923,
+          -0.4980495320577841,
+          -0.5529953740040516
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9982641750361451,
+            -0.43390658888537437,
+            -0.5241637949757654
+          ],
+          "edgeDistancePixels": 0.33848586795171276,
+          "movementPixels": 3.664440086700536,
+          "intervalMs": 17.700000002980232,
+          "progress": 0.08343794496910427
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 16.470496
+        }
+      },
+      {
+        "actor": "7cb1a91c8ce0",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342530247132421,
+          0.052754112167200724,
+          -0.3017613580664227
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 16.470496
+        }
+      },
+      {
+        "actor": "f744cbfa022c",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342504567266994,
+          0.05274237729301458,
+          -0.3017642777796715
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 16.671131
+        }
+      },
+      {
+        "actor": "9937057eb5cd",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342491309873395,
+          0.052736323080891497,
+          -0.3017657838674094
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 16.872194
+        }
+      },
+      {
+        "actor": "958fad88fa5e",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342439212236976,
+          0.052712558064528146,
+          -0.3017716942398644
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 16.972333
+        }
+      },
+      {
+        "actor": "f21003d879b2",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769224,
+          -0.49833425199294806,
+          -0.5531248182448185
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9938848827865087,
+            -0.43194775867948426,
+            -0.523268352861088
+          ],
+          "edgeDistancePixels": 1.1924478566308112,
+          "movementPixels": 2.4916855208344497,
+          "intervalMs": 15.800000000745058,
+          "progress": 0.08635153279891947
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 16.972333
+        }
+      },
+      {
+        "actor": "69ff9e9e8af7",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8888761189306431,
+          0.03222264845351092,
+          -0.3688652173300486
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 16.972333
+        }
+      },
+      {
+        "actor": "16fb6b635a86",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342391023232693,
+          0.05269061313753143,
+          -0.30177714972168723
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 16.972333
+        }
+      },
+      {
+        "actor": "9de07997b73f",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342375617468568,
+          0.05268360495904757,
+          -0.3017788914943831
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 17.173404
+        }
+      },
+      {
+        "actor": "2fcb597cf19d",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342327835684664,
+          0.05266189174339307,
+          -0.3017842865841972
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 17.373874
+        }
+      },
+      {
+        "actor": "cad1feb72850",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769235,
+          -0.4986067035322761,
+          -0.5532486949727871
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9906228371374094,
+            -0.43049948171807845,
+            -0.5226327497362542
+          ],
+          "edgeDistancePixels": 1.8285467582051678,
+          "movementPixels": 2.4795196234408623,
+          "intervalMs": 16.599999997764826,
+          "progress": 0.08851034119246053
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 17.474227
+        }
+      },
+      {
+        "actor": "7186eec593d7",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342294674869236,
+          0.05264684305302361,
+          -0.30178802450498476
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 17.474227
+        }
+      },
+      {
+        "actor": "541073357b04",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342273422290526,
+          0.052637207191919014,
+          -0.3017904174116611
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 17.675312
+        }
+      },
+      {
+        "actor": "998e8e89769e",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.93422561123099,
+          0.0526293639383465,
+          -0.30179236484848737
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 17.875768
+        }
+      },
+      {
+        "actor": "9555640659dc",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342207182565317,
+          0.05260721800802349,
+          -0.3017978620816868
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 17.975994
+        }
+      },
+      {
+        "actor": "96ff9a74143c",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769229,
+          -0.4989003524238776,
+          -0.5533822207225485
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9967808429266264,
+            -0.4339048565285181,
+            -0.5241842225473996
+          ],
+          "edgeDistancePixels": 0.6277356293078545,
+          "movementPixels": 2.4227286139496758,
+          "intervalMs": 17.199999999254942,
+          "progress": 0.08437401616119314
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 17.975994
+        }
+      },
+      {
+        "actor": "9c2f6f2e323b",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8891185279122841,
+          0.03234056549979883,
+          -0.36879396463470415
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 17.975994
+        }
+      },
+      {
+        "actor": "44c6d6ac0ff5",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.93421468970319,
+          0.052579981784486286,
+          -0.30180461986936113
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 17.975994
+        }
+      },
+      {
+        "actor": "b34df588daa6",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342127821367231,
+          0.05257137496076503,
+          -0.3018067546866201
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 18.17603
+        }
+      },
+      {
+        "actor": "c0564daa1b2a",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342103578803792,
+          0.05256044468650248,
+          -0.3018094653313229
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 18.375491
+        }
+      },
+      {
+        "actor": "c33723436092",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076923,
+          -0.49922294062541556,
+          -0.5535289188512409
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9971385859638757,
+            -0.4344239658936765,
+            -0.5243924804001157
+          ],
+          "edgeDistancePixels": 0.557975737044234,
+          "movementPixels": 4.086464189713023,
+          "intervalMs": 17.199999999254942,
+          "progress": 0.08413268756645195
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555564,
+          "phase": "accepted",
+          "decisionAt": 18.476277
+        }
+      },
+      {
+        "actor": "d39c091c0814",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9342033652544179,
+          0.05252896582277498,
+          -0.3018172689309121
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 18.476277
+        }
+      },
+      {
+        "actor": "d573d95296a4",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341992384203434,
+          0.05251042187220783,
+          -0.3018218639015249
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 18.67736
+        }
+      },
+      {
+        "actor": "8e46a1151313",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341906822098283,
+          0.0524720541933343,
+          -0.3018313660863561
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 18.878231
+        }
+      },
+      {
+        "actor": "997a10d0a0f7",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341884851980343,
+          0.052462219642586044,
+          -0.30183380066536825
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 18.978879
+        }
+      },
+      {
+        "actor": "0d7fee222ba1",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769229,
+          -0.4996783659237158,
+          -0.5537360488863484
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9916383910271165,
+            -0.43203709019581593,
+            -0.5233009121548567
+          ],
+          "edgeDistancePixels": 1.6305137497122857,
+          "movementPixels": 2.5410800672554523,
+          "intervalMs": 16.600000001490116,
+          "progress": 0.08779774686104853
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 18.978879
+        }
+      },
+      {
+        "actor": "38272ae5bfc5",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.889455101796717,
+          0.03250450214797595,
+          -0.3686948268673166
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 18.978879
+        }
+      },
+      {
+        "actor": "2d6489d968b4",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341811719744381,
+          0.0524295337867669,
+          -0.30184188906750786
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 18.978879
+        }
+      },
+      {
+        "actor": "1cb30846b595",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341782943492903,
+          0.05241669370698244,
+          -0.30184506515354614
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 19.178783
+        }
+      },
+      {
+        "actor": "5c7c10c18ac4",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341724262867099,
+          0.0523905471422536,
+          -0.3018515304190281
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 19.379336
+        }
+      },
+      {
+        "actor": "ecd734f712fd",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769249,
+          -0.5000626339097377,
+          -0.5539108378335128
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9900324973130183,
+            -0.4314952915487965,
+            -0.5231023356207962
+          ],
+          "edgeDistancePixels": 1.9436630239614228,
+          "movementPixels": 2.465715055606102,
+          "intervalMs": 15.600000001490116,
+          "progress": 0.08883196297979445
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 19.480316
+        }
+      },
+      {
+        "actor": "48e09c869b39",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341676301352251,
+          0.052369213422777526,
+          -0.3018568033501743
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 19.480316
+        }
+      },
+      {
+        "actor": "4188455327e8",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341639722575114,
+          0.052352964931418666,
+          -0.30186081803164455
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 19.679516
+        }
+      },
+      {
+        "actor": "07cb954872c2",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341615041778513,
+          0.05234201234760785,
+          -0.3018635235336101
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 19.880094
+        }
+      },
+      {
+        "actor": "991b1d1eda4a",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341552379033351,
+          0.052314243336630636,
+          -0.3018703806197638
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 19.980356
+        }
+      },
+      {
+        "actor": "d00ceaeaf5b0",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769249,
+          -0.5004718600751175,
+          -0.5540970011389953
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9989668945988865,
+            -0.4364965317977767,
+            -0.5253307061668444
+          ],
+          "edgeDistancePixels": 0.2014555532171236,
+          "movementPixels": 2.4193640679850765,
+          "intervalMs": 16.699999999254942,
+          "progress": 0.08286867650434165
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 19.980356
+        }
+      },
+      {
+        "actor": "17032617609e",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8897851492017018,
+          0.032665502248645235,
+          -0.36859737745469345
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 19.980356
+        }
+      },
+      {
+        "actor": "661f4e601d57",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341468899273706,
+          0.0522773352954696,
+          -0.30187948910179807
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 19.980356
+        }
+      },
+      {
+        "actor": "cab2edf837fe",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341442730681886,
+          0.05226578577469412,
+          -0.3018823381408068
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 20.179521
+        }
+      },
+      {
+        "actor": "e2830df7052c",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341349519786362,
+          0.052224724671713706,
+          -0.30189246227711974
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 20.380808
+        }
+      },
+      {
+        "actor": "9927c9ebba8e",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769229,
+          -0.5009521128532494,
+          -0.5543155042968659
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9933335905865273,
+            -0.4340185253424771,
+            -0.5242237015900596
+          ],
+          "edgeDistancePixels": 1.2999498356271844,
+          "movementPixels": 2.4371198559880627,
+          "intervalMs": 17,
+          "progress": 0.08661093413747967
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 20.481558
+        }
+      },
+      {
+        "actor": "2a9f45ece4e9",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341288232695575,
+          0.052197792232535706,
+          -0.30189909871837095
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 20.481558
+        }
+      },
+      {
+        "actor": "391ae5c9adb2",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.934125374725963,
+          0.05218266047062089,
+          -0.30190282592325346
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 20.681001
+        }
+      },
+      {
+        "actor": "ff8d2508557a",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341134061685032,
+          0.05213027035344853,
+          -0.30191572256960764
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 20.880938
+        }
+      },
+      {
+        "actor": "f493b1bbdb54",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341105415182573,
+          0.052117759822190406,
+          -0.30191880041610364
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 20.981448
+        }
+      },
+      {
+        "actor": "085db89466ce",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076923,
+          -0.501526288789372,
+          -0.5545767809720491
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9923372620305834,
+            -0.4340616567967807,
+            -0.5242135311562874
+          ],
+          "edgeDistancePixels": 1.4942339040362436,
+          "movementPixels": 2.5674316498221854,
+          "intervalMs": 17,
+          "progress": 0.08728059458600303
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 20.981448
+        }
+      },
+      {
+        "actor": "ec9853d5594d",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.890235762556639,
+          0.032885704006358735,
+          -0.3684639542824052
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 20.981448
+        }
+      },
+      {
+        "actor": "1e24be7d5e1c",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9341003500939541,
+          0.05207334166273521,
+          -0.3019297225330858
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 20.981448
+        }
+      },
+      {
+        "actor": "927f999af9db",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340973992840573,
+          0.05206050698158859,
+          -0.3019328768474048
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 21.180532
+        }
+      },
+      {
+        "actor": "445e8a4da66a",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340944253625476,
+          0.05204758357098683,
+          -0.3019360522231166
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 21.381943
+        }
+      },
+      {
+        "actor": "c50ed2286121",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769229,
+          -0.502078277887912,
+          -0.5548280035586158
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.8895784839618318,
+            -0.3817785735235503,
+            -0.5005053206913689
+          ],
+          "edgeDistancePixels": 21.532195627442796,
+          "movementPixels": 31.87084614189929,
+          "intervalMs": 17.099999997764826,
+          "progress": 0.1559054352348066
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 21.482079
+        }
+      },
+      {
+        "actor": "afe629d5d335",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340808231791716,
+          0.051988624278796705,
+          -0.30195052945898704
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 21.482079
+        }
+      },
+      {
+        "actor": "72aa781726a8",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340676497279485,
+          0.05193175605741666,
+          -0.30196447848580377
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 21.682927
+        }
+      },
+      {
+        "actor": "83f09b5b0d49",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340645081509406,
+          0.05191822776175078,
+          -0.3019677946648305
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 21.883584
+        }
+      },
+      {
+        "actor": "fd8854160a68",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340613452223437,
+          0.05190462048766374,
+          -0.30197112937618553
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 21.984676
+        }
+      },
+      {
+        "actor": "2cfa2bd32627",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769226,
+          -0.5026900742799929,
+          -0.555106493906141
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9982501959056957,
+            -0.43817189514367616,
+            -0.5260542577280686
+          ],
+          "edgeDistancePixels": 0.34121179838932925,
+          "movementPixels": 2.718783239720325,
+          "intervalMs": 16.700000002980232,
+          "progress": 0.08331944423400316
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 21.984676
+        }
+      },
+      {
+        "actor": "bbe27d281e98",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8907152572599648,
+          0.033120513278937516,
+          -0.3683215013148481
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 21.984676
+        }
+      },
+      {
+        "actor": "f46408f04214",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340501540504962,
+          0.051856578730270206,
+          -0.3019828962478496
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 21.984676
+        }
+      },
+      {
+        "actor": "6eb176461875",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340469187560284,
+          0.051842720213135164,
+          -0.3019862886921
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 22.184217
+        }
+      },
+      {
+        "actor": "edd1033ecbd0",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340428565039542,
+          0.051825338366707115,
+          -0.30199054239881007
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 22.384184
+        }
+      },
+      {
+        "actor": "0bd82aaceebb",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076922,
+          -0.5030984670778286,
+          -0.5552924229273122
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.994054449350537,
+            -0.43634969735511164,
+            -0.5252484483067252
+          ],
+          "edgeDistancePixels": 1.159382376645286,
+          "movementPixels": 2.501205826480609,
+          "intervalMs": 15.900000002235174,
+          "progress": 0.08610305314042317
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 22.483887
+        }
+      },
+      {
+        "actor": "a5eca39824f1",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.934035481792016,
+          0.051793836703757985,
+          -0.3019982480700112
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 22.483887
+        }
+      },
+      {
+        "actor": "194a7bea8192",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340313489662042,
+          0.05177621319424586,
+          -0.3020025570419229
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 22.683742
+        }
+      },
+      {
+        "actor": "602ceaa9e6aa",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340213515442053,
+          0.051733670526676045,
+          -0.30201295303743625
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 22.884182
+        }
+      },
+      {
+        "actor": "6fec300120f2",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340179877665666,
+          0.05171938463440235,
+          -0.3020164422061833
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 22.984386
+        }
+      },
+      {
+        "actor": "69c2ab9f8885",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769215,
+          -0.503669062267787,
+          -0.5555522357042881
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9944924876762042,
+            -0.43708372894727227,
+            -0.5255805780530107
+          ],
+          "edgeDistancePixels": 1.0739649031401732,
+          "movementPixels": 2.519466960836062,
+          "intervalMs": 16,
+          "progress": 0.08580163919757562
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 22.984386
+        }
+      },
+      {
+        "actor": "d34a614e8012",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8911302904542113,
+          0.03332416824789897,
+          -0.3681977992330354
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 22.984386
+        }
+      },
+      {
+        "actor": "d5cffb72f695",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340069715196113,
+          0.0516726975942105,
+          -0.30202783859982063
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 22.984386
+        }
+      },
+      {
+        "actor": "4f99846dd2ec",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9340026931402808,
+          0.05165460631651532,
+          -0.3020322520825445
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 23.184351
+        }
+      },
+      {
+        "actor": "df3968727215",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339992572643293,
+          0.05164009393862374,
+          -0.30203579140694314
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 23.384827
+        }
+      },
+      {
+        "actor": "7551c9dec75f",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769218,
+          -0.5041161871755749,
+          -0.5557558588426874
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9960854067129533,
+            -0.43826847984260164,
+            -0.5261451701797979
+          ],
+          "edgeDistancePixels": 0.7633456909741038,
+          "movementPixels": 2.3422243245388286,
+          "intervalMs": 16.5,
+          "progress": 0.08471085154090964
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 23.484692
+        }
+      },
+      {
+        "actor": "9a1e0d8e09ec",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339914855837808,
+          0.05160732156172784,
+          -0.3020437805557391
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 23.484692
+        }
+      },
+      {
+        "actor": "e887506a374b",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339810306781392,
+          0.051563350588691145,
+          -0.30205449208012436
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 23.685191
+        }
+      },
+      {
+        "actor": "5f7668b1a1c1",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339775266813187,
+          0.05154864323675124,
+          -0.3020580729164346
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 23.885135
+        }
+      },
+      {
+        "actor": "fa84657fbac0",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339695954397704,
+          0.051515408054828446,
+          -0.30206616118780216
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7265333333333345,
+          "phase": "accepted",
+          "decisionAt": 23.985846
+        }
+      },
+      {
+        "actor": "15a069c3ac97",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769229,
+          -0.5047696434421659,
+          -0.5560534952868483
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9924794095121244,
+            -0.4369967349712088,
+            -0.5255608009212662
+          ],
+          "edgeDistancePixels": 1.4665151451357357,
+          "movementPixels": 2.4239866286306215,
+          "intervalMs": 16.900000002235174,
+          "progress": 0.08711691672076056
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7265333333333345,
+          "phase": "accepted",
+          "decisionAt": 23.985846
+        }
+      },
+      {
+        "actor": "25d70fb0f6fb",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.891577446413111,
+          0.03354401556633504,
+          -0.3680641055723053
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7265333333333345,
+          "phase": "accepted",
+          "decisionAt": 23.985846
+        }
+      },
+      {
+        "actor": "b51ab028484a",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339580512825949,
+          0.05146716794264855,
+          -0.3020778922901336
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 23.985846
+        }
+      },
+      {
+        "actor": "a5f278260985",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339526871721692,
+          0.05144480664243676,
+          -0.30208332659255765
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 24.184787
+        }
+      },
+      {
+        "actor": "a363003bcc94",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339490978320248,
+          0.05142986281711966,
+          -0.3020869570260417
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 24.385048
+        }
+      },
+      {
+        "actor": "4ff5338f1a61",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769224,
+          -0.5052925248826814,
+          -0.556291699327421
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9968889778582216,
+            -0.4397310941264754,
+            -0.5268064173814189
+          ],
+          "edgeDistancePixels": 0.6066493176467852,
+          "movementPixels": 2.3289672398822288,
+          "intervalMs": 17.299999997019768,
+          "progress": 0.08416085499208714
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 24.485023
+        }
+      },
+      {
+        "actor": "2feb49f5da35",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339391888592828,
+          0.05138868661354908,
+          -0.3020969551180237
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 24.485023
+        }
+      },
+      {
+        "actor": "92c31952172c",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339274004904311,
+          0.05133985018372711,
+          -0.30210880331013845
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 24.684802
+        }
+      },
+      {
+        "actor": "a86b3a1efcb8",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339237543722635,
+          0.0513247778447098,
+          -0.30211245783645957
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 24.884843
+        }
+      },
+      {
+        "actor": "4d0e01d6272c",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339155292718411,
+          0.0512908332083051,
+          -0.3021206845004454
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 24.985985
+        }
+      },
+      {
+        "actor": "8c24c52eb27d",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769229,
+          -0.5059840592863543,
+          -0.5566067922025764
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9998702946703726,
+            -0.4419152263302224,
+            -0.527773629464222
+          ],
+          "edgeDistancePixels": 0.025292539277346204,
+          "movementPixels": 2.430466255105575,
+          "intervalMs": 16.800000000745058,
+          "progress": 0.08218051401986708
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 24.985985
+        }
+      },
+      {
+        "actor": "33aeb296f2ef",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8920769734330185,
+          0.03379014047731799,
+          -0.3679142394086804
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 24.985985
+        }
+      },
+      {
+        "actor": "b5ee9c3ce8ff",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9339035897221648,
+          0.05124169717978645,
+          -0.3021325836799864
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 24.985985
+        }
+      },
+      {
+        "actor": "8d22b1d1e19e",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9338999024167245,
+          0.05122655525388505,
+          -0.3021362483777106
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 25.184787
+        }
+      },
+      {
+        "actor": "7f74c02abde1",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9338952899816074,
+          0.05120763596384307,
+          -0.3021408258323077
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 25.385165
+        }
+      },
+      {
+        "actor": "6be5c27c1b08",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769229,
+          -0.5065373171653023,
+          -0.5568589273382953
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9960366828473275,
+            -0.4403978362529899,
+            -0.527104202688029
+          ],
+          "edgeDistancePixels": 0.772846844771139,
+          "movementPixels": 2.359406619365016,
+          "intervalMs": 15.600000001490116,
+          "progress": 0.08472280897619514
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 25.485582
+        }
+      },
+      {
+        "actor": "7bb1454252a0",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9338832559160724,
+          0.05115838747409918,
+          -0.3021527337570554
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 25.485582
+        }
+      },
+      {
+        "actor": "7b052711f621",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9338711842766045,
+          0.051109147902380296,
+          -0.30216462858477977
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 25.685315
+        }
+      },
+      {
+        "actor": "51fb45ee5071",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.933867459722226,
+          0.051093988295857394,
+          -0.30216828849520205
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 25.886061
+        }
+      },
+      {
+        "actor": "7924c1213e83",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9338581390668966,
+          0.05105611858825422,
+          -0.30217742666193315
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 25.985449
+        }
+      },
+      {
+        "actor": "7484ca313e4d",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076923,
+          -0.5072564531126735,
+          -0.5571867203138419
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9906854837020573,
+            -0.4383024874564018,
+            -0.5261165856172827
+          ],
+          "edgeDistancePixels": 1.8163306780988198,
+          "movementPixels": 2.453967721716857,
+          "intervalMs": 17.100000001490116,
+          "progress": 0.08832103150241627
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.726533333333333,
+          "phase": "accepted",
+          "decisionAt": 25.985449
+        }
+      },
+      {
+        "actor": "e8b4c4c2f7f4",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8925971788331443,
+          0.03404704948639514,
+          -0.3677575895768541
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726533333333333,
+          "phase": "accepted",
+          "decisionAt": 25.985449
+        }
+      },
+      {
+        "actor": "c108ae7fc077",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9338460085905688,
+          0.05100697513761359,
+          -0.30218927558813646
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 25.985449
+        }
+      },
+      {
+        "actor": "4262ed69a69b",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9338422699857993,
+          0.05099186144202065,
+          -0.3021929174418505
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 26.18633
+        }
+      },
+      {
+        "actor": "fa03c20467ba",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9338301185069234,
+          0.05094284214407707,
+          -0.30220472221520867
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 26.387082
+        }
+      },
+      {
+        "actor": "605bade236cd",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769246,
+          -0.5078717961643264,
+          -0.5574672591461057
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9928420107922505,
+            -0.43995903911001355,
+            -0.5268696996874149
+          ],
+          "edgeDistancePixels": 1.3958078955111448,
+          "movementPixels": 4.421613011402428,
+          "intervalMs": 17.299999997019768,
+          "progress": 0.08687672278529317
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 26.487175
+        }
+      },
+      {
+        "actor": "c0733da73a7a",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9338217120603323,
+          0.050909023155524605,
+          -0.3022128601347306
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 26.487175
+        }
+      },
+      {
+        "actor": "c004717bd56e",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9338151751075375,
+          0.05088277718628663,
+          -0.3022191721816807
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 26.688087
+        }
+      },
+      {
+        "actor": "c34d1a055501",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9338114371667808,
+          0.050867789673110106,
+          -0.30222277521899765
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 26.888989
+        }
+      },
+      {
+        "actor": "4f0bd0ead688",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9338011675132533,
+          0.050826688767586954,
+          -0.3022326507694516
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 26.989171
+        }
+      },
+      {
+        "actor": "c0158b484cb8",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769249,
+          -0.5085035826405586,
+          -0.5577553486672939
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9959561792347799,
+            -0.44212669969249196,
+            -0.5278568692379332
+          ],
+          "edgeDistancePixels": 0.7885450492179275,
+          "movementPixels": 2.5128645761600805,
+          "intervalMs": 17.300000000745058,
+          "progress": 0.08479240869307143
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 26.989171
+        }
+      },
+      {
+        "actor": "e5818b591a4e",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8931039851136736,
+          0.03429792771703095,
+          -0.36760440267122296
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 26.989171
+        }
+      },
+      {
+        "actor": "6e4edc627d40",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9337890611660142,
+          0.050778379140202605,
+          -0.3022442486273169
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 26.989171
+        }
+      },
+      {
+        "actor": "c521e33981d9",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9337853394783492,
+          0.05076355866094132,
+          -0.30224780451288524
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 27.188459
+        }
+      },
+      {
+        "actor": "8c965e5f13bd",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9337742022488574,
+          0.05071929368089721,
+          -0.3022584191117029
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 27.390133
+        }
+      },
+      {
+        "actor": "b19e4702020d",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769218,
+          -0.5090885782496425,
+          -0.5580221508090561
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9967586600438884,
+            -0.44305833578540127,
+            -0.5282790748385857
+          ],
+          "edgeDistancePixels": 0.6320612914417706,
+          "movementPixels": 2.4770879944069564,
+          "intervalMs": 16.700000002980232,
+          "progress": 0.08425649189690398
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 27.490621
+        }
+      },
+      {
+        "actor": "125aef40e655",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9337668008123935,
+          0.050689947227370934,
+          -0.3022654514038219
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 27.490621
+        }
+      },
+      {
+        "actor": "2fbbf2a4917b",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9337612613563953,
+          0.0506680201271198,
+          -0.3022707032490183
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 27.69117
+        }
+      },
+      {
+        "actor": "d101d8bfef81",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9337575733033867,
+          0.050653438858815576,
+          -0.30227419445920156
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 27.890652
+        }
+      },
+      {
+        "actor": "619ffd5eb725",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9337483818015254,
+          0.050617158903071606,
+          -0.3022828768296665
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 27.991167
+        }
+      },
+      {
+        "actor": "b85d4465c263",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769233,
+          -0.5096453235890617,
+          -0.5582761124037074
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.991212891275039,
+            -0.440638308748534,
+            -0.5271969358605919
+          ],
+          "edgeDistancePixels": 1.7134862013673997,
+          "movementPixels": 2.4177317654401027,
+          "intervalMs": 16.899999998509884,
+          "progress": 0.0879497666195238
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 27.991167
+        }
+      },
+      {
+        "actor": "b14a23b2ada8",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8935652468483886,
+          0.034526765595983236,
+          -0.3674644887763311
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 27.991167
+        }
+      },
+      {
+        "actor": "87f7b88a2535",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.933736500443755,
+          0.05057038793059193,
+          -0.30229406106148093
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 27.991167
+        }
+      },
+      {
+        "actor": "72292c908190",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9337328625918366,
+          0.05055609580078559,
+          -0.3022974767255868
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 28.190526
+        }
+      },
+      {
+        "actor": "3c4c218db1bd",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9337210813176766,
+          0.05050990075988888,
+          -0.30230851050131413
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 28.390649
+        }
+      },
+      {
+        "actor": "6e9358b9149a",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076924,
+          -0.5102308924772276,
+          -0.5585432680281602
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.992681716976702,
+            -0.4419119989396006,
+            -0.5277759584707207
+          ],
+          "edgeDistancePixels": 1.4270651895431015,
+          "movementPixels": 2.4428626931007718,
+          "intervalMs": 17.299999997019768,
+          "progress": 0.08697003546328179
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 28.491107
+        }
+      },
+      {
+        "actor": "d010fb003865",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9337138796346931,
+          0.05048173019610347,
+          -0.30231523434214336
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 28.491107
+        }
+      },
+      {
+        "actor": "e4a31e19598b",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9337084961423541,
+          0.05046070510798046,
+          -0.3023202503302629
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 28.690717
+        }
+      },
+      {
+        "actor": "0a80fd2255ee",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9336942743024821,
+          0.05040529834321596,
+          -0.30233345919411037
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 28.890871
+        }
+      },
+      {
+        "actor": "0edd8c104ed2",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9336907363961249,
+          0.05039154557368322,
+          -0.3023367356673434
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 28.990954
+        }
+      },
+      {
+        "actor": "78b1a276c9c4",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769237,
+          -0.5108775506250174,
+          -0.5588383495000364
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9897820142851094,
+            -0.4409685638579035,
+            -0.5273413322124609
+          ],
+          "edgeDistancePixels": 1.9925072144036733,
+          "movementPixels": 2.5297177770706893,
+          "intervalMs": 16.699999999254942,
+          "progress": 0.08891501515491328
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.726533333333333,
+          "phase": "accepted",
+          "decisionAt": 28.990954
+        }
+      },
+      {
+        "actor": "1c1aa6e3c89e",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.894067726209296,
+          0.034776601747046075,
+          -0.3673115346934751
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726533333333333,
+          "phase": "accepted",
+          "decisionAt": 28.990954
+        }
+      },
+      {
+        "actor": "d8b3eab9bdaa",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9336793445312693,
+          0.05034734448532996,
+          -0.30234726035839854
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 28.990954
+        }
+      },
+      {
+        "actor": "5f3d2f88e156",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9336749922829392,
+          0.05033049042823563,
+          -0.30235127112823856
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 29.19107
+        }
+      },
+      {
+        "actor": "33f0ac079c23",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9336680826241677,
+          0.05030376999264394,
+          -0.30235762715958214
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 29.390483
+        }
+      },
+      {
+        "actor": "679899d4f710",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076924,
+          -0.5113579181992497,
+          -0.5590575870335825
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9931210418361996,
+            -0.4430921922188912,
+            -0.5283336680349691
+          ],
+          "edgeDistancePixels": 1.341396841941069,
+          "movementPixels": 2.418527320664765,
+          "intervalMs": 16.800000000745058,
+          "progress": 0.08666853975575692
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444447,
+          "phase": "accepted",
+          "decisionAt": 29.491069
+        }
+      },
+      {
+        "actor": "9c95a838080c",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9336612157260178,
+          0.05027725992239086,
+          -0.3023639299429691
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 29.491069
+        }
+      },
+      {
+        "actor": "0e7602440738",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9336544094639398,
+          0.05025102799920509,
+          -0.30237016345074597
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 29.690737
+        }
+      },
+      {
+        "actor": "91038390363c",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9336418023161768,
+          0.05020255411371603,
+          -0.3023816740925115
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 29.890856
+        }
+      },
+      {
+        "actor": "b4a84dc64781",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9336384750814426,
+          0.05018978586559619,
+          -0.3023847042702714
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 29.992377
+        }
+      },
+      {
+        "actor": "c740ea545ac2",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076924,
+          -0.5119818886344096,
+          -0.5593424118739847
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9971704924868567,
+            -0.4458090033088666,
+            -0.5295211633308695
+          ],
+          "edgeDistancePixels": 0.5517539650629355,
+          "movementPixels": 2.548990116025823,
+          "intervalMs": 16.399999998509884,
+          "progress": 0.08400112983975684
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 29.992377
+        }
+      },
+      {
+        "actor": "49fe39d15764",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8945081302233377,
+          0.0349960466011049,
+          -0.367177012900186
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 29.992377
+        }
+      },
+      {
+        "actor": "13b32bc6adab",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9336277763685485,
+          0.05014879939406116,
+          -0.3023944262203013
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 29.992377
+        }
+      },
+      {
+        "actor": "658bfe97db3d",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9336237153072237,
+          0.05013326934115832,
+          -0.30239810793530186
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 30.191418
+        }
+      },
+      {
+        "actor": "6de83ee33c0b",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769233,
+          -0.5123762154038997,
+          -0.5595224386652569
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9968100262353691,
+            -0.4459644145854352,
+            -0.5295903773138968
+          ],
+          "edgeDistancePixels": 0.6220448841030307,
+          "movementPixels": 2.689220205971857,
+          "intervalMs": 17.399999998509884,
+          "progress": 0.08424744018065014
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 30.391797
+        }
+      },
+      {
+        "actor": "a76c2258548f",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9336132648336409,
+          0.050093375128010244,
+          -0.3024075606353325
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 401,
+          "progress": 0.72,
+          "phase": "rejected",
+          "decisionAt": 30.391797
+        }
+      },
+      {
+        "actor": "887a2ca2a79b",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8946847246805857,
+          0.03508416467848491,
+          -0.36712294990064487
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444461,
+          "phase": "accepted",
+          "decisionAt": 30.592098
+        }
+      },
+      {
+        "actor": "d661093756cd",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9336061423187227,
+          0.05006624258825137,
+          -0.3024139853894947
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444461,
+          "phase": "accepted",
+          "decisionAt": 30.592098
+        }
+      },
+      {
+        "actor": "0096b8cd7f8a",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076924,
+          -0.5126589502884994,
+          -0.5596515323151426
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9973026705782709,
+            -0.44646705678821574,
+            -0.5298187335613708
+          ],
+          "edgeDistancePixels": 0.525979237237168,
+          "movementPixels": 2.5161425351653106,
+          "intervalMs": 16.700000002980232,
+          "progress": 0.08392213659851137
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7265333333333345,
+          "phase": "accepted",
+          "decisionAt": 30.691335
+        }
+      },
+      {
+        "actor": "5b56d3e4c064",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335991145645006,
+          0.05003951633064919,
+          -0.3024203106600183
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7265333333333345,
+          "phase": "accepted",
+          "decisionAt": 30.691335
+        }
+      },
+      {
+        "actor": "b7bf21a1883a",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335952492975836,
+          0.05002483598169941,
+          -0.302423783654966
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444461,
+          "phase": "accepted",
+          "decisionAt": 30.891333
+        }
+      },
+      {
+        "actor": "8d95f0868351",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076921,
+          -0.5128859050640436,
+          -0.5597551653950018
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9915629178697727,
+            -0.4436009728014316,
+            -0.5285584269143612
+          ],
+          "edgeDistancePixels": 1.6452310153943261,
+          "movementPixels": 2.2835156669576864,
+          "intervalMs": 16.600000001490116,
+          "progress": 0.08773512144341308
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444461,
+          "phase": "accepted",
+          "decisionAt": 31.091768
+        }
+      },
+      {
+        "actor": "5ffb8dc8cac7",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8948665624082192,
+          0.03517497366580846,
+          -0.3670672084899881
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444461,
+          "phase": "accepted",
+          "decisionAt": 31.091768
+        }
+      },
+      {
+        "actor": "9888fd8afab3",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335853560325963,
+          0.04998732265052655,
+          -0.30243265388646057
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444461,
+          "phase": "accepted",
+          "decisionAt": 31.091768
+        }
+      },
+      {
+        "actor": "106f2cdcbbd3",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335823528150508,
+          0.04997595245536198,
+          -0.3024353411639059
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 31.191504
+        }
+      },
+      {
+        "actor": "915293fc83ea",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769229,
+          -0.5133078207750691,
+          -0.5599478413727408
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9904965076545699,
+            -0.4434397268706096,
+            -0.5284580584769933
+          ],
+          "edgeDistancePixels": 1.8531810073588755,
+          "movementPixels": 2.4878080745625195,
+          "intervalMs": 16.899999998509884,
+          "progress": 0.08847195020022194
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 31.392542
+        }
+      },
+      {
+        "actor": "de1064080202",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335691070788565,
+          0.04992590026762083,
+          -0.3024471636874254
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 31.392542
+        }
+      },
+      {
+        "actor": "4dc4cfb10303",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8950511101101396,
+          0.03526721349321637,
+          -0.36701056023833867
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 31.493699
+        }
+      },
+      {
+        "actor": "c4fb49ef687f",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335626501890972,
+          0.04990155794961949,
+          -0.3024529093077566
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 31.493699
+        }
+      },
+      {
+        "actor": "52b0bd8ac370",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076923,
+          -0.5135621821633363,
+          -0.5600640123615568
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.991571642415346,
+            -0.44421911499368066,
+            -0.5288130857657398
+          ],
+          "edgeDistancePixels": 1.643529729007528,
+          "movementPixels": 2.4534531117226637,
+          "intervalMs": 15.800000000745058,
+          "progress": 0.08775845388890244
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 31.69418
+        }
+      },
+      {
+        "actor": "47d4b1d392e4",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335563121265227,
+          0.049877699466865086,
+          -0.302458538102378
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 31.69418
+        }
+      },
+      {
+        "actor": "46f0303f6ba3",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335500832584124,
+          0.04985428649256616,
+          -0.30246405926481035
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 31.894295
+        }
+      },
+      {
+        "actor": "28e203df8d9f",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076921,
+          -0.5138215744376399,
+          -0.560182490291181
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9968573059549194,
+            -0.4472028207892563,
+            -0.530175837056325
+          ],
+          "edgeDistancePixels": 0.6128253387907184,
+          "movementPixels": 2.438912701284563,
+          "intervalMs": 16.300000000745058,
+          "progress": 0.08422932919685665
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555577,
+          "phase": "accepted",
+          "decisionAt": 31.995603
+        }
+      },
+      {
+        "actor": "b54eb985e5c6",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8952353994875268,
+          0.03535940221313178,
+          -0.3669539146165143
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555577,
+          "phase": "accepted",
+          "decisionAt": 31.995603
+        }
+      },
+      {
+        "actor": "773f323ea206",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335413081313519,
+          0.04982136037278382,
+          -0.3024718195478745
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264555555555577,
+          "phase": "accepted",
+          "decisionAt": 31.995603
+        }
+      },
+      {
+        "actor": "e20d4ab71ef5",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335380020776329,
+          0.049808972795234684,
+          -0.30247473786645374
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.726455555555555,
+          "phase": "accepted",
+          "decisionAt": 32.194981
+        }
+      },
+      {
+        "actor": "4bd12776b9e2",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769246,
+          -0.514070312839164,
+          -0.5602961108242068
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9918526712349668,
+            -0.444765434072532,
+            -0.5290847750927052
+          ],
+          "edgeDistancePixels": 1.5887291091814766,
+          "movementPixels": 2.313405195887131,
+          "intervalMs": 16.900000002235174,
+          "progress": 0.08757091531770925
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 32.395595
+        }
+      },
+      {
+        "actor": "03e1dce387b4",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335327888320524,
+          0.04978945839578068,
+          -0.3024793337304984
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 32.395595
+        }
+      },
+      {
+        "actor": "e72c2cebc3d4",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8953540890795044,
+          0.03541881668644265,
+          -0.36691739198337103
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 32.495521
+        }
+      },
+      {
+        "actor": "b0e1d9faae47",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335270483826384,
+          0.04976799779702787,
+          -0.3024843859381414
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 32.495521
+        }
+      },
+      {
+        "actor": "2dafbe3298d0",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769229,
+          -0.5143720627572217,
+          -0.560433957889042
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9941794238363544,
+            -0.44627412066933325,
+            -0.529748483025766
+          ],
+          "edgeDistancePixels": 1.1350123519108957,
+          "movementPixels": 2.4075321488716317,
+          "intervalMs": 16.5,
+          "progress": 0.08603626441344107
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 32.696631
+        }
+      },
+      {
+        "actor": "f5ce6175d57b",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335183854758836,
+          0.049735665462913387,
+          -0.30249199357252043
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 32.696631
+        }
+      },
+      {
+        "actor": "54f7c4bf46f1",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335100426008713,
+          0.04970458848102453,
+          -0.30249930132556513
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 32.896304
+        }
+      },
+      {
+        "actor": "835f6b1bbb4b",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769235,
+          -0.5146429135350801,
+          -0.5605577002243268
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9931250892309238,
+            -0.44599255161292806,
+            -0.5295920516163535
+          ],
+          "edgeDistancePixels": 1.3406075999698597,
+          "movementPixels": 2.506972906001567,
+          "intervalMs": 15.899999998509884,
+          "progress": 0.08676148689669473
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 32.996649
+        }
+      },
+      {
+        "actor": "7d8b29df6ecd",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8955523232313621,
+          0.03551812241520696,
+          -0.36685632114282285
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 32.996649
+        }
+      },
+      {
+        "actor": "8633b414140b",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335025982987515,
+          0.04967690883911938,
+          -0.30250580647627245
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 32.996649
+        }
+      },
+      {
+        "actor": "de91f494d91d",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9335003699213257,
+          0.049668632381828996,
+          -0.302507750893351
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444461,
+          "phase": "accepted",
+          "decisionAt": 33.197116
+        }
+      },
+      {
+        "actor": "602a2a860d8a",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769226,
+          -0.5149181171832883,
+          -0.5606834416929116
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9990411564071071,
+            -0.4493226236713383,
+            -0.5311133673985502
+          ],
+          "edgeDistancePixels": 0.18697450061411325,
+          "movementPixels": 2.4954196321535784,
+          "intervalMs": 14.800000000745058,
+          "progress": 0.08281430617139081
+        },
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 33.39683
+        }
+      },
+      {
+        "actor": "4e410ede7936",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9334922598581318,
+          0.04963854616763741,
+          -0.3025148165134601
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 33.39683
+        }
+      },
+      {
+        "actor": "941fbfbce3a7",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8956769708150557,
+          0.03558061118373973,
+          -0.36681787480474826
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 33.497126
+        }
+      },
+      {
+        "actor": "6a1c60a93835",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9334875901060052,
+          0.049621247806932015,
+          -0.302518877085455
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": {
+          "status": 200,
+          "progress": 0.7264944444444433,
+          "phase": "accepted",
+          "decisionAt": 33.497126
+        }
+      },
+      {
+        "actor": "3f184afef03d",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769226,
+          -0.5150997923653545,
+          -0.5607664554710944
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9918843055862094,
+            -0.44568853126177593,
+            -0.5294771101254254
+          ],
+          "edgeDistancePixels": 1.58256041068916,
+          "movementPixels": 2.488373775086839,
+          "intervalMs": 16.100000001490116,
+          "progress": 0.08759833204675357
+        },
+        "response": null
+      },
+      {
+        "actor": "8bcb51e27237",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9334830703119386,
+          0.049604522413851014,
+          -0.3025228018586644
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": null
+      },
+      {
+        "actor": "b38e206ecf77",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9334806229748144,
+          0.04959547325390502,
+          -0.30252492479680315
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": null
+      },
+      {
+        "actor": "95066aa35ff9",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769224,
+          -0.5152408557196061,
+          -0.5608309154482912
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9904555524101334,
+            -0.4450583565187836,
+            -0.5291882243964978
+          ],
+          "edgeDistancePixels": 1.8611672800239893,
+          "movementPixels": 2.393951853217284,
+          "intervalMs": 16.899999998509884,
+          "progress": 0.08856030283438875
+        },
+        "response": null
+      },
+      {
+        "actor": "891ef56cdd36",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8957894402567027,
+          0.03563702551186264,
+          -0.36678315441663467
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": null
+      },
+      {
+        "actor": "4cf11ac85985",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9334744891960094,
+          0.049572815300455694,
+          -0.3025302387217169
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": null
+      },
+      {
+        "actor": "9140c5215e33",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769213,
+          -0.5153741002768496,
+          -0.5608918051130274
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.991977564257252,
+            -0.4459661908015907,
+            -0.5296029024051054
+          ],
+          "edgeDistancePixels": 1.5643749698358538,
+          "movementPixels": 2.449485289155359,
+          "intervalMs": 17.600000001490116,
+          "progress": 0.08754892306138273
+        },
+        "response": null
+      },
+      {
+        "actor": "76ae68e2aca6",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076924,
+          -0.5154107390231514,
+          -0.5609085486019969
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9997942232961741,
+            -0.4501339643094566,
+            -0.5314821106870801
+          ],
+          "edgeDistancePixels": 0.0401264572460569,
+          "movementPixels": 2.405319584817321,
+          "intervalMs": 16.700000002980232,
+          "progress": 0.08233158247259104
+        },
+        "response": null
+      },
+      {
+        "actor": "dfc1b46e3d66",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9334656890851463,
+          0.04954036279224699,
+          -0.30253784565059183
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": null
+      },
+      {
+        "actor": "e2b6098d5e28",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076923,
+          -0.5155422348485178,
+          -0.5609686422346996
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9967855241612597,
+            -0.44866794111215247,
+            -0.5308110325777731
+          ],
+          "edgeDistancePixels": 0.6268227885543681,
+          "movementPixels": 2.6320885244990113,
+          "intervalMs": 17.800000000745058,
+          "progress": 0.08435041091100044
+        },
+        "response": null
+      },
+      {
+        "actor": "38080142b43d",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769226,
+          -0.5155756998027216,
+          -0.5609839361139124
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9992401324933906,
+            -0.44998166079269997,
+            -0.5314118639720834
+          ],
+          "edgeDistancePixels": 0.1481741637888312,
+          "movementPixels": 2.579827050682568,
+          "intervalMs": 17.099999997764826,
+          "progress": 0.08271064569827091
+        },
+        "response": null
+      },
+      {
+        "actor": "373ff3c1f039",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9334603913472826,
+          0.0495208571145638,
+          -0.3025424154978259
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": null
+      },
+      {
+        "actor": "03cc1ea3ce00",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769235,
+          -0.5156486836107081,
+          -0.5610172911176001
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9997491136203853,
+            -0.45030974602233315,
+            -0.5315612482538377
+          ],
+          "edgeDistancePixels": 0.048922844024862355,
+          "movementPixels": 2.4990328367785515,
+          "intervalMs": 16.599999997764826,
+          "progress": 0.08237448776355875
+        },
+        "response": null
+      },
+      {
+        "actor": "1ce0c7491320",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769244,
+          -0.515687675004148,
+          -0.5610351112386245
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9972227634401577,
+            -0.44901796412294775,
+            -0.5309704381332216
+          ],
+          "edgeDistancePixels": 0.5415611291692485,
+          "movementPixels": 2.4601302167458265,
+          "intervalMs": 16.899999998509884,
+          "progress": 0.08406623957177757
+        },
+        "response": null
+      },
+      {
+        "actor": "0bf2c63be99d",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769257,
+          -0.5157553600765371,
+          -0.5610660456502572
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9976949334013646,
+            -0.44897334074402356,
+            -0.530949551497742
+          ],
+          "edgeDistancePixels": 0.4494879867339002,
+          "movementPixels": 2.4766687263010048,
+          "intervalMs": 13.900000002235174,
+          "progress": 0.08427951229281148
+        },
+        "response": null
+      },
+      {
+        "actor": "b9e738cc3af4",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9334522064387488,
+          0.04949076677437757,
+          -0.3025494617332828
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": null
+      },
+      {
+        "actor": "78af19888837",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769242,
+          -0.5158195591351461,
+          -0.561095387423924
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9743104584640656,
+            -0.4352754667323502,
+            -0.5247357602636584
+          ],
+          "edgeDistancePixels": 5.009460599507206,
+          "movementPixels": 6.566456933535245,
+          "intervalMs": 17.699999999254942,
+          "progress": 0.1020299866854484
+        },
+        "response": null
+      },
+      {
+        "actor": "6783b56d684a",
+        "route": "dispatch",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          0.8948587577115777,
+          0.03565521890356587,
+          -0.3667573242501332
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": null
+      },
+      {
+        "actor": "b50d4464afdf",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769222,
+          -0.5146691534062966,
+          -0.5605692204134198
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.9973541941262785,
+            -0.4471657218355905,
+            -0.5300634382563485
+          ],
+          "edgeDistancePixels": 0.5159321453757004,
+          "movementPixels": 2.8135647429985142,
+          "intervalMs": 16.399999998509884,
+          "progress": 0.08567981952249218
+        },
+        "response": null
+      },
+      {
+        "actor": "9f832bd73ab8",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076924,
+          -0.5142488289271229,
+          -0.5603769704564567
+        ],
+        "extendedApproach": true,
+        "firstEntry": {
+          "viewport": [
+            390,
+            844
+          ],
+          "ndc": [
+            -0.996697660418331,
+            -0.44646026994063787,
+            -0.5297710381353886
+          ],
+          "edgeDistancePixels": 0.6439562184254616,
+          "movementPixels": 2.5742892848710266,
+          "intervalMs": 16.900000002235174,
+          "progress": 0.08602160866652295
+        },
+        "response": null
+      },
+      {
+        "actor": "68872d65c753",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.123076923076923,
+          -0.5139081264187249,
+          -0.5602211353709581
+        ],
+        "extendedApproach": true,
+        "firstEntry": null,
+        "response": null
+      },
+      {
+        "actor": "835406b1b672",
+        "route": "storefront",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -0.9388237034564136,
+          0.04902703554012653,
+          -0.3027544419037851
+        ],
+        "extendedApproach": false,
+        "firstEntry": null,
+        "response": null
+      },
+      {
+        "actor": "b1b5fa125784",
+        "route": "accounts",
+        "viewport": [
+          390,
+          844
+        ],
+        "birthNdc": [
+          -1.1230769230769222,
+          -0.5133636118212112,
+          -0.559972068824126
+        ],
+        "extendedApproach": true,
+        "firstEntry": null,
+        "response": null
+      }
+    ]
+  }
+}

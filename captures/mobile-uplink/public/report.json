@@ -1,0 +1,1498 @@
+{
+  "passed": true,
+  "url": "https://cloudbreak.onrender.com",
+  "checkedAt": "2026-09-07T07:26:39.175Z",
+  "checkUplink": true,
+  "method": "Actual HTTP, ordinary touch controls, original wall clock; per-render diagnostics are observed only.",
+  "physicalDeviceTested": false,
+  "stages": [
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "worldBadges": [
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleModes": 4,
+      "districtSelectors": 3,
+      "uplinks": [
+        {
+          "route": "storefront",
+          "position": [
+            -10,
+            0.26,
+            7.5
+          ],
+          "screenPosition": [
+            -0.9333133799887964,
+            0.03458125491666864,
+            -0.30079310333143505
+          ],
+          "labelPosition": [
+            -9.371087914363923,
+            2.41,
+            8.109729110786814
+          ],
+          "originalJunction": [
+            -10,
+            0.26,
+            7.5
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 68,
+            "width": 390,
+            "height": 546
+          },
+          "labelRect": {
+            "x": 8.4921875,
+            "y": 297.2046813964844,
+            "width": 79.015625,
+            "height": 18.390625
+          }
+        },
+        {
+          "route": "accounts",
+          "position": [
+            2.4579507779923446,
+            0.26,
+            25.541445704979537
+          ],
+          "screenPosition": [
+            -0.9076923076923081,
+            -0.41201914347718516,
+            -0.504465237108408
+          ],
+          "labelPosition": [
+            3.3144599525194884,
+            2.41,
+            25.72499960428661
+          ],
+          "originalJunction": [
+            0.6,
+            0.26,
+            9.35
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 68,
+            "width": 390,
+            "height": 546
+          },
+          "labelRect": {
+            "x": 8.4921875,
+            "y": 417.9046936035156,
+            "width": 79.015625,
+            "height": 18.390625
+          },
+          "edgeDistancePixels": 17.999999999999915,
+          "upstreamWorldDistance": 16.297696006207214
+        },
+        {
+          "route": "dispatch",
+          "position": [
+            13.2,
+            2.4,
+            -0.5
+          ],
+          "screenPosition": [
+            0.8908993313447232,
+            0.016570269845338836,
+            -0.3667062229278639
+          ],
+          "labelPosition": [
+            12.83137057060293,
+            4.55,
+            -1.2946145882013438
+          ],
+          "originalJunction": [
+            13.2,
+            2.4,
+            -0.5
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 68,
+            "width": 390,
+            "height": 546
+          },
+          "labelRect": {
+            "x": 302.4921875,
+            "y": 292.50469970703125,
+            "width": 79.015625,
+            "height": 18.390625
+          }
+        }
+      ]
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "worldBadges": [
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleModes": 4,
+      "districtSelectors": 3,
+      "uplinks": [
+        {
+          "route": "storefront",
+          "position": [
+            -10,
+            0.26,
+            7.5
+          ],
+          "screenPosition": [
+            -0.9421471677074305,
+            0.062430469698402526,
+            -0.3015533137618922
+          ],
+          "labelPosition": [
+            -9.371087914363923,
+            2.41,
+            8.109729110786814
+          ],
+          "originalJunction": [
+            -10,
+            0.26,
+            7.5
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 68,
+            "width": 320,
+            "height": 270
+          },
+          "labelRect": {
+            "x": 8.4921875,
+            "y": 164.70468139648438,
+            "width": 79.015625,
+            "height": 18.390625
+          }
+        },
+        {
+          "route": "accounts",
+          "position": [
+            2.3719480287971964,
+            0.26,
+            24.791959302774128
+          ],
+          "screenPosition": [
+            -0.8875000000000012,
+            -0.6550013247033816,
+            -0.4990465671768327
+          ],
+          "labelPosition": [
+            3.22845720332434,
+            2.41,
+            24.9755132020812
+          ],
+          "originalJunction": [
+            0.6,
+            0.26,
+            9.35
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 68,
+            "width": 320,
+            "height": 270
+          },
+          "labelRect": {
+            "x": 8.4921875,
+            "y": 260.50469970703125,
+            "width": 79.015625,
+            "height": 18.390625
+          },
+          "edgeDistancePixels": 17.99999999999981,
+          "upstreamWorldDistance": 15.543291380054956
+        },
+        {
+          "route": "dispatch",
+          "position": [
+            13.2,
+            2.4,
+            -0.5
+          ],
+          "screenPosition": [
+            0.8842804547930159,
+            0.03422247744744719,
+            -0.36713552842965147
+          ],
+          "labelPosition": [
+            12.83137057060293,
+            4.55,
+            -1.2946145882013438
+          ],
+          "originalJunction": [
+            13.2,
+            2.4,
+            -0.5
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 68,
+            "width": 320,
+            "height": 270
+          },
+          "labelRect": {
+            "x": 232.4921875,
+            "y": 160.70468139648438,
+            "width": 79.015625,
+            "height": 18.390625
+          }
+        }
+      ],
+      "rotation": {
+        "viewport": [
+          320,
+          568
+        ],
+        "actorsFrozen": 35,
+        "exactWorldPositionsPreserved": true
+      }
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "worldBadges": [
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleModes": 4,
+      "districtSelectors": 3,
+      "uplinks": [
+        {
+          "route": "storefront",
+          "position": [
+            -10,
+            0.26,
+            7.5
+          ],
+          "screenPosition": [
+            -0.9423785379743743,
+            0.03661671717152261,
+            -0.301323057066732
+          ],
+          "labelPosition": [
+            -9.371087914363923,
+            2.41,
+            8.109729110786814
+          ],
+          "originalJunction": [
+            -10,
+            0.26,
+            7.5
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 68,
+            "width": 430,
+            "height": 634
+          },
+          "labelRect": {
+            "x": 8.4921875,
+            "y": 336.4046936035156,
+            "width": 79.015625,
+            "height": 18.390625
+          }
+        },
+        {
+          "route": "accounts",
+          "position": [
+            2.4438865416558464,
+            0.26,
+            25.418880391774373
+          ],
+          "screenPosition": [
+            -0.9162790697674418,
+            -0.38509568863694643,
+            -0.5040285027990077
+          ],
+          "labelPosition": [
+            3.30039571618299,
+            2.41,
+            25.602434291081444
+          ],
+          "originalJunction": [
+            0.6,
+            0.26,
+            9.35
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 68,
+            "width": 430,
+            "height": 634
+          },
+          "labelRect": {
+            "x": 8.4921875,
+            "y": 468.7046813964844,
+            "width": 79.015625,
+            "height": 18.390625
+          },
+          "edgeDistancePixels": 18.000000000000018,
+          "upstreamWorldDistance": 16.17432640401604
+        },
+        {
+          "route": "dispatch",
+          "position": [
+            13.2,
+            2.4,
+            -0.5
+          ],
+          "screenPosition": [
+            0.8822103288734022,
+            0.018630080709765368,
+            -0.3677480581952417
+          ],
+          "labelPosition": [
+            12.83137057060293,
+            4.55,
+            -1.2946145882013438
+          ],
+          "originalJunction": [
+            13.2,
+            2.4,
+            -0.5
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 68,
+            "width": 430,
+            "height": 634
+          },
+          "labelRect": {
+            "x": 342.4921875,
+            "y": 331.60467529296875,
+            "width": 79.015625,
+            "height": 18.390625
+          }
+        }
+      ],
+      "rotation": {
+        "viewport": [
+          430,
+          932
+        ],
+        "actorsFrozen": 35,
+        "exactWorldPositionsPreserved": true
+      }
+    },
+    {
+      "viewport": [
+        844,
+        390
+      ],
+      "worldBadges": [
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleModes": 4,
+      "districtSelectors": 3,
+      "uplinks": [
+        {
+          "route": "storefront",
+          "position": [
+            -10,
+            0.26,
+            7.5
+          ],
+          "screenPosition": [
+            -0.6519290976109346,
+            0.06576892784210689,
+            -0.30010255761480065
+          ],
+          "labelPosition": [
+            -9.371087914363923,
+            2.41,
+            8.109729110786814
+          ],
+          "originalJunction": [
+            -10,
+            0.26,
+            7.5
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 58,
+            "width": 544,
+            "height": 332
+          },
+          "labelRect": {
+            "x": 57.79219055175781,
+            "y": 179.6046905517578,
+            "width": 79.015625,
+            "height": 18.390625
+          }
+        },
+        {
+          "route": "accounts",
+          "position": [
+            3.559921763591531,
+            0.26,
+            35.144769750556335
+          ],
+          "screenPosition": [
+            -0.8771661637166881,
+            -0.9174093931251734,
+            -0.583484999533224
+          ],
+          "labelPosition": [
+            4.416430938118674,
+            2.41,
+            35.32832364986341
+          ],
+          "originalJunction": [
+            0.6,
+            0.26,
+            9.35
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 58,
+            "width": 544,
+            "height": 332
+          },
+          "labelRect": {
+            "x": 8.4921875,
+            "y": 341.60467529296875,
+            "width": 79.015625,
+            "height": 18.390625
+          },
+          "edgeDistancePixels": 13.710040741221208,
+          "upstreamWorldDistance": 25.964038270862236
+        },
+        {
+          "route": "dispatch",
+          "position": [
+            13.2,
+            2.4,
+            -0.5
+          ],
+          "screenPosition": [
+            0.6058902905929088,
+            0.033493530480881946,
+            -0.3671568755244098
+          ],
+          "labelPosition": [
+            12.83137057060293,
+            4.55,
+            -1.2946145882013438
+          ],
+          "originalJunction": [
+            13.2,
+            2.4,
+            -0.5
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 58,
+            "width": 544,
+            "height": 332
+          },
+          "labelRect": {
+            "x": 399.29217529296875,
+            "y": 175.8046875,
+            "width": 79.015625,
+            "height": 18.390625
+          }
+        }
+      ],
+      "rotation": {
+        "viewport": [
+          844,
+          390
+        ],
+        "actorsFrozen": 37,
+        "exactWorldPositionsPreserved": true
+      }
+    },
+    {
+      "viewport": [
+        932,
+        430
+      ],
+      "worldBadges": [
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "display": "none",
+          "rects": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "visibleModes": 4,
+      "districtSelectors": 3,
+      "uplinks": [
+        {
+          "route": "storefront",
+          "position": [
+            -10,
+            0.26,
+            7.5
+          ],
+          "screenPosition": [
+            -0.6287918233676989,
+            0.06612801200060782,
+            -0.30004554435851805
+          ],
+          "labelPosition": [
+            -9.371087914363923,
+            2.41,
+            8.109729110786814
+          ],
+          "originalJunction": [
+            -10,
+            0.26,
+            7.5
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 58,
+            "width": 632,
+            "height": 372
+          },
+          "labelRect": {
+            "x": 80.69218444824219,
+            "y": 195.3046875,
+            "width": 79.015625,
+            "height": 18.390625
+          }
+        },
+        {
+          "route": "accounts",
+          "position": [
+            3.6077546212668303,
+            0.26,
+            35.56161777857595
+          ],
+          "screenPosition": [
+            -0.85739550282683,
+            -0.9290683043185651,
+            -0.5868410647590194
+          ],
+          "labelPosition": [
+            4.464263795793974,
+            2.41,
+            35.74517167788302
+          ],
+          "originalJunction": [
+            0.6,
+            0.26,
+            9.35
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 58,
+            "width": 632,
+            "height": 372
+          },
+          "labelRect": {
+            "x": 15.392189025878906,
+            "y": 379.10467529296875,
+            "width": 79.015625,
+            "height": 18.390625
+          },
+          "edgeDistancePixels": 13.193295396746885,
+          "upstreamWorldDistance": 26.383621708020122
+        },
+        {
+          "route": "dispatch",
+          "position": [
+            13.2,
+            2.4,
+            -0.5
+          ],
+          "screenPosition": [
+            0.5840316842935102,
+            0.03311461760399987,
+            -0.3673020523242817
+          ],
+          "labelPosition": [
+            12.83137057060293,
+            4.55,
+            -1.2946145882013438
+          ],
+          "originalJunction": [
+            13.2,
+            2.4,
+            -0.5
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 58,
+            "width": 632,
+            "height": 372
+          },
+          "labelRect": {
+            "x": 463.29217529296875,
+            "y": 191.20468139648438,
+            "width": 79.015625,
+            "height": 18.390625
+          }
+        }
+      ],
+      "rotation": {
+        "viewport": [
+          932,
+          430
+        ],
+        "actorsFrozen": 21,
+        "exactWorldPositionsPreserved": true
+      }
+    },
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "worldBadges": [
+        {
+          "display": "block",
+          "rects": 1,
+          "width": 123.65625,
+          "height": 28
+        },
+        {
+          "display": "block",
+          "rects": 1,
+          "width": 109.5,
+          "height": 28
+        },
+        {
+          "display": "block",
+          "rects": 1,
+          "width": 102.265625,
+          "height": 28
+        }
+      ],
+      "visibleModes": 12,
+      "districtSelectors": 0,
+      "uplinks": [
+        {
+          "route": "storefront",
+          "position": [
+            -10,
+            0.26,
+            7.5
+          ],
+          "screenPosition": [
+            -0.7510642533277615,
+            0.06547231548073641,
+            -0.6253901012470099
+          ],
+          "labelPosition": [
+            -9.371087914363923,
+            2.41,
+            8.109729110786814
+          ],
+          "originalJunction": [
+            -10,
+            0.26,
+            7.5
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 900
+          },
+          "labelRect": {
+            "x": 104.89218139648438,
+            "y": 342.79998779296875,
+            "width": 123.015625,
+            "height": 24
+          }
+        },
+        {
+          "route": "accounts",
+          "position": [
+            0.6,
+            0.26,
+            9.35
+          ],
+          "screenPosition": [
+            -0.27707729079283405,
+            -0.17506344117284212,
+            -0.7120760305014168
+          ],
+          "labelPosition": [
+            1.4565091745271437,
+            -0.43999999999999995,
+            9.533553899307071
+          ],
+          "originalJunction": [
+            0.6,
+            0.26,
+            9.35
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 900
+          },
+          "labelRect": {
+            "x": 424.8921813964844,
+            "y": 551.4000244140625,
+            "width": 123.01565551757812,
+            "height": 24
+          }
+        },
+        {
+          "route": "dispatch",
+          "position": [
+            13.2,
+            2.4,
+            -0.5
+          ],
+          "screenPosition": [
+            0.6983753094671563,
+            0.0338072320130907,
+            -0.7090094233654467
+          ],
+          "labelPosition": [
+            12.83137057060293,
+            4.55,
+            -1.2946145882013438
+          ],
+          "originalJunction": [
+            13.2,
+            2.4,
+            -0.5
+          ],
+          "canvas": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 900
+          },
+          "labelRect": {
+            "x": 1030.8922119140625,
+            "y": 332.1000061035156,
+            "width": 123.015625,
+            "height": 24
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "geometryWarnings": [],
+  "screenshots": [
+    "phone-390x844-accounts.png",
+    "mobile-320x568.png",
+    "mobile-430x932.png",
+    "mobile-844x390.png",
+    "mobile-932x430.png",
+    "desktop-1280x900.png"
+  ],
+  "sourceHashes": {
+    "src/CityScene.tsx": "084fdfeeee4bc308a1cae49260802f5443547c9c779022dcfe770c4a40fa2231",
+    "src/traffic-path.ts": "0622b912410249b59b3e56ef7dfd055cfa94667cff0139064284d48dbe5a128c",
+    "src/style.css": "c19b4f2922a4b4e8df8506fbd6a84b74c0a544136f0ce55ab59efdf9f5d2efac",
+    "server/app.mjs": "4c261136951dc49681f158882004f7dfee962ecd67921b4415dbce939753c546",
+    "server/gateway.mjs": "8af4348f19279f70ffcccc40bc8b8030bc07e9ba37bf1229ffaea553b25b95b4",
+    "server/waves.mjs": "90a78c144a27aabe7cca8729ce02e729a15cd032a09d34396b3d358881eba060"
+  },
+  "slowFlowContinuity": {
+    "actorsCompared": 6,
+    "beforeMissionTime": 32.757,
+    "afterMissionTime": 33.284,
+    "observedMissionSeconds": 0.527000000000001,
+    "observedWallSeconds": 0.5436757920000018,
+    "timingNote": "Measured complete observation/control interval, including UI, HTTP and waits; not an isolated network latency measurement. Normal forward motion has no fixed progress ceiling.",
+    "actors": [
+      {
+        "actor": "8eda268736ff",
+        "beforeProgress": 0.3568711412338846,
+        "afterProgress": 0.5622786242289238,
+        "progressDelta": 0.20540748299503925,
+        "stillPresent": true,
+        "sameObjectUUID": true,
+        "deadlineUnchanged": true,
+        "perFrameBackwardProgress": false,
+        "perFrameUUIDChanged": false,
+        "sampledFrames": 88
+      },
+      {
+        "actor": "7e8d21851873",
+        "beforeProgress": 0.22012249296493056,
+        "afterProgress": 0.4337588719566779,
+        "progressDelta": 0.21363637899174734,
+        "stillPresent": true,
+        "sameObjectUUID": true,
+        "deadlineUnchanged": true,
+        "perFrameBackwardProgress": false,
+        "perFrameUUIDChanged": false,
+        "sampledFrames": 65
+      },
+      {
+        "actor": "601c202465e8",
+        "beforeProgress": 0.1336493796605078,
+        "afterProgress": 0.3494374405707033,
+        "progressDelta": 0.2157880609101955,
+        "stillPresent": true,
+        "sameObjectUUID": true,
+        "deadlineUnchanged": true,
+        "perFrameBackwardProgress": false,
+        "perFrameUUIDChanged": false,
+        "sampledFrames": 52
+      },
+      {
+        "actor": "638ac7901473",
+        "beforeProgress": 0.10496755277930736,
+        "afterProgress": 0.31634661397417013,
+        "progressDelta": 0.21137906119486277,
+        "stillPresent": true,
+        "sameObjectUUID": true,
+        "deadlineUnchanged": true,
+        "perFrameBackwardProgress": false,
+        "perFrameUUIDChanged": false,
+        "sampledFrames": 48
+      },
+      {
+        "actor": "a5b91da76333",
+        "beforeProgress": 0.04608561113976234,
+        "afterProgress": 0.2635172769468797,
+        "progressDelta": 0.21743166580711737,
+        "stillPresent": true,
+        "sameObjectUUID": true,
+        "deadlineUnchanged": true,
+        "perFrameBackwardProgress": false,
+        "perFrameUUIDChanged": false,
+        "sampledFrames": 39
+      },
+      {
+        "actor": "e19d17f0f6ae",
+        "beforeProgress": 0.006869263473728387,
+        "afterProgress": 0.2236418293812956,
+        "progressDelta": 0.21677256590756722,
+        "stillPresent": true,
+        "sameObjectUUID": true,
+        "deadlineUnchanged": true,
+        "perFrameBackwardProgress": false,
+        "perFrameUUIDChanged": false,
+        "sampledFrames": 34
+      }
+    ],
+    "sameRequestAndObjectIdentities": true,
+    "deadlinesUnchanged": true,
+    "forwardProgress": true,
+    "perFrameMonotonicity": true
+  },
+  "arrivals": {
+    "sampledFrames": 4328,
+    "mobileAccountsBirths": 235,
+    "allBornOutsideXYInsideZ": true,
+    "allStartedAtZero": true,
+    "sameIdentitiesAndForwardProgress": true,
+    "realHTTPDeadlinesPreserved": true,
+    "originalRejectedGateProgress": 0.72,
+    "viewports": [
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "births": 164,
+        "entered": 162,
+        "sameActorsJoinedRealHTTP": 162,
+        "maximumFirstEntryDistancePixels": 4.245178564463155
+      },
+      {
+        "viewport": [
+          320,
+          568
+        ],
+        "births": 40,
+        "entered": 37,
+        "sameActorsJoinedRealHTTP": 37,
+        "maximumFirstEntryDistancePixels": 1.6772497570330103
+      },
+      {
+        "viewport": [
+          430,
+          932
+        ],
+        "births": 15,
+        "entered": 14,
+        "sameActorsJoinedRealHTTP": 14,
+        "maximumFirstEntryDistancePixels": 2.142739263050755
+      },
+      {
+        "viewport": [
+          844,
+          390
+        ],
+        "births": 8,
+        "entered": 8,
+        "sameActorsJoinedRealHTTP": 8,
+        "maximumFirstEntryDistancePixels": 1.2654531581653596
+      },
+      {
+        "viewport": [
+          932,
+          430
+        ],
+        "births": 8,
+        "entered": 8,
+        "sameActorsJoinedRealHTTP": 8,
+        "maximumFirstEntryDistancePixels": 1.836717730285955
+      }
+    ],
+    "otherLaneBirths": 330,
+    "otherLaneOriginsUnchanged": true,
+    "desktopBirths": 42,
+    "desktopOriginalPaths": true
+  },
+  "uplinkPlacement": {
+    "allMobileCentersInsideFrameNearEntry": true,
+    "maximumAllowedEdgeDistancePixels": 24,
+    "terminalAndBirthFeederCollinear": true,
+    "birthsUpstreamOfTerminal": true,
+    "birthsCompared": 235,
+    "labelsAboveTerminalWithinCanvas": true,
+    "otherTerminalsAndDesktopOriginal": true,
+    "viewports": [
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "edgeDistancePixels": 17.999999999999915,
+        "upstreamWorldDistance": 16.297696006207214
+      },
+      {
+        "viewport": [
+          320,
+          568
+        ],
+        "edgeDistancePixels": 17.99999999999981,
+        "upstreamWorldDistance": 15.543291380054956
+      },
+      {
+        "viewport": [
+          430,
+          932
+        ],
+        "edgeDistancePixels": 18.000000000000018,
+        "upstreamWorldDistance": 16.17432640401604
+      },
+      {
+        "viewport": [
+          844,
+          390
+        ],
+        "edgeDistancePixels": 13.710040741221208,
+        "upstreamWorldDistance": 25.964038270862236
+      },
+      {
+        "viewport": [
+          932,
+          430
+        ],
+        "edgeDistancePixels": 13.193295396746885,
+        "upstreamWorldDistance": 26.383621708020122
+      }
+    ]
+  },
+  "examples": [
+    {
+      "actor": "16240e615de1",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769215,
+        -0.5106840486234128,
+        -0.5560343933090366
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9943492898276762,
+          -0.44025059748091316,
+          -0.525838732874699
+        ],
+        "edgeDistancePixels": 1.101888483603135,
+        "movementPixels": 2.415044742439663,
+        "intervalMs": 16.199999999254942,
+        "progress": 0.08688790344451965
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264555555555553,
+        "phase": "accepted",
+        "decisionAt": 2.507693
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "1c372fccc473",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769226,
+        -0.5062485750023179,
+        -0.5559886217668246
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9958217873750619,
+          -0.43896600564119104,
+          -0.5261195966690124
+        ],
+        "edgeDistancePixels": 0.8147514618629326,
+        "movementPixels": 2.229989799555723,
+        "intervalMs": 17.099999997764826,
+        "progress": 0.08539648515896252
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264555555555556,
+        "phase": "accepted",
+        "decisionAt": 3.012988
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "b8cde15f9f2a",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769224,
+        -0.5045495748951399,
+        -0.555796601341757
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9964906002788855,
+          -0.43830211776939615,
+          -0.5260806354416097
+        ],
+        "edgeDistancePixels": 0.6843329456173325,
+        "movementPixels": 2.2326968959805753,
+        "intervalMs": 16.399999998509884,
+        "progress": 0.08493677074607696
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264555555555556,
+        "phase": "accepted",
+        "decisionAt": 3.514398
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "f62ca1fffcbb",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769229,
+        -0.5035848523198093,
+        -0.5554892581325228
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9946165318359089,
+          -0.4365814727066784,
+          -0.5253684002545942
+        ],
+        "edgeDistancePixels": 1.0497762919977598,
+        "movementPixels": 2.3882927165812635,
+        "intervalMs": 16.600000001490116,
+        "progress": 0.08618839099425697
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264944444444443,
+        "phase": "accepted",
+        "decisionAt": 4.015267
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "a2f1d6558c4b",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769224,
+        -0.5029819849964287,
+        -0.5552338947314599
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9948129775027541,
+          -0.4361683157043572,
+          -0.5251928679019582
+        ],
+        "edgeDistancePixels": 1.0114693869629499,
+        "movementPixels": 2.3704294596581317,
+        "intervalMs": 17.799999997019768,
+        "progress": 0.08605288032043618
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264555555555556,
+        "phase": "accepted",
+        "decisionAt": 4.516281
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "6749df6a9dec",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769235,
+        -0.502551338512262,
+        -0.5550415968705548
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9940978138833207,
+          -0.43536646726679323,
+          -0.524856065151455
+        ],
+        "edgeDistancePixels": 1.1509262927524544,
+        "movementPixels": 2.235452497525336,
+        "intervalMs": 16.699999999254942,
+        "progress": 0.08654481357372194
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264944444444447,
+        "phase": "accepted",
+        "decisionAt": 5.018647
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "ed08637ef80c",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.123076923076923,
+        -0.5018902757355047,
+        -0.5547421613608318
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9946911405565549,
+          -0.4351582049017662,
+          -0.524740868937726
+        ],
+        "edgeDistancePixels": 1.0352275914717861,
+        "movementPixels": 2.3697930978827606,
+        "intervalMs": 17,
+        "progress": 0.08612283311575937
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264944444444447,
+        "phase": "accepted",
+        "decisionAt": 5.518645
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "76950f7a87df",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769222,
+        -0.5013628034962966,
+        -0.5545023249992186
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9942212162065636,
+          -0.43446064675837187,
+          -0.5244256536440978
+        ],
+        "edgeDistancePixels": 1.1268628397201053,
+        "movementPixels": 2.3918738572287683,
+        "intervalMs": 17,
+        "progress": 0.08642954638115308
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264555555555556,
+        "phase": "accepted",
+        "decisionAt": 6.021216
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "355b1f532e6b",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769253,
+        -0.500892193940684,
+        -0.5542882273567662
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9947602267929977,
+          -0.43432887380806484,
+          -0.5243682312284447
+        ],
+        "edgeDistancePixels": 1.0217557753654498,
+        "movementPixels": 2.381113198628566,
+        "intervalMs": 15.399999998509884,
+        "progress": 0.08606093500751243
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264944444444447,
+        "phase": "accepted",
+        "decisionAt": 6.520948
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "0c61ef35b16a",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769224,
+        -0.500535576129245,
+        -0.554125984273073
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9940760530370638,
+          -0.43361310477776366,
+          -0.5240681269149337
+        ],
+        "edgeDistancePixels": 1.1551696577725568,
+        "movementPixels": 2.220139860999534,
+        "intervalMs": 16.599999997764826,
+        "progress": 0.08652592092678536
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264944444444447,
+        "phase": "accepted",
+        "decisionAt": 7.021884
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "6b8c9f1a07a6",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.1230769230769215,
+        -0.49998124283751655,
+        -0.5538738138175314
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9945505777249622,
+          -0.43343792096301015,
+          -0.5239667655670064
+        ],
+        "edgeDistancePixels": 1.0626373436323617,
+        "movementPixels": 2.3702019516783612,
+        "intervalMs": 17,
+        "progress": 0.08618137146817043
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.7264555555555556,
+        "phase": "accepted",
+        "decisionAt": 7.521579
+      },
+      "actualHttpStatus": 200
+    },
+    {
+      "actor": "41c73d231f1e",
+      "viewport": [
+        390,
+        844
+      ],
+      "birthNdc": [
+        -1.123076923076923,
+        -0.49957622856766926,
+        -0.5536895936659674
+      ],
+      "firstEntry": {
+        "viewport": [
+          390,
+          844
+        ],
+        "ndc": [
+          -0.9940516413696766,
+          -0.432836725002981,
+          -0.5236949533981141
+        ],
+        "edgeDistancePixels": 1.1599299329130615,
+        "movementPixels": 2.3775273536839943,
+        "intervalMs": 17,
+        "progress": 0.08650425219429204
+      },
+      "response": {
+        "status": 200,
+        "progress": 0.726455555555555,
+        "phase": "accepted",
+        "decisionAt": 8.022657
+      },
+      "actualHttpStatus": 200
+    }
+  ],
+  "actualRequests": 589,
+  "missionSecondsObserved": 65.656,
+  "recording": {
+    "recorded": false,
+    "reason": "Recording disabled; actual screenshots and per-render measurements retained."
+  }
+}

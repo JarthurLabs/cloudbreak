@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-09-07T07:22:24.606134+00:00",
+  "url": "https://cloudbreak.onrender.com",
+  "pageStatus": 200,
+  "js": "/assets/index-DBqMBNKV.js",
+  "jsStatus": 200,
+  "containsNewUplinkGeometry": true,
+  "jsSha256": "70540180b0e7924d724c365083a70c3fce4a58ad76cac0cdf3519aa32a64d088",
+  "css": "/assets/index-DF-J7T9n.css",
+  "testedCssByteIdentical": true,
+  "health": {
+    "game": "cloudbreak",
+    "status": "ok",
+    "port": 10000,
+    "localOnly": false,
+    "frontend": "ready",
+    "sessions": 0,
+    "maxSessions": 8
+  }
+}

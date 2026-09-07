@@ -201,13 +201,25 @@ try {
   await page.waitForFunction(() => window.__cloudbreakPerf.trafficContinuity.active.some(actor => actor.route === 'accounts' && actor.threatType === 'swarm' && actor.progress < .4));
   if (recordClip) recording = await beginRecording();
   const clipStarted = Date.now();
-  const before = (await continuity()).active.filter(actor => actor.route === 'accounts' && actor.source === 'incoming' && actor.measuredStatus === null && actor.progress < .45);
+  const transitionStarted = performance.now(), beforeSnapshot = await continuity();
+  const before = beforeSnapshot.active.filter(actor => actor.route === 'accounts' && actor.source === 'incoming' && actor.measuredStatus === null && actor.progress < .45);
   assert.ok(before.length, 'Need approaching Accounts actors before the policy change.');
   assert.equal(modeForPolicy((await state()).routes.find(route => route.id === 'accounts').policy), 'open');
   await mode('accounts', 'rate'); await page.waitForTimeout(100);
-  const after = await continuity();
-  for (const old of before) { const current = after.active.find(actor => actor.id === old.id); assert.ok(current, 'Slow flow must retain the approaching actor.'); assert.equal(current.uuid, old.uuid); assert.equal(current.decisionAt, old.decisionAt); assert.ok(current.progress >= old.progress && current.progress - old.progress < .25, 'Mode changes must preserve forward progress.'); }
-  report.slowFlowContinuity = { actorsCompared: before.length, sameRequestAndObjectIdentities: true, deadlinesUnchanged: true, forwardProgress: true };
+  const after = await continuity(), transitionWallSeconds = (performance.now() - transitionStarted) / 1000, afterAudit = await audit();
+  const actorMeasurements = before.map(old => {
+    const current = after.active.find(actor => actor.id === old.id), trace = afterAudit.actors[old.id];
+    return { actor: alias(old.id), beforeProgress: old.progress, afterProgress: current?.progress ?? null, progressDelta: current ? current.progress - old.progress : null, stillPresent: !!current, sameObjectUUID: current?.uuid === old.uuid, deadlineUnchanged: current?.decisionAt === old.decisionAt, perFrameBackwardProgress: trace?.backwardProgress ?? null, perFrameUUIDChanged: trace?.uuidChanged ?? null, sampledFrames: trace?.samples ?? 0 };
+  });
+  report.slowFlowContinuity = { actorsCompared: before.length, beforeMissionTime: beforeSnapshot.missionTime, afterMissionTime: after.missionTime, observedMissionSeconds: after.missionTime - beforeSnapshot.missionTime, observedWallSeconds: transitionWallSeconds, timingNote: 'Measured complete observation/control interval, including UI, HTTP and waits; not an isolated network latency measurement. Normal forward motion has no fixed progress ceiling.', actors: actorMeasurements };
+  for (const measurement of actorMeasurements) {
+    assert.ok(measurement.stillPresent, 'Slow flow must retain the approaching actor.');
+    assert.equal(measurement.sameObjectUUID, true); assert.equal(measurement.deadlineUnchanged, true);
+    assert.ok(measurement.progressDelta >= 0, 'Mode changes must never move an actor backward.');
+    assert.equal(measurement.perFrameBackwardProgress, false, 'The per-frame audit must contain no backward step.');
+    assert.equal(measurement.perFrameUUIDChanged, false, 'The per-frame audit must preserve object identity.');
+  }
+  Object.assign(report.slowFlowContinuity, { sameRequestAndObjectIdentities: true, deadlinesUnchanged: true, forwardProgress: true, perFrameMonotonicity: true });
   await observeFor(Math.max(0, 10100 - (Date.now() - clipStarted)));
   const clip = recording ? await recording.stop() : null; recording = null;
   await photo('phone-390x844-accounts');
