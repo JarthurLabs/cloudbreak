@@ -1,5 +1,7 @@
 # Clearer mobile bridge arrivals
 
+This records the first bridge-arrival pass. The later [entry-track refinement](../mobile-uplink/README.md) moves the middle Internet uplink to the screen edge and fills the entire feeder with matching bridge detail.
+
 Nicholas spotted two problems in an actual phone screenshot: floating district numbers covered the gates and buildings, and traffic appeared too close to the middle gate. Mobile now uses the bottom district strip for selection. Accounts traffic enters from beyond the screen edge along the existing long bridge and passes through its Internet uplink before reaching the original gate.
 
 [Play Cloudbreak](https://cloudbreak.onrender.com/)

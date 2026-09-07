@@ -11,10 +11,12 @@ import { ROUTE_NAMES } from '../src/types.ts';
 const target = new URL(process.env.CLOUDBREAK_CHECK_URL || 'http://127.0.0.1:5310');
 assert.ok(['http://127.0.0.1:5310/', 'https://cloudbreak.onrender.com/'].includes(target.href), 'Only the exact local preview or public Cloudbreak root URL is allowed.');
 const publicRun = target.protocol === 'https:', recordClip = process.env.RECORD_CLIP === '1' || (!publicRun && process.env.RECORD_CLIP !== '0');
-const root = resolve(import.meta.dirname, '..'), output = resolve(root, publicRun ? 'captures/mobile-arrivals/public' : 'captures/mobile-arrivals');
+const checkUplink = process.env.CHECK_UPLINK === '1';
+const captureFolder = checkUplink ? 'captures/mobile-uplink' : 'captures/mobile-arrivals';
+const root = resolve(import.meta.dirname, '..'), output = resolve(root, captureFolder + (publicRun ? '/public' : ''));
 const ffmpeg = resolve(root, '.cloudbreak-runtime/media/node_modules/ffmpeg-static/ffmpeg');
 await mkdir(output, { recursive: true });
-const report = { passed: false, url: target.origin, checkedAt: new Date().toISOString(), method: 'Actual HTTP, ordinary touch controls, original wall clock; per-render diagnostics are observed only.', physicalDeviceTested: false, stages: [], errors: [], geometryWarnings: [], screenshots: [] };
+const report = { passed: false, url: target.origin, checkedAt: new Date().toISOString(), checkUplink, method: 'Actual HTTP, ordinary touch controls, original wall clock; per-render diagnostics are observed only.', physicalDeviceTested: false, stages: [], errors: [], geometryWarnings: [], screenshots: [] };
 const sourceFiles = ['src/CityScene.tsx', 'src/traffic-path.ts', 'src/style.css', 'server/app.mjs', 'server/gateway.mjs', 'server/waves.mjs'];
 const hash = value => createHash('sha256').update(value).digest('hex');
 report.sourceHashes = Object.fromEntries(await Promise.all(sourceFiles.map(async file => [file, hash(await readFile(resolve(root, file)))])));
@@ -22,7 +24,7 @@ const alias = id => hash(id).slice(0, 12), same = (a, b) => JSON.stringify(a) ==
 const sanitize = value => String(value).replaceAll(root, '[project]').replace(/\b[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b/gi, '[redacted-id]');
 let browser, page, id, recording;
 
-function installAudit() {
+function installAudit(checkUplink) {
   const audit = window.__arrivalsAudit = { actors: {}, sampledFrames: 0 };
   const inside = point => Math.abs(point[0]) <= 1 && Math.abs(point[1]) <= 1;
   const sample = () => {
@@ -32,6 +34,7 @@ function installAudit() {
     if (current && canvas) {
       for (const birth of current.recentBirths) if (!audit.actors[birth.id]) audit.actors[birth.id] = {
         birth: structuredClone(birth), viewport: [innerWidth, innerHeight], canvas: [canvas.width, canvas.height],
+        ...(checkUplink ? { uplinkAtBirth: structuredClone(window.__cloudbreakPerf.internetUplinks?.find(item => item.route === birth.route)) } : {}),
         samples: 0, uuidChanged: false, backwardProgress: false, maxProgressStep: 0, last: null, firstEntry: null, response: null,
       };
       for (const actor of current.active) {
@@ -91,7 +94,31 @@ async function layout(width, height) {
   assert.equal(await page.locator('.district-tabs button:visible').count(), desktop ? 0 : 3);
   assert.equal(await page.locator('.mode-choice:visible').count(), desktop ? 12 : 4);
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1 || document.documentElement.scrollHeight > innerHeight + 1), false);
-  return { viewport: [width, height], worldBadges: badges, visibleModes: desktop ? 12 : 4, districtSelectors: desktop ? 0 : 3 };
+  let uplinks;
+  if (checkUplink) {
+    uplinks = await page.evaluate(() => {
+      const canvas = document.querySelector('.city-scene canvas').getBoundingClientRect();
+      return (window.__cloudbreakPerf.internetUplinks ?? []).map(item => {
+        const label = document.querySelector(`.uplink-label[data-route="${item.route}"]`).getBoundingClientRect();
+        return { ...structuredClone(item), canvas: { x: canvas.x, y: canvas.y, width: canvas.width, height: canvas.height }, labelRect: { x: label.x, y: label.y, width: label.width, height: label.height } };
+      });
+    });
+    assert.equal(uplinks.length, 3, 'Uplink diagnostics must describe all three physical terminals.');
+    for (const terminal of uplinks) {
+      if (desktop || terminal.route !== 'accounts') { assert.deepEqual(terminal.position, terminal.originalJunction, 'Other terminals and the desktop middle terminal must remain at their original junctions.'); continue; }
+      const [x, y, z] = terminal.screenPosition, { canvas, labelRect } = terminal;
+      assert.ok(Math.abs(x) <= 1 && Math.abs(y) <= 1 && Math.abs(z) <= 1, 'The actual middle terminal origin must be inside the frame and depth clip.');
+      terminal.edgeDistancePixels = Math.min((1 - Math.abs(x)) * canvas.width / 2, (1 - Math.abs(y)) * canvas.height / 2);
+      assert.ok(terminal.edgeDistancePixels >= 0 && terminal.edgeDistancePixels <= 24, 'The terminal must sit within 24 pixels of the entry edge.');
+      terminal.upstreamWorldDistance = Math.hypot(...terminal.position.map((value, index) => value - terminal.originalJunction[index]));
+      assert.ok(terminal.upstreamWorldDistance > .1, 'The terminal must move upstream from the former middle junction.');
+      assert.ok(terminal.labelPosition[1] > terminal.position[1] + 1.5, 'The terminal label anchor must move above its platform.');
+      const terminalPixelY = canvas.y + (1 - y) * canvas.height / 2;
+      assert.ok(labelRect.y + labelRect.height / 2 < terminalPixelY, 'The visible label must sit above the terminal.');
+      assert.ok(labelRect.x >= canvas.x - 1 && labelRect.x + labelRect.width <= canvas.x + canvas.width + 1 && labelRect.y >= canvas.y - 1 && labelRect.y + labelRect.height <= canvas.y + canvas.height + 1, 'The middle uplink label must remain fully within its canvas.');
+    }
+  }
+  return { viewport: [width, height], worldBadges: badges, visibleModes: desktop ? 12 : 4, districtSelectors: desktop ? 0 : 3, ...(uplinks ? { uplinks } : {}) };
 }
 async function pausedResize(width, height) {
   await tap('Pause game'); await page.getByRole('button', { name: 'Resume First Light', exact: true }).waitFor(); await page.waitForTimeout(350);
@@ -124,13 +151,17 @@ async function beginRecording() {
   return { async stop() {
     const end = await page.evaluate(() => (performance.timeOrigin + performance.now()) / 1000);
     await cdp.send('Page.stopScreencast'); accepting = false; await Promise.all(writes); cdp.off('Page.screencastFrame', onFrame); await cdp.detach();
+    // A queued compositor callback can arrive after the requested stop boundary.
+    // Retain its raw file, but omit that later image from this timed recording.
+    const framesAfterStopOmitted = frames.filter(frame => frame.timestamp > end).length;
+    while (frames.length && frames.at(-1).timestamp > end) frames.pop();
     assert.ok(frames.length > 100, 'A motion clip needs actual continuous compositor frames.'); assert.deepEqual(errors, []);
     const duration = end - frames[0].timestamp, lines = ['ffconcat version 1.0'];
     for (let index = 0; index < frames.length; index++) lines.push(`file '${frames[index].file}'`, 'option framerate 1000', `duration ${((frames[index + 1]?.timestamp ?? end) - frames[index].timestamp).toFixed(6)}`);
     lines.push(`file '${frames.at(-1).file}'`, 'option framerate 1000');
     await writeFile(resolve(output, 'phone.ffconcat'), lines.join('\n') + '\n');
     const intervals = frames.slice(1).map((frame, index) => frame.timestamp - frames[index].timestamp);
-    const receipt = { file: 'accounts-arrivals-phone-silent.mp4', width: 390, height: 844, durationSeconds: duration, actualFrames: frames.length, averageFps: frames.length / duration, maximumFrameIntervalSeconds: Math.max(...intervals), finalRealFrameHoldSeconds: end - frames.at(-1).timestamp, audio: 'Silent technical review clip; no audio recorded.', timing: 'Original compositor timestamps, variable frame rate. No speed changes or interpolated gameplay. Final real image held only to recording stop.', frames };
+    const receipt = { file: 'accounts-arrivals-phone-silent.mp4', width: 390, height: 844, durationSeconds: duration, actualFrames: frames.length, averageFps: frames.length / duration, maximumFrameIntervalSeconds: Math.max(...intervals), finalRealFrameHoldSeconds: end - frames.at(-1).timestamp, framesAfterStopOmitted, audio: 'Silent technical review clip; no audio recorded.', timing: 'Original compositor timestamps, variable frame rate. No speed changes or interpolated gameplay. Frames beyond the requested stop are omitted; the final preceding real image is held only to that stop.', frames };
     await writeFile(resolve(output, 'phone-recording.json'), JSON.stringify(receipt, null, 2) + '\n');
     return receipt;
   } };
@@ -153,7 +184,7 @@ try {
   page.on('pageerror', error => report.errors.push(sanitize(error.message)));
   page.on('console', message => { if (message.type() === 'error') report.errors.push(sanitize(message.text())); if (/NaN|BufferGeometry|WebGL.*(?:INVALID|error|lost)/i.test(message.text())) report.geometryWarnings.push(sanitize(message.text())); });
   assert.equal((await page.goto(report.url, { waitUntil: 'domcontentloaded' })).status(), 200);
-  await tap('Enter the city'); await page.evaluate(installAudit); await tap('Begin First Light');
+  await tap('Enter the city'); await page.evaluate(installAudit, checkUplink); await tap('Begin First Light');
   id = await page.evaluate(() => sessionStorage.getItem('cloudbreak.session')); assert.ok(id);
   await page.waitForFunction(() => window.__cloudbreakPerf?.trafficContinuity?.active.length > 0);
   report.stages.push(await layout(390, 844));
@@ -204,6 +235,15 @@ try {
     if (trace.rejectedAtGate !== undefined) assert.equal(trace.rejectedAtGate, .72);
     const record = byId.get(trace.birth.id);
     if (record) { assert.equal(record.decisionAt, trace.birth.decisionAt); if (trace.response) assert.equal(trace.response.status, record.status); }
+    if (checkUplink) {
+      const terminal = trace.uplinkAtBirth; assert.ok(terminal, 'Each birth must have a same-frame terminal observation.');
+      const feeder = trace.birth.rawCurveOrigin.map((value, index) => value - terminal.originalJunction[index]);
+      const station = terminal.position.map((value, index) => value - terminal.originalJunction[index]);
+      const cross = [feeder[1] * station[2] - feeder[2] * station[1], feeder[2] * station[0] - feeder[0] * station[2], feeder[0] * station[1] - feeder[1] * station[0]];
+      assert.ok(Math.hypot(...cross) < 1e-7 * Math.max(1, Math.hypot(...feeder) * Math.hypot(...station)), 'The terminal and actual birth must share the same feeder line.');
+      assert.ok(feeder.reduce((sum, value, index) => sum + value * station[index], 0) > 0, 'Both must lie upstream of the original junction.');
+      assert.ok(Math.hypot(...feeder) > Math.hypot(...station), 'The actor must start upstream of the newly placed entry terminal.');
+    }
   }
   const viewportEvidence = report.stages.filter(stage => stage.viewport[0] !== 1280).map(stage => {
     const births = accounts.filter(trace => same(trace.viewport, stage.viewport));
@@ -221,6 +261,7 @@ try {
     assert.ok(origins.every(origin => same(origin, origins[0])), 'Other-lane origins must remain identical across layouts.');
   }
   report.arrivals = { sampledFrames: observed.sampledFrames, mobileAccountsBirths: accounts.length, allBornOutsideXYInsideZ: true, allStartedAtZero: true, sameIdentitiesAndForwardProgress: true, realHTTPDeadlinesPreserved: true, originalRejectedGateProgress: .72, viewports: viewportEvidence, otherLaneBirths: other.length, otherLaneOriginsUnchanged: true, desktopBirths: desktop.length, desktopOriginalPaths: true };
+  if (checkUplink) report.uplinkPlacement = { allMobileCentersInsideFrameNearEntry: true, maximumAllowedEdgeDistancePixels: 24, terminalAndBirthFeederCollinear: true, birthsUpstreamOfTerminal: true, birthsCompared: accounts.length, labelsAboveTerminalWithinCanvas: true, otherTerminalsAndDesktopOriginal: true, viewports: report.stages.filter(stage => stage.viewport[0] !== 1280).map(stage => ({ viewport: stage.viewport, edgeDistancePixels: stage.uplinks.find(item => item.route === 'accounts').edgeDistancePixels, upstreamWorldDistance: stage.uplinks.find(item => item.route === 'accounts').upstreamWorldDistance })) };
   report.examples = accounts.filter(trace => trace.firstEntry && trace.response && byId.has(trace.birth.id)).slice(0, 12).map(trace => ({ actor: alias(trace.birth.id), viewport: trace.viewport, birthNdc: trace.birth.screenPosition, firstEntry: trace.firstEntry, response: trace.response, actualHttpStatus: byId.get(trace.birth.id).status }));
   report.actualRequests = final.totalRequests; report.missionSecondsObserved = final.elapsed;
   assert.deepEqual(report.errors, []); assert.deepEqual(report.geometryWarnings, []);

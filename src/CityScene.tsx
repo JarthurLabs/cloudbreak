@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
-import { feederApproach } from './traffic-path';
+import { feederApproach, feederEntryPoint } from './traffic-path';
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import type { GameState, IncomingRequest, RequestRecord, RouteId, ThreatType } from './types';
 
@@ -48,6 +48,8 @@ type Route = {
   id: RouteId;
   curve: THREE.CubicBezierCurve3;
   uplinkLabel: THREE.Vector3;
+  uplink: THREE.Group;
+  uplinkLabelOffset: THREE.Vector3;
   retract: THREE.Group;
   shield: THREE.Group;
   shieldDisc: THREE.MeshBasicMaterial;
@@ -422,37 +424,37 @@ function createRoute(id: RouteId, index: number, m: Materials, scene: THREE.Scen
   ];
   const ps = paths[index].map(p => new THREE.Vector3(...p));
   const curve = new THREE.CubicBezierCurve3(ps[0], ps[1], ps[2], ps[3]);
-  const createSegment = (from: number, to: number, pivot: THREE.Vector3) => {
+  const createSegment = (from: number, to: number, pivot: THREE.Vector3, roadCurve: THREE.CubicBezierCurve3 = curve, spans = 8, sleeperStep = 1 / 12) => {
     const group = new THREE.Group();
     group.position.copy(pivot);
-    const floor = new THREE.Mesh(ribbon(curve, from, to, .91, 0, pivot), m.deep);
+    const floor = new THREE.Mesh(ribbon(roadCurve, from, to, .91, 0, pivot), m.deep);
     floor.receiveShadow = true;
     group.add(floor);
     const architecture = new Architecture(group);
     for (const side of [-1, 1]) {
       const points: THREE.Vector3[] = [];
-      for (let i = 0; i <= 32; i++) {
-        const t = THREE.MathUtils.lerp(from, to, i / 32);
-        const point = curve.getPoint(t).sub(pivot);
-        const tangent = curve.getTangent(t);
+      for (let i = 0; i <= spans * 4; i++) {
+        const t = THREE.MathUtils.lerp(from, to, i / (spans * 4));
+        const point = roadCurve.getPoint(t).sub(pivot);
+        const tangent = roadCurve.getTangent(t);
         point.add(new THREE.Vector3(tangent.z, 0, -tangent.x).normalize().multiplyScalar(side * .48));
         point.y += .025;
         points.push(point);
       }
-      architecture.add(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points), 40, .028, 5, false), m.energy);
+      architecture.add(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points), spans * 5, .028, 5, false), m.energy);
       const upper = points.map(p => p.clone().add(new THREE.Vector3(0, .19, 0)));
-      architecture.add(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(upper), 40, .018, 5, false), m.trim);
+      architecture.add(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(upper), spans * 5, .018, 5, false), m.trim);
       const lower = points.map(p => p.clone().add(new THREE.Vector3(0, -.43, 0)));
-      architecture.add(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(lower), 40, .058, 6, false), m.blue);
-      for (let span = 0; span < 8; span++) {
+      architecture.add(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(lower), spans * 5, .058, 6, false), m.blue);
+      for (let span = 0; span < spans; span++) {
         const first = span * 4, last = first + 4;
         architecture.channel(m.trim, points[first], lower[last], .042, .048);
         architecture.channel(m.blue, lower[first], points[last], .047, .052);
       }
     }
-    for (let t = Math.ceil(from * 12) / 12; t <= to; t += 1 / 12) {
-      const point = curve.getPoint(t).sub(pivot);
-      const tangent = curve.getTangent(t);
+    for (let t = Math.ceil(from / sleeperStep) * sleeperStep; t <= to; t += sleeperStep) {
+      const point = roadCurve.getPoint(t).sub(pivot);
+      const tangent = roadCurve.getTangent(t);
       const angle = Math.atan2(tangent.x, tangent.z);
       architecture.box(m.blue, point.x, point.y - .065, point.z, 1.06, .14, .14, .015, new THREE.Euler(0, angle, 0));
       architecture.box(m.cyan, point.x, point.y + .015, point.z, .09, .018, .27, .015, new THREE.Euler(0, angle, 0));
@@ -470,15 +472,21 @@ function createRoute(id: RouteId, index: number, m: Materials, scene: THREE.Scen
   const infrastructure = new THREE.Group();
   scene.add(infrastructure);
   const support = new Architecture(infrastructure);
-  support.add(ribbon(feed, 0, 1, 1.06, -.025, new THREE.Vector3()), m.stone);
-  for (const side of [-1, 1]) {
-    const edge = new THREE.Vector3(outward.z, 0, -outward.x).multiplyScalar(side * .53);
-    const start = arterialStart.clone().add(edge), end = source.clone().add(edge);
-    support.channel(m.blue, start.clone().add(new THREE.Vector3(0, -.18, 0)), end.clone().add(new THREE.Vector3(0, -.18, 0)), .11, .15);
-    support.channel(m.cyan, start, end, .018, .022);
+  if (index === 1) {
+    // Carry the existing bridge construction along the entire mobile approach.
+    const length = feed.getLength();
+    createSegment(0, 1, new THREE.Vector3(), feed, Math.ceil(length / 1.1), 1 / Math.ceil(length / (curve.getLength() / 12)));
+  } else {
+    support.add(ribbon(feed, 0, 1, 1.06, -.025, new THREE.Vector3()), m.stone);
+    for (const side of [-1, 1]) {
+      const edge = new THREE.Vector3(outward.z, 0, -outward.x).multiplyScalar(side * .53);
+      const start = arterialStart.clone().add(edge), end = source.clone().add(edge);
+      support.channel(m.blue, start.clone().add(new THREE.Vector3(0, -.18, 0)), end.clone().add(new THREE.Vector3(0, -.18, 0)), .11, .15);
+      support.channel(m.cyan, start, end, .018, .022);
+    }
   }
-  // Internet uplinks join the city artery to a fixed request exit. Their wire globes are neutral
-  // network infrastructure, with no shield surface, interaction or policy state.
+  // Internet uplinks mark the network entry, separate from the defense gate.
+  // The middle terminal follows the compact viewport entry; its bridge stays fixed.
   const terminal = new THREE.Group();
   terminal.position.copy(source);
   terminal.rotation.y = Math.atan2(-outward.x, -outward.z);
@@ -509,7 +517,8 @@ function createRoute(id: RouteId, index: number, m: Materials, scene: THREE.Scen
   }
   terminalBody.box(m.energy, 0, .025, -.025, .91, .025, .075, .012);
   terminalBody.finish();
-  const uplinkLabel = new THREE.Vector3(globe.x, index === 1 ? -.7 : 2.15, globe.z).applyAxisAngle(Y_AXIS, terminal.rotation.y).add(source);
+  const uplinkLabelOffset = new THREE.Vector3(globe.x, index === 1 ? -.7 : 2.15, globe.z).applyAxisAngle(Y_AXIS, terminal.rotation.y);
+  const uplinkLabel = uplinkLabelOffset.clone().add(source);
   const anchor = [new THREE.Vector3(-4.3, -3.1, 1.25), new THREE.Vector3(-.3, -3.1, -3.55), new THREE.Vector3(4.65, -3.1, .65)][index];
   const bearing = curve.getPoint(.72).add(new THREE.Vector3(0, -.46, 0));
   const across = curve.getTangent(.72);
@@ -555,7 +564,7 @@ function createRoute(id: RouteId, index: number, m: Materials, scene: THREE.Scen
   }
   a.finish();
   scene.add(gate);
-  return { id, curve, uplinkLabel, retract, shield, shieldDisc, shieldRim, isolation: 0, flash: 0, gate: initialGateMotion() };
+  return { id, curve, uplinkLabel, uplink: terminal, uplinkLabelOffset, retract, shield, shieldDisc, shieldRim, isolation: 0, flash: 0, gate: initialGateMotion() };
 }
 
 function createUndercity(scene: THREE.Scene, m: Materials) {
@@ -890,6 +899,12 @@ export default function CityScene(props: Props) {
       camera.position.copy(ambientCameraPosition);
       camera.lookAt(cameraTarget);
       camera.updateMatrixWorld(true);
+      const middleRoute = routes[1];
+      middleRoute.uplink.position.copy(compactLayout.matches
+        ? feederEntryPoint(middleRoute.curve, camera, width, height, -18)
+        : middleRoute.curve.v0);
+      middleRoute.uplinkLabel.copy(middleRoute.uplink.position).add(middleRoute.uplinkLabelOffset);
+      if (compactLayout.matches) middleRoute.uplinkLabel.y += 2.85;
       if (state && state !== lastState) {
         if (state.sessionId !== sessionId || (lastState !== null && (state.logFile !== lastState.logFile || state.elapsed < lastState.elapsed || state.totalRequests < lastState.totalRequests))) {
           travelers.splice(0).forEach(traveler => removeTraveler(traveler, 'session-reset'));
@@ -1156,7 +1171,9 @@ export default function CityScene(props: Props) {
           projected.copy(route.uplinkLabel).project(camera);
           const inset = 8 + uplinkLabelWidths[i] / 2;
           const labelX = THREE.MathUtils.clamp((projected.x + 1) / 2 * width, inset, width - inset);
-          uplinkLabel.style.transform = `translate(-50%, -50%) translate(${labelX.toFixed(1)}px, ${((-projected.y + 1) / 2 * height).toFixed(1)}px)`;
+          const projectedY = (-projected.y + 1) / 2 * height;
+          const labelY = i === 1 && compactLayout.matches ? THREE.MathUtils.clamp(projectedY, 16, height - 16) : projectedY;
+          uplinkLabel.style.transform = `translate(-50%, -50%) translate(${labelX.toFixed(1)}px, ${labelY.toFixed(1)}px)`;
           uplinkLabel.style.opacity = titleMode ? '0' : '1';
         }
       }
@@ -1204,6 +1221,11 @@ export default function CityScene(props: Props) {
           transitionFrames: gate.frames, targetTransitionMs: GATE_TRANSITION_MS,
         };
       });
+      performanceData.internetUplinks = routes.map(route => ({
+        route: route.id, position: route.uplink.position.toArray(),
+        screenPosition: route.uplink.position.clone().project(camera).toArray(),
+        labelPosition: route.uplinkLabel.toArray(), originalJunction: route.curve.v0.toArray(),
+      }));
       performanceData.visualSampling = { discardedStale: continuityCounts.discardedStale, discardedCapacity: continuityCounts.discardedCapacity, maximumQueuedMissionAgeSeconds: MAX_QUEUED_AGE_SECONDS };
       performanceData.trafficContinuity = {
         missionTime, phase: state?.phase ?? 'ready',

@@ -38,3 +38,11 @@ captures/mobile-arrivals/phone-frames/
 captures/mobile-arrivals/public/*.png
 captures/mobile-arrivals/public/*.ffconcat
 captures/mobile-arrivals/public/phone-frames/
+
+# Raw uplink refinement captures remain local.
+captures/mobile-uplink/*.png
+captures/mobile-uplink/*.ffconcat
+captures/mobile-uplink/phone-frames/
+captures/mobile-uplink/public/*.png
+captures/mobile-uplink/public/*.ffconcat
+captures/mobile-uplink/public/phone-frames/
