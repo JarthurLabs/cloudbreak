@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-09-07T03:19:04.355Z",
+  "origin": "https://cloudbreak.onrender.com",
+  "htmlStatus": 200,
+  "cssPath": "/assets/index-D1kzxJR3.css",
+  "cssStatus": 200,
+  "cssSha256": "51972e6fa3f145199c0c06af8630d4068e5ea0de976fcf9d623ef6e93a88c0b3",
+  "cssMatchesTestedLocalBuild": true,
+  "viewportFitCover": true,
+  "health": {
+    "game": "cloudbreak",
+    "status": "ok",
+    "frontend": "ready",
+    "localOnly": false
+  }
+}

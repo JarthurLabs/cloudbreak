@@ -92,6 +92,8 @@ The revised phone layout keeps three district selectors visible and shows four l
 
 Review also caught two details beyond the main layout: attack announcements needed to remain available to screen readers, and the result screen needed a working mute button. Those were addressed in the mobile revision. [Actual phone-size screenshots and verification limits](../captures/mobile/README.md) distinguish browser emulation from physical-device testing.
 
+The mobile release also reinforced why a successful build is only part of deployment. Render compiled the update but the first attempt stopped progressing before the server started. The existing game stayed available. Retrying the same commit succeeded, and Codex compared the live stylesheet with the tested build before running a public touch mission. The cause of that initial hosting delay was not established.
+
 ## The connection to my work
 
 My experience with software-as-a-service implementation, documentation, onboarding, and troubleshooting gives me a practical way to approach this subject. I am used to thinking about what someone needs to do, where the workflow breaks, how to explain a change, and how to check that it helped.

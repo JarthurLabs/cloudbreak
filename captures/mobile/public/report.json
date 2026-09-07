@@ -1,0 +1,1106 @@
+{
+  "passed": true,
+  "url": "https://cloudbreak.onrender.com",
+  "checkedAt": "2026-09-07T03:18:56.017Z",
+  "fullRunRequested": true,
+  "method": "Isolated Chrome context; real touch input, unchanged server clock, actual HTTP responses.",
+  "physicalDeviceTested": false,
+  "layouts": [
+    {
+      "name": "03-playing-390x844",
+      "width": 390,
+      "height": 844,
+      "visibleModes": 4,
+      "visibleDistrictSelectors": 3,
+      "overflow": {
+        "horizontal": false,
+        "vertical": false
+      },
+      "targets": [
+        {
+          "label": "Select storefront",
+          "x": 92.0999984741211,
+          "y": 321.70001220703125,
+          "width": 44.00000762939453,
+          "height": 44
+        },
+        {
+          "label": "Select accounts",
+          "x": 182,
+          "y": 311.8999938964844,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select dispatch",
+          "x": 208.6999969482422,
+          "y": 346.6000061035156,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Pause game",
+          "x": 334,
+          "y": 12,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select Storefront: All clear, Open",
+          "x": 10,
+          "y": 623,
+          "width": 119.328125,
+          "height": 62
+        },
+        {
+          "label": "Select Accounts: All clear, Open",
+          "x": 135.328125,
+          "y": 623,
+          "width": 119.328125,
+          "height": 62
+        },
+        {
+          "label": "Select Dispatch: All clear, Open",
+          "x": 260.65625,
+          "y": 623,
+          "width": 119.34375,
+          "height": 62
+        },
+        {
+          "label": "Storefront: Open",
+          "x": 10,
+          "y": 721,
+          "width": 182,
+          "height": 54
+        },
+        {
+          "label": "Storefront: Key check",
+          "x": 198,
+          "y": 721,
+          "width": 182,
+          "height": 54
+        },
+        {
+          "label": "Storefront: Slow flow",
+          "x": 10,
+          "y": 781,
+          "width": 182,
+          "height": 54
+        },
+        {
+          "label": "Storefront: Close bridge",
+          "x": 198,
+          "y": 781,
+          "width": 182,
+          "height": 54
+        }
+      ],
+      "canvas": {
+        "x": 0,
+        "y": 68,
+        "width": 390,
+        "height": 546
+      }
+    },
+    {
+      "name": "playing-320x568",
+      "width": 320,
+      "height": 568,
+      "visibleModes": 4,
+      "visibleDistrictSelectors": 3,
+      "overflow": {
+        "horizontal": false,
+        "vertical": false
+      },
+      "targets": [
+        {
+          "label": "Select storefront",
+          "x": 70.80000305175781,
+          "y": 180.39999389648438,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select accounts",
+          "x": 144.6999969482422,
+          "y": 172.39999389648438,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select dispatch",
+          "x": 166.39999389648438,
+          "y": 200.89999389648438,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Pause game",
+          "x": 264,
+          "y": 12,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select Storefront: All clear, Open",
+          "x": 10,
+          "y": 347,
+          "width": 96,
+          "height": 62
+        },
+        {
+          "label": "Select Accounts: All clear, Open",
+          "x": 112,
+          "y": 347,
+          "width": 96,
+          "height": 62
+        },
+        {
+          "label": "Select Dispatch: All clear, Open",
+          "x": 214,
+          "y": 347,
+          "width": 96,
+          "height": 62
+        },
+        {
+          "label": "Accounts: Open",
+          "x": 10,
+          "y": 445,
+          "width": 147,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Key check",
+          "x": 163,
+          "y": 445,
+          "width": 147,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Slow flow",
+          "x": 10,
+          "y": 505,
+          "width": 147,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Close bridge",
+          "x": 163,
+          "y": 505,
+          "width": 147,
+          "height": 54
+        }
+      ],
+      "canvas": {
+        "x": 0,
+        "y": 68,
+        "width": 320,
+        "height": 270
+      }
+    },
+    {
+      "name": "playing-360x640",
+      "width": 360,
+      "height": 640,
+      "visibleModes": 4,
+      "visibleDistrictSelectors": 3,
+      "overflow": {
+        "horizontal": false,
+        "vertical": false
+      },
+      "targets": [
+        {
+          "label": "Select storefront",
+          "x": 82.4000015258789,
+          "y": 216.3000030517578,
+          "width": 44,
+          "height": 43.99998474121094
+        },
+        {
+          "label": "Select accounts",
+          "x": 165.5,
+          "y": 207.3000030517578,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select dispatch",
+          "x": 189.89999389648438,
+          "y": 239.39999389648438,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Pause game",
+          "x": 304,
+          "y": 12,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select Storefront: All clear, Open",
+          "x": 10,
+          "y": 419,
+          "width": 109.328125,
+          "height": 62
+        },
+        {
+          "label": "Select Accounts: All clear, Open",
+          "x": 125.328125,
+          "y": 419,
+          "width": 109.328125,
+          "height": 62
+        },
+        {
+          "label": "Select Dispatch: All clear, Open",
+          "x": 240.65625,
+          "y": 419,
+          "width": 109.34375,
+          "height": 62
+        },
+        {
+          "label": "Accounts: Open",
+          "x": 10,
+          "y": 517,
+          "width": 167,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Key check",
+          "x": 183,
+          "y": 517,
+          "width": 167,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Slow flow",
+          "x": 10,
+          "y": 577,
+          "width": 167,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Close bridge",
+          "x": 183,
+          "y": 577,
+          "width": 167,
+          "height": 54
+        }
+      ],
+      "canvas": {
+        "x": 0,
+        "y": 68,
+        "width": 360,
+        "height": 342
+      }
+    },
+    {
+      "name": "playing-375x667",
+      "width": 375,
+      "height": 667,
+      "visibleModes": 4,
+      "visibleDistrictSelectors": 3,
+      "overflow": {
+        "horizontal": false,
+        "vertical": false
+      },
+      "targets": [
+        {
+          "label": "Select storefront",
+          "x": 86.80000305175781,
+          "y": 229.8000030517578,
+          "width": 44,
+          "height": 43.99998474121094
+        },
+        {
+          "label": "Select accounts",
+          "x": 173.3000030517578,
+          "y": 220.39999389648438,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select dispatch",
+          "x": 198.6999969482422,
+          "y": 253.8000030517578,
+          "width": 44,
+          "height": 43.99998474121094
+        },
+        {
+          "label": "Pause game",
+          "x": 319,
+          "y": 12,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select Storefront: All clear, Open",
+          "x": 10,
+          "y": 446,
+          "width": 114.328125,
+          "height": 62
+        },
+        {
+          "label": "Select Accounts: All clear, Open",
+          "x": 130.328125,
+          "y": 446,
+          "width": 114.328125,
+          "height": 62
+        },
+        {
+          "label": "Select Dispatch: All clear, Open",
+          "x": 250.65625,
+          "y": 446,
+          "width": 114.34375,
+          "height": 62
+        },
+        {
+          "label": "Accounts: Open",
+          "x": 10,
+          "y": 544,
+          "width": 174.5,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Key check",
+          "x": 190.5,
+          "y": 544,
+          "width": 174.5,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Slow flow",
+          "x": 10,
+          "y": 604,
+          "width": 174.5,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Close bridge",
+          "x": 190.5,
+          "y": 604,
+          "width": 174.5,
+          "height": 54
+        }
+      ],
+      "canvas": {
+        "x": 0,
+        "y": 68,
+        "width": 375,
+        "height": 369
+      }
+    },
+    {
+      "name": "playing-430x932",
+      "width": 430,
+      "height": 932,
+      "visibleModes": 4,
+      "visibleDistrictSelectors": 3,
+      "overflow": {
+        "horizontal": false,
+        "vertical": false
+      },
+      "targets": [
+        {
+          "label": "Select storefront",
+          "x": 102.69999694824219,
+          "y": 362.1000061035156,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select accounts",
+          "x": 202,
+          "y": 351.3999938964844,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select dispatch",
+          "x": 231,
+          "y": 389.70001220703125,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Pause game",
+          "x": 374,
+          "y": 12,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select Storefront: All clear, Open",
+          "x": 10,
+          "y": 711,
+          "width": 132.65625,
+          "height": 62
+        },
+        {
+          "label": "Select Accounts: All clear, Open",
+          "x": 148.65625,
+          "y": 711,
+          "width": 132.671875,
+          "height": 62
+        },
+        {
+          "label": "Select Dispatch: All clear, Open",
+          "x": 287.328125,
+          "y": 711,
+          "width": 132.671875,
+          "height": 62
+        },
+        {
+          "label": "Accounts: Open",
+          "x": 10,
+          "y": 809,
+          "width": 202,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Key check",
+          "x": 218,
+          "y": 809,
+          "width": 202,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Slow flow",
+          "x": 10,
+          "y": 869,
+          "width": 202,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Close bridge",
+          "x": 218,
+          "y": 869,
+          "width": 202,
+          "height": 54
+        }
+      ],
+      "canvas": {
+        "x": 0,
+        "y": 68,
+        "width": 430,
+        "height": 634
+      }
+    },
+    {
+      "name": "playing-844x390",
+      "width": 844,
+      "height": 390,
+      "visibleModes": 4,
+      "visibleDistrictSelectors": 3,
+      "overflow": {
+        "horizontal": false,
+        "vertical": false
+      },
+      "targets": [
+        {
+          "label": "Select storefront",
+          "x": 171.1999969482422,
+          "y": 201.1999969482422,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select accounts",
+          "x": 257.79998779296875,
+          "y": 191.89999389648438,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select dispatch",
+          "x": 283.1000061035156,
+          "y": 225.39999389648438,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Pause game",
+          "x": 788,
+          "y": 7,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select Storefront: All clear, Open",
+          "x": 555,
+          "y": 68,
+          "width": 89,
+          "height": 62
+        },
+        {
+          "label": "Select Accounts: All clear, Open",
+          "x": 650,
+          "y": 68,
+          "width": 89,
+          "height": 62
+        },
+        {
+          "label": "Select Dispatch: All clear, Open",
+          "x": 745,
+          "y": 68,
+          "width": 89,
+          "height": 62
+        },
+        {
+          "label": "Accounts: Open",
+          "x": 555,
+          "y": 166,
+          "width": 136.5,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Key check",
+          "x": 697.5,
+          "y": 166,
+          "width": 136.5,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Slow flow",
+          "x": 555,
+          "y": 226,
+          "width": 136.5,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Close bridge",
+          "x": 697.5,
+          "y": 226,
+          "width": 136.5,
+          "height": 54
+        }
+      ],
+      "canvas": {
+        "x": 0,
+        "y": 58,
+        "width": 544,
+        "height": 332
+      }
+    },
+    {
+      "name": "playing-932x430",
+      "width": 932,
+      "height": 430,
+      "visibleModes": 4,
+      "visibleDistrictSelectors": 3,
+      "overflow": {
+        "horizontal": false,
+        "vertical": false
+      },
+      "targets": [
+        {
+          "label": "Select storefront",
+          "x": 205.6999969482422,
+          "y": 221.10000610351562,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select accounts",
+          "x": 302.79998779296875,
+          "y": 210.6999969482422,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select dispatch",
+          "x": 331.1000061035156,
+          "y": 248.1999969482422,
+          "width": 44,
+          "height": 44.00001525878906
+        },
+        {
+          "label": "Pause game",
+          "x": 876,
+          "y": 7,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "label": "Select Storefront: All clear, Open",
+          "x": 643,
+          "y": 68,
+          "width": 89,
+          "height": 62
+        },
+        {
+          "label": "Select Accounts: All clear, Open",
+          "x": 738,
+          "y": 68,
+          "width": 89,
+          "height": 62
+        },
+        {
+          "label": "Select Dispatch: All clear, Open",
+          "x": 833,
+          "y": 68,
+          "width": 89,
+          "height": 62
+        },
+        {
+          "label": "Accounts: Open",
+          "x": 643,
+          "y": 166,
+          "width": 136.5,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Key check",
+          "x": 785.5,
+          "y": 166,
+          "width": 136.5,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Slow flow",
+          "x": 643,
+          "y": 226,
+          "width": 136.5,
+          "height": 54
+        },
+        {
+          "label": "Accounts: Close bridge",
+          "x": 785.5,
+          "y": 226,
+          "width": 136.5,
+          "height": 54
+        }
+      ],
+      "canvas": {
+        "x": 0,
+        "y": 58,
+        "width": 632,
+        "height": 372
+      }
+    },
+    {
+      "name": "desktop-1280x900",
+      "width": 1280,
+      "height": 900,
+      "visibleModes": 12,
+      "visibleDistrictSelectors": 0,
+      "overflow": {
+        "horizontal": false,
+        "vertical": false
+      },
+      "targets": [
+        {
+          "label": "Select storefront",
+          "x": 364.5718688964844,
+          "y": 433.8999938964844,
+          "width": 123.65625,
+          "height": 28
+        },
+        {
+          "label": "Select accounts",
+          "x": 606.5499877929688,
+          "y": 408.6000061035156,
+          "width": 109.5,
+          "height": 28
+        },
+        {
+          "label": "Select dispatch",
+          "x": 678.5671997070312,
+          "y": 499.29998779296875,
+          "width": 102.265625,
+          "height": 28
+        },
+        {
+          "label": "Mute sound",
+          "x": 1059.125,
+          "y": 27.5,
+          "width": 39,
+          "height": 39
+        },
+        {
+          "label": "How to play",
+          "x": 1106.125,
+          "y": 27.5,
+          "width": 86.875,
+          "height": 39
+        },
+        {
+          "label": "Pause game",
+          "x": 1201,
+          "y": 27.5,
+          "width": 39,
+          "height": 39
+        },
+        {
+          "label": "Inspect request evidence",
+          "x": 1075.96875,
+          "y": 678,
+          "width": 143.03125,
+          "height": 18
+        },
+        {
+          "label": "Storefront: Open",
+          "x": 61,
+          "y": 783,
+          "width": 86.40625,
+          "height": 58
+        },
+        {
+          "label": "Storefront: Key check",
+          "x": 153.40625,
+          "y": 783,
+          "width": 86.421875,
+          "height": 58
+        },
+        {
+          "label": "Storefront: Slow flow",
+          "x": 245.828125,
+          "y": 783,
+          "width": 86.40625,
+          "height": 58
+        },
+        {
+          "label": "Storefront: Close bridge",
+          "x": 338.234375,
+          "y": 783,
+          "width": 86.421875,
+          "height": 58
+        },
+        {
+          "label": "Accounts: Open",
+          "x": 457.65625,
+          "y": 783,
+          "width": 86.40625,
+          "height": 58
+        },
+        {
+          "label": "Accounts: Key check",
+          "x": 550.0625,
+          "y": 783,
+          "width": 86.421875,
+          "height": 58
+        },
+        {
+          "label": "Accounts: Slow flow",
+          "x": 642.484375,
+          "y": 783,
+          "width": 86.421875,
+          "height": 58
+        },
+        {
+          "label": "Accounts: Close bridge",
+          "x": 734.90625,
+          "y": 783,
+          "width": 86.421875,
+          "height": 58
+        },
+        {
+          "label": "Dispatch: Open",
+          "x": 854.328125,
+          "y": 783,
+          "width": 86.65625,
+          "height": 58
+        },
+        {
+          "label": "Dispatch: Key check",
+          "x": 946.984375,
+          "y": 783,
+          "width": 86.671875,
+          "height": 58
+        },
+        {
+          "label": "Dispatch: Slow flow",
+          "x": 1039.65625,
+          "y": 783,
+          "width": 86.65625,
+          "height": 58
+        },
+        {
+          "label": "Dispatch: Close bridge",
+          "x": 1132.3125,
+          "y": 783,
+          "width": 86.671875,
+          "height": 58
+        }
+      ],
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 900
+      }
+    }
+  ],
+  "actions": [
+    {
+      "elapsed": 0.97,
+      "route": "accounts",
+      "mode": "auth",
+      "credits": 25,
+      "reason": "All four mode controls and credit refunds"
+    },
+    {
+      "elapsed": 1.396,
+      "route": "accounts",
+      "mode": "rate",
+      "credits": 30,
+      "reason": "All four mode controls and credit refunds"
+    },
+    {
+      "elapsed": 1.673,
+      "route": "accounts",
+      "mode": "isolate",
+      "credits": 35,
+      "reason": "All four mode controls and credit refunds"
+    },
+    {
+      "elapsed": 1.954,
+      "route": "accounts",
+      "mode": "open",
+      "credits": 40,
+      "reason": "All four mode controls and credit refunds"
+    },
+    {
+      "elapsed": 14.72,
+      "route": "storefront",
+      "mode": "auth",
+      "credits": 25,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 30.666,
+      "route": "storefront",
+      "mode": "open",
+      "credits": 40,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 32.61,
+      "route": "accounts",
+      "mode": "rate",
+      "credits": 30,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 50.72,
+      "route": "accounts",
+      "mode": "open",
+      "credits": 40,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 52.939,
+      "route": "dispatch",
+      "mode": "isolate",
+      "credits": 35,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 67.12,
+      "route": "dispatch",
+      "mode": "open",
+      "credits": 40,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 70.598,
+      "route": "dispatch",
+      "mode": "rate",
+      "credits": 30,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 71.597,
+      "route": "accounts",
+      "mode": "auth",
+      "credits": 15,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 92.594,
+      "route": "accounts",
+      "mode": "open",
+      "credits": 30,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 92.933,
+      "route": "dispatch",
+      "mode": "open",
+      "credits": 40,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 96.522,
+      "route": "storefront",
+      "mode": "isolate",
+      "credits": 35,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 97.215,
+      "route": "dispatch",
+      "mode": "auth",
+      "credits": 20,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 116.254,
+      "route": "storefront",
+      "mode": "open",
+      "credits": 25,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 116.729,
+      "route": "dispatch",
+      "mode": "open",
+      "credits": 40,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 120.395,
+      "route": "accounts",
+      "mode": "isolate",
+      "credits": 35,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 121.251,
+      "route": "storefront",
+      "mode": "rate",
+      "credits": 25,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 139.931,
+      "route": "accounts",
+      "mode": "open",
+      "credits": 30,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 140.85,
+      "route": "storefront",
+      "mode": "open",
+      "credits": 40,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 144.449,
+      "route": "accounts",
+      "mode": "rate",
+      "credits": 30,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 144.86,
+      "route": "dispatch",
+      "mode": "auth",
+      "credits": 15,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 145.758,
+      "route": "storefront",
+      "mode": "isolate",
+      "credits": 10,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 170.967,
+      "route": "storefront",
+      "mode": "open",
+      "credits": 15,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 171.553,
+      "route": "dispatch",
+      "mode": "open",
+      "credits": 30,
+      "reason": "Real-time mobile mission"
+    },
+    {
+      "elapsed": 172.636,
+      "route": "accounts",
+      "mode": "open",
+      "credits": 40,
+      "reason": "Real-time mobile mission"
+    }
+  ],
+  "screenshots": [
+    "01-title-390x844.png",
+    "02-briefing-390x844.png",
+    "briefing-320x568.png",
+    "briefing-375x667.png",
+    "03-playing-390x844.png",
+    "04-paused-guide-390x844.png",
+    "playing-320x568.png",
+    "playing-360x640.png",
+    "playing-375x667.png",
+    "playing-430x932.png",
+    "playing-844x390.png",
+    "playing-932x430.png",
+    "desktop-1280x900.png",
+    "mission-overlapping-attacks.png",
+    "mission-complete-390x844.png",
+    "mission-evidence-390x844.png"
+  ],
+  "errors": [],
+  "geometryWarnings": [],
+  "smallBriefings": [
+    {
+      "width": 320,
+      "height": 568,
+      "startVisibleWithinViewport": true,
+      "targets": [
+        {
+          "label": "Begin First Light",
+          "x": 35,
+          "y": 445.203125,
+          "width": 250,
+          "height": 48
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "startVisibleWithinViewport": true,
+      "targets": [
+        {
+          "label": "Begin First Light",
+          "x": 35,
+          "y": 493.59375,
+          "width": 305,
+          "height": 48
+        }
+      ]
+    }
+  ],
+  "selectionDoesNotMutatePolicies": true,
+  "allFourModesAndCreditRefunds": true,
+  "pauseSettingsAndGuide": true,
+  "simultaneousDistrictAwareness": true,
+  "mission": {
+    "completed": true,
+    "wallSeconds": 180.357,
+    "phase": "won",
+    "elapsed": 180,
+    "integrity": 93.2,
+    "service": 83.98876404494382,
+    "totalRequests": 1961,
+    "legitimateServed": 897,
+    "legitimateTotal": 1068,
+    "hostileBlocked": 825,
+    "hostileAdmitted": 68,
+    "logCountsReconciled": true
+  },
+  "postFlight": {
+    "visibleTouchTargets": true,
+    "muteUnmute": true,
+    "actualRequestEvidence": true,
+    "flyAgainResetsMission": true
+  }
+}
