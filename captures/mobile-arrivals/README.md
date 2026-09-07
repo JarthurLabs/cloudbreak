@@ -4,13 +4,15 @@ Nicholas spotted two problems in an actual phone screenshot: floating district n
 
 [Play Cloudbreak](https://cloudbreak.onrender.com/)
 
-<img src="phone.webp" alt="Actual phone play: unobstructed buildings and amber swarm arrivals along the extended middle bridge" width="390">
+<img src="public/phone.webp" alt="Live public phone play: unobstructed buildings and amber swarm arrivals along the extended middle bridge" width="390">
 
 [Watch the actual ten-second phone recording](accounts-arrivals-phone-silent.mp4). It is a silent review capture at 390 by 844 pixels, with original compositor timing, no sped-up play, and no interpolated gameplay. The game still uses the selected Firewall Drive soundtrack.
 
 ![Actual landscape phone layout with clear gates and bridge connections](landscape.webp)
 
 ## Verification
+
+The [fresh public check](public/report.json) passed against the deployed game on September 7, 2026. It observed 235 Accounts births across the five mobile sizes, six continuous actors through the protection change, and 586 real requests over 65.187 mission seconds. Paused rotation and desktop checks passed with no browser or geometry errors. The [live asset check](public-assets.json) confirms the deployed stylesheet is byte-identical to the tested version. The phone screenshot above is from that public run. Render deployed source commit `7a98a1e` successfully; the later repository update only records this evidence.
 
 The [local report](report.json) records 233 mobile Accounts births across five portrait and landscape sizes. Every sampled birth was outside the screen boundary and within the camera depth range. The same actors entered through an edge and joined real gateway responses. Six approaching actors retained their identities, deadlines and forward progress through an Open to Slow flow change. Paused rotation preserved exact world positions. Other lanes and desktop arrivals kept their original paths.
 
